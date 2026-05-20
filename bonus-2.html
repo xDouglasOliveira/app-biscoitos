@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -15,7 +15,120 @@
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/bonus.css">
 
-  <style>body { background: #FAF6EF; }</style>
+  <style>
+    body { background: #FAF6EF; }
+
+    .bonus-mensagem {
+      background: #F0F7F0;
+      border-left: 4px solid #5A8A68;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      padding: var(--space-4) var(--space-5);
+      margin: var(--space-3) 0;
+      color: var(--text-primary);
+      line-height: 1.75;
+      font-size: var(--text-sm);
+    }
+    .bonus-mensagem::before {
+      content: "💬 Modelo de mensagem";
+      display: block;
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: #5A8A68;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-2);
+    }
+
+    .bonus-kit-sugestao {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4) var(--space-5);
+      margin: var(--space-4) 0;
+    }
+    .bonus-kit-sugestao h5 {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      color: var(--accent-primary);
+      margin-bottom: var(--space-3);
+    }
+    .bonus-kit-sugestao ul {
+      margin: 0;
+      padding-left: var(--space-5);
+    }
+    .bonus-kit-sugestao li {
+      margin-bottom: var(--space-1);
+      font-size: var(--text-sm);
+    }
+
+    .bonus-frase-destaque {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: var(--accent-primary);
+      font-style: italic;
+      border-left: 4px solid var(--accent-light);
+      padding: var(--space-3) var(--space-4);
+      margin: var(--space-6) 0;
+      background: var(--accent-soft);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    }
+
+    .bonus-erros {
+      list-style: none;
+      padding-left: 0;
+    }
+    .bonus-erros li::before {
+      content: "✗  ";
+      color: #C0392B;
+      font-weight: 700;
+    }
+
+    table.bonus-tabela {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-4) 0;
+      font-size: var(--text-sm);
+    }
+    table.bonus-tabela th {
+      background: var(--accent-soft);
+      color: var(--accent-primary);
+      font-weight: 700;
+      padding: var(--space-2) var(--space-3);
+      text-align: left;
+      border-bottom: 2px solid var(--accent-light);
+    }
+    table.bonus-tabela td {
+      padding: var(--space-2) var(--space-3);
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: top;
+    }
+    table.bonus-tabela tr:last-child td { border-bottom: none; }
+
+    .bonus-encerramento {
+      background: linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-secondary) 100%);
+      border: 1px solid var(--accent-light);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8) var(--space-6);
+      margin-top: var(--space-10);
+    }
+    .bonus-encerramento h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      color: var(--accent-primary);
+      margin-bottom: var(--space-6);
+    }
+    .bonus-encerramento p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+    }
+    .bonus-encerramento .assinatura {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      color: var(--accent-primary);
+      margin-top: var(--space-6);
+    }
+  </style>
 
   <script>
     (function () {
@@ -83,12 +196,11 @@
           <span class="bonus-hero-badge">📅 Bônus 2</span>
           <h1 class="bonus-hero-titulo">Calendário de Datas e Encomendas</h1>
           <p class="bonus-hero-desc">
-            As datas que mais vendem biscoitos no Brasil — e como se preparar
-            com antecedência para nunca perder uma oportunidade de encomenda.
+            O ano inteiro planejado para o seu negócio caseiro de amanteigados —
+            datas, kits, mensagens prontas e como nunca mais perder uma encomenda.
           </p>
         </div>
         <div class="bonus-hero-foto">
-          <!-- PLACEHOLDER: foto do calendário ou planejamento -->
           <div class="bonus-hero-foto-placeholder" aria-hidden="true">📅</div>
         </div>
       </div>
@@ -96,143 +208,787 @@
 
     <div class="container">
 
-      <!-- ======================================================
-           PLACEHOLDER: CONTEÚDO DO BÔNUS 2 VIRÁ DEPOIS
-           ====================================================== -->
+      <!-- INTRODUÇÃO -->
+      <div class="bonus-richtext" style="margin-bottom: var(--space-10);">
+        <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: visão anual com os 12 meses em tons kraft, creme e caramelo, com pequenos desenhos de biscoitos, fitas, caixas e datas marcadas]</div>
 
+        <p>Minha filha, se tem uma coisa que eu demorei para entender foi isso aqui: biscoito amanteigado não vende só porque é gostoso. Ele vende melhor quando aparece na hora certa, com a intenção certa e com uma apresentação que combina com aquele momento.</p>
+        <p>Eu levei quase 3 anos fazendo tudo no improviso.</p>
+        <p>Quando chegava perto do Dia das Mães, eu pensava: "Nossa, eu podia ter feito umas caixinhas." Quando chegava Natal, eu corria atrás de lata, fita, etiqueta, e muitas vezes já estava tudo caro ou acabando. Quando uma vizinha perguntava se eu tinha opção para professora, eu respondia: "Posso ver aqui", mas não tinha nada pronto na cabeça.</p>
+        <p>E assim a gente perde oportunidade sem perceber.</p>
+        <p>Depois de muito erro, eu entendi que o calendário é o motor do negócio caseiro. Não porque você precisa fazer tudo o ano inteiro, pelo amor de Deus, não é isso. Mas porque as pessoas compram por emoção.</p>
+        <p>Elas compram porque é Dia das Mães.<br>
+        Compram porque querem agradecer uma professora.<br>
+        Compram porque vão visitar uma avó.<br>
+        Compram porque querem levar um agrado numa reunião de família.<br>
+        Compram porque Natal pede algo bonito na mesa.</p>
+        <p>O amanteigado entra nesses momentos como carinho comestível. Ele não é só doce. Ele pode ser presente, lembrança, mimo, agradecimento e cuidado.</p>
+        <p>Neste guia, eu organizei o ano todo para você não precisar ficar pensando do zero. Aqui você vai encontrar ideias de kits, épocas de divulgação, mensagens prontas e jeitos simples de se preparar.</p>
+        <p>Use esse calendário como uma amiga mais velha te lembrando: "começa antes, menina, não deixa para a última hora".</p>
+      </div>
+
+      <!-- CAPÍTULO 1 -->
       <section class="bonus-section">
-        <h2>As datas mais lucrativas do ano</h2>
+        <h2>Capítulo 1 — Por que o calendário muda tudo</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: folha mensal com setas mostrando "planejar", "divulgar", "produzir" e "entregar"]</div>
 
-        <!-- PLACEHOLDER: calendário/lista de datas -->
-        <div class="bonus-destaque-box">
-          <p>
-            📅 <strong>Datas de ouro para biscoitos artesanais:</strong>
-            Dia das Mães, Dia dos Namorados, Festa Junina, Dia dos Pais,
-            Dia das Crianças, Natal e Réveillon são os picos de encomenda.
-          </p>
+          <p>Quando você começa a vender amanteigados sem calendário, tudo vira correria.</p>
+          <p>Você faz o biscoito, posta quando lembra, responde quem aparece e torce para ter pedido. Só que negócio caseiro não precisa viver só de sorte. Ele pode ter mais organização.</p>
+
+          <h4>O que é previsibilidade de demanda</h4>
+          <p>Previsibilidade de demanda é uma palavra bonita para uma coisa simples: saber quando as pessoas costumam comprar mais.</p>
+          <p>Por exemplo: perto do Dia das Mães, muita gente procura presente. Perto do Natal, muita gente quer lembrancinhas. No Dia dos Professores, mães procuram algo bonito para agradecer. Em Festa Junina, todo mundo pensa em comida afetiva.</p>
+          <p>Quando você sabe disso antes, você prepara:</p>
+          <ul>
+            <li>O sabor certo</li>
+            <li>A embalagem certa</li>
+            <li>A mensagem certa</li>
+            <li>A quantidade possível</li>
+            <li>O prazo de encomenda</li>
+            <li>A forma de entrega</li>
+          </ul>
+          <p>Não é adivinhar. É observar o calendário e se antecipar.</p>
+
+          <h4>Por que o amanteigado muda em cada época do ano</h4>
+          <p>O mesmo biscoito pode ganhar sentidos diferentes conforme o mês.</p>
+          <p>Em janeiro, ele pode ser um kit de chá da tarde calmo.<br>
+          Em maio, pode ser presente de mãe.<br>
+          Em junho, pode ter cara de Festa Junina.<br>
+          Em outubro, pode virar lembrança para professora.<br>
+          Em dezembro, pode ser uma lata de Natal para presentear família.</p>
+          <p>A receita pode ser parecida, mas a história muda.</p>
+          <p>E quando a história muda, a pessoa enxerga outro valor.</p>
+          <p>Eu sei que parece estranho planejar biscoito como se fosse calendário de loja grande, mas é justamente isso que ajuda a dona de casa a não se perder. Você não precisa fazer em grande quantidade. Só precisa chegar antes na cabeça da cliente.</p>
+
+          <h4>O erro fatal: divulgar 3 dias antes</h4>
+          <p>Esse é um erro que eu mesma cometi.</p>
+          <p>Chegava uma data importante e eu só lembrava em cima da hora. Aí postava assim: "Aceito encomendas para amanhã." Só que a pessoa já tinha comprado outra coisa, ou já tinha resolvido o presente, ou já estava sem tempo.</p>
+          <p>Para presente, a cliente pensa antes.</p>
+          <p>Ela precisa imaginar para quem vai dar, ver o preço, escolher o kit, confirmar, combinar pagamento, entrega ou retirada. Se você aparece tarde, ela pode até gostar, mas não compra porque já passou o momento de decisão.</p>
+
+          <h4>A regra dos 21 dias de antecedência</h4>
+          <p>Guarde isso: para datas especiais, comece a divulgar 21 dias antes.</p>
+          <p>Não precisa vender tudo no primeiro dia. Mas precisa plantar a ideia.</p>
+          <p>Funciona assim:</p>
+          <ul>
+            <li>21 dias antes: avisar que vai ter kit especial</li>
+            <li>15 dias antes: mostrar sabores e embalagens</li>
+            <li>10 dias antes: abrir ou reforçar encomendas</li>
+            <li>7 dias antes: mostrar bastidores e lembrar prazo</li>
+            <li>3 dias antes: avisar últimas unidades ou fechamento</li>
+          </ul>
+          <p class="bonus-frase-destaque">Quem divulga cedo vende com calma. Quem divulga tarde trabalha no susto.</p>
         </div>
+      </section>
 
-        <div class="bonus-img-placeholder" aria-hidden="true">
-          📷 Imagem: calendário anual com datas marcadas
+      <!-- CAPÍTULO 2 -->
+      <section class="bonus-section">
+        <h2>Capítulo 2 — Janeiro — Recomeço e Autocuidado</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: mês de janeiro com destaque para "5 a 25: kit Janeiro Calmo"]</div>
+
+          <p>Janeiro costuma ser um mês mais quieto para doces. Muita gente vem das festas de fim de ano, está organizando a casa, as contas, a rotina e a cabeça.</p>
+          <p>Mas isso não quer dizer que você precisa sumir.</p>
+          <p>Janeiro é o mês do recomeço. E recomeço combina com calma.</p>
+          <p>Em vez de vender como "doce de festa", você pode apresentar seus amanteigados como um agrado para o chá da tarde, um momento simples para voltar à rotina com mais carinho.</p>
+
+          <h4>Oportunidades de janeiro</h4>
+          <ul>
+            <li>Volta às aulas tardia no fim do mês</li>
+            <li>Recomeço de rotina</li>
+            <li>Kits leves para chá da tarde</li>
+            <li>Presentes pequenos para visitas</li>
+            <li>Mimos de agradecimento</li>
+          </ul>
+
+          <h4>Kit sugerido: Janeiro Calmo</h4>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa branca minimalista com 6 amanteigados de baunilha, sachê de chá claro, fita de algodão cru e etiqueta escrita "Janeiro Calmo"]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>O que incluir no kit</h5>
+            <ul>
+              <li>6 amanteigados de baunilha</li>
+              <li>1 sachê de chá</li>
+              <li>Caixa branca pequena</li>
+              <li>Papel de seda creme</li>
+              <li>Etiqueta minimalista</li>
+              <li>Fita de algodão cru</li>
+            </ul>
+          </div>
+          <p>A ideia é passar leveza. Nada de embalagem muito colorida. Janeiro pede branco, creme, bege, verde clarinho.</p>
+
+          <h4>Período de divulgação</h4>
+          <p>Divulgue de 5 a 25 de janeiro. Depois do dia 25, você pode mudar a comunicação para volta às aulas, café da tarde das mães ou lembrancinhas simples.</p>
+
+          <h4>Linguagem para status do WhatsApp</h4>
+          <div class="bonus-mensagem">Comecinho de ano também merece um carinho simples.<br>Preparei o Kit Janeiro Calmo com amanteigados de baunilha e chá para aquele café da tarde sem pressa.<br>Quem quiser reservar, me chama aqui.</div>
+          <div class="bonus-mensagem">Janeiro pede leveza, casa arrumada e um café gostoso.<br>Fiz uma opção simples e delicada de amanteigados para acompanhar esse recomeço.<br>Poucas unidades por fornada.</div>
+          <div class="bonus-mensagem">Para presentear alguém ou cuidar do seu próprio café da tarde:<br>Kit Janeiro Calmo com amanteigados artesanais e sachê de chá.<br>Feito em casa, com carinho e sem exagero.</div>
         </div>
+      </section>
 
-        <p>
-          <strong>CALENDÁRIO DE DATAS E ENCOMENDAS</strong>
-          <br />
-          O ano inteiro planejado para o seu negócio caseiro de amanteigados
-        </p>
+      <!-- CAPÍTULO 3 -->
+      <section class="bonus-section">
+        <h2>Capítulo 3 — Fevereiro — Carnaval e Pré-Namorados</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: fevereiro com dois blocos: Carnaval discreto e pré-venda romântica no final do mês]</div>
 
-        <div style="margin-top: var(--space-6);">
-          <div class="bonus-img-placeholder" aria-hidden="true">
-            
-            [CALENDÁRIO VISUAL: visão anual com os 12 meses em tons kraft, creme e caramelo, com pequenos desenhos de biscoitos, fitas, caixas e datas marcadas]
+          <p>Fevereiro é um mês meio danado. Tem Carnaval, calor, viagem, bagunça de rotina. Nem sempre é o melhor mês para doces delicados.</p>
+          <p>Carnaval em si costuma vender pouco para amanteigado, porque as pessoas estão pensando em festa, bebida, rua, viagem ou descanso. Mas você pode usar fevereiro com inteligência.</p>
+          <p>A última semana do mês já pode começar a preparar uma ideia romântica para o Dia dos Namorados, principalmente se você quiser vender caixas personalizadas.</p>
+
+          <h4>O que fazer em fevereiro</h4>
+          <p>Não brigue com o Carnaval. Use ele de forma leve.</p>
+          <ul>
+            <li>Mini saquinhos para levar em viagem</li>
+            <li>Biscoitos para café da manhã de pousada</li>
+            <li>Kits pequenos para visita</li>
+            <li>Primeiras ideias românticas no fim do mês</li>
+          </ul>
+
+          <h4>Kit sugerido: Carta de Amor</h4>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa kraft pequena com 8 biscoitos amanteigados em formato de coração, fita vinho, cartão dobrado e etiqueta "Carta de Amor"]</div>
+          <p>Esse kit é para plantar o desejo desde cedo.</p>
+          <div class="bonus-kit-sugestao">
+            <h5>Materiais</h5>
+            <ul>
+              <li>Caixa kraft pequena</li>
+              <li>8 biscoitos amanteigados</li>
+              <li>Cartão em branco para mensagem</li>
+              <li>Fita vinho, preta ou creme</li>
+              <li>Papel de seda branco</li>
+            </ul>
+          </div>
+          <p>Você pode oferecer o cartão escrito pela própria cliente ou deixar um modelo pronto.</p>
+
+          <h4>Mensagem para fim de fevereiro</h4>
+          <div class="bonus-mensagem">Já estou testando uma caixinha especial para quem gosta de presentear com carinho.<br>O Kit Carta de Amor vai ter amanteigados artesanais e um cartão para mensagem.<br>Em breve abro a lista de encomendas.</div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 4 -->
+      <section class="bonus-section">
+        <h2>Capítulo 4 — Março — Dia da Mulher + Início da Páscoa</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: março com destaque no dia 8 e uma seta no dia 15 para "começar Páscoa"]</div>
+
+          <p>Março é um mês muito bom e pouca gente aproveita direito.</p>
+          <p>O Dia da Mulher, em 8 de março, é uma data linda para presentes delicados. Não precisa fazer nada exagerado. Um kit bonito, com mensagem respeitosa, já chama atenção.</p>
+          <p>Depois do dia 15, você começa a falar de Páscoa. A Páscoa muda de data, às vezes cai em março, às vezes em abril. Por isso, olhe o calendário do ano e se prepare antes.</p>
+
+          <h4>Dia da Mulher</h4>
+          <p>A melhor abordagem aqui é carinho, reconhecimento e delicadeza. Evite frases muito pesadas ou muito comerciais. Fale como quem oferece um presente simples para uma mulher importante.</p>
+
+          <h4>Kit sugerido: Para Ela</h4>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa creme com biscoitos de lavanda ou baunilha, fita rosa antigo, etiqueta "Para Ela" e flor seca decorativa]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>Sugestão de composição</h5>
+            <ul>
+              <li>6 ou 8 amanteigados</li>
+              <li>Sabor baunilha, limão ou lavanda</li>
+              <li>Caixa creme ou kraft</li>
+              <li>Fita rosa antigo</li>
+              <li>Flor seca do lado de fora</li>
+              <li>Bilhete curto: "Para uma mulher que merece doçura, calma e carinho."</li>
+            </ul>
           </div>
 
-          <div style="margin-top: var(--space-6);" class="bonus-richtext">
-            <p>Minha filha, se tem uma coisa que eu demorei para entender foi isso aqui: biscoito amanteigado não vende só porque é gostoso. Ele vende melhor quando aparece na hora certa, com a intenção certa e com uma apresentação que combina com aquele momento.</p>
-            <p>Eu levei quase 3 anos fazendo tudo no improviso.</p>
-            <p>Quando chegava perto do Dia das Mães, eu pensava: “Nossa, eu podia ter feito umas caixinhas.” Quando chegava Natal, eu corria atrás de lata, fita, etiqueta, e muitas vezes já estava tudo caro ou acabando. Quando uma vizinha perguntava se eu tinha opção para professora, eu respondia: “Posso ver aqui”, mas não tinha nada pronto na cabeça.</p>
-            <p>E assim a gente perde oportunidade sem perceber.</p>
-            <p>Depois de muito erro, eu entendi que o calendário é o motor do negócio caseiro. Não porque você precisa fazer tudo o ano inteiro, pelo amor de Deus, não é isso. Mas porque as pessoas compram por emoção.</p>
-            <p>Elas compram porque é Dia das Mães.<br />
-            Compram porque querem agradecer uma professora.<br />
-            Compram porque vão visitar uma avó.<br />
-            Compram porque querem levar um agrado numa reunião de família.<br />
-            Compram porque Natal pede algo bonito na mesa.</p>
-            <p>O amanteigado entra nesses momentos como carinho comestível. Ele não é só doce. Ele pode ser presente, lembrança, mimo, agradecimento e cuidado.</p>
-            <p>Neste guia, eu organizei o ano todo para você não precisar ficar pensando do zero. Aqui você vai encontrar ideias de kits, épocas de divulgação, mensagens prontas e jeitos simples de se preparar.</p>
-            <p>Use esse calendário como uma amiga mais velha te lembrando: “começa antes, menina, não deixa para a última hora”.</p>
+          <h4>A partir do dia 15: Páscoa</h4>
+          <p>Comece a mostrar que seu produto é uma alternativa ao chocolate. Muita gente quer fugir do ovo tradicional, seja pelo preço, pelo excesso ou porque quer algo diferente. O amanteigado entra muito bem aqui.</p>
+          <div class="bonus-mensagem">Este ano vou preparar uma opção diferente para a Páscoa: amanteigados artesanais em embalagem delicada, para presentear sem cair no óbvio.<br>Em breve mostro os modelos.</div>
+        </div>
+      </section>
 
-            <h3>CAPÍTULO 1 — POR QUE O CALENDÁRIO MUDA TUDO</h3>
-            <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: folha mensal com setas mostrando “planejar”, “divulgar”, “produzir” e “entregar”]</div>
+      <!-- CAPÍTULO 5 -->
+      <section class="bonus-section">
+        <h2>Capítulo 5 — Abril — Páscoa + Dia da Educação</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: abril com Páscoa em destaque móvel e dia 28 marcado como Dia da Educação]</div>
 
-            <p>Quando você começa a vender amanteigados sem calendário, tudo vira correria.</p>
-            <p>Você faz o biscoito, posta quando lembra, responde quem aparece e torce para ter pedido. Só que negócio caseiro não precisa viver só de sorte. Ele pode ter mais organização.</p>
+          <p>Abril pode ser um mês forte, principalmente quando a Páscoa cai nele.</p>
+          <p>A grande oportunidade da Páscoa é essa: nem todo mundo quer chocolate. Tem gente que quer dar algo diferente. Tem gente que já comprou chocolate para criança, mas quer um presente delicado para professora, mãe, sogra, vizinha ou colega.</p>
 
-            <h4>O que é previsibilidade de demanda</h4>
-            <p>Previsibilidade de demanda é uma palavra bonita para uma coisa simples: saber quando as pessoas costumam comprar mais.</p>
-            <p>Por exemplo: perto do Dia das Mães, muita gente procura presente. Perto do Natal, muita gente quer lembrancinhas. No Dia dos Professores, mães procuram algo bonito para agradecer. Em Festa Junina, todo mundo pensa em comida afetiva.</p>
-            <p>Quando você sabe disso antes, você prepara:</p>
+          <h4>O amanteigado como alternativa diferente</h4>
+          <p>Você pode usar frases como:</p>
+          <ul>
+            <li>"Uma lembrança diferente para esta Páscoa"</li>
+            <li>"Para quem quer sair do chocolate tradicional"</li>
+            <li>"Um presente delicado para acompanhar o café"</li>
+            <li>"Páscoa também pode ter sabor de casa"</li>
+          </ul>
+
+          <h4>Kits temáticos</h4>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa pastel azul claro com biscoitos amanteigados, fita rosa suave e raminho de alecrim]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>Ideias de embalagem e sabor</h5>
             <ul>
-              <li>O sabor certo</li>
-              <li>A embalagem certa</li>
-              <li>A mensagem certa</li>
-              <li>A quantidade possível</li>
-              <li>O prazo de encomenda</li>
-              <li>A forma de entrega</li>
+              <li>Caixa pastel com fita clara</li>
+              <li>Biscoitos em formato de coelho, ovo ou flor</li>
+              <li>Papel de seda branco</li>
+              <li>Raminho de alecrim do lado de fora</li>
+              <li>Etiqueta "Feliz Páscoa"</li>
             </ul>
-            <p>Não é adivinhar. É observar o calendário e se antecipar.</p>
-
-            <h4>Por que o amanteigado muda em cada época do ano</h4>
-            <p>O mesmo biscoito pode ganhar sentidos diferentes conforme o mês.</p>
-            <p>Em janeiro, ele pode ser um kit de chá da tarde calmo.<br />
-            Em maio, pode ser presente de mãe.<br />
-            Em junho, pode ter cara de Festa Junina.<br />
-            Em outubro, pode virar lembrança para professora.<br />
-            Em dezembro, pode ser uma lata de Natal para presentear família.</p>
-            <p>A receita pode ser parecida, mas a história muda.</p>
-            <p>E quando a história muda, a pessoa enxerga outro valor.</p>
-            <p>Eu sei que parece estranho planejar biscoito como se fosse calendário de loja grande, mas é justamente isso que ajuda a dona de casa a não se perder. Você não precisa fazer em grande quantidade. Só precisa chegar antes na cabeça da cliente.</p>
-
-            <h4>O erro fatal: divulgar 3 dias antes</h4>
-            <p>Esse é um erro que eu mesma cometi.</p>
-            <p>Chegava uma data importante e eu só lembrava em cima da hora. Aí postava assim: “Aceito encomendas para amanhã.” Só que a pessoa já tinha comprado outra coisa, ou já tinha resolvido o presente, ou já estava sem tempo.</p>
-            <p>Para presente, a cliente pensa antes.</p>
-            <p>Ela precisa imaginar para quem vai dar, ver o preço, escolher o kit, confirmar, combinar pagamento, entrega ou retirada. Se você aparece tarde, ela pode até gostar, mas não compra porque já passou o momento de decisão.</p>
-
-            <h4>A regra dos 21 dias de antecedência</h4>
-            <p>Guarde isso: para datas especiais, comece a divulgar 21 dias antes.</p>
-            <p>Não precisa vender tudo no primeiro dia. Mas precisa plantar a ideia.</p>
-            <p>Funciona assim:</p>
+            <h5 style="margin-top: var(--space-3);">Sabores que combinam</h5>
             <ul>
-              <li>21 dias antes: avisar que vai ter kit especial</li>
-              <li>15 dias antes: mostrar sabores e embalagens</li>
-              <li>10 dias antes: abrir ou reforçar encomendas</li>
-              <li>7 dias antes: mostrar bastidores e lembrar prazo</li>
-              <li>3 dias antes: avisar últimas unidades ou fechamento</li>
+              <li>Baunilha</li>
+              <li>Limão</li>
+              <li>Chocolate branco</li>
+              <li>Coco</li>
+              <li>Amêndoas</li>
             </ul>
-            <p><strong>Frase para guardar:</strong> quem divulga cedo vende com calma. Quem divulga tarde trabalha no susto.</p>
+          </div>
 
-            <h3>CAPÍTULO 2 — JANEIRO — RECOMEÇO E AUTOCUIDADO</h3>
-            <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: mês de janeiro com destaque para “5 a 25: kit Janeiro Calmo”]</div>
-            <p>Janeiro costuma ser um mês mais quieto para doces. Muita gente vem das festas de fim de ano, está organizando a casa, as contas, a rotina e a cabeça.</p>
-            <p>Mas isso não quer dizer que você precisa sumir.</p>
-            <p>Janeiro é o mês do recomeço. E recomeço combina com calma.</p>
+          <h4>Dia 28 de abril — Dia da Educação</h4>
+          <p>Essa data é ótima para vender kits pequenos para professores e funcionários de escola.</p>
+          <div class="bonus-kit-sugestao">
+            <h5>Versão simples</h5>
+            <ul>
+              <li>4 amanteigados</li>
+              <li>Saquinho kraft</li>
+              <li>Etiqueta "Obrigada por ensinar com carinho"</li>
+              <li>Fita de algodão cru</li>
+            </ul>
+          </div>
+          <div class="bonus-mensagem">Dia 28 é Dia da Educação.<br>Preparei uma lembrancinha simples e carinhosa para professores e pessoas que fazem parte da vida escolar das crianças.<br>Quem quiser reservar, me chama.</div>
+        </div>
+      </section>
 
-            <p><em>(conteúdo completo do bônus 2 adicionado conforme texto enviado; caso você queira, depois eu posso transformar tudo em seções/accordion para melhorar leitura e performance)</em></p>
+      <!-- CAPÍTULO 6 -->
+      <section class="bonus-section">
+        <h2>Capítulo 6 — Maio — Dia das Mães</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: maio com o primeiro domingo marcado como início da campanha e o Dia das Mães em destaque]</div>
+
+          <p>Maio é uma das datas mais fortes do ano para quem trabalha com presente artesanal.</p>
+          <p>Dia das Mães mexe com emoção. É uma data em que as pessoas querem demonstrar carinho, mesmo com algo simples. Aqui você precisa começar cedo. No dia 1º de maio, já pode divulgar.</p>
+
+          <h4>Estratégia de pré-venda</h4>
+          <ul>
+            <li>Dia 1: avise que abriu agenda de Dia das Mães</li>
+            <li>Dia 3: mostre os modelos de kit</li>
+            <li>Dia 5: mostre bastidores</li>
+            <li>Dia 7: fale dos prazos</li>
+            <li>Últimos dias: reforce fechamento de encomendas</li>
+          </ul>
+          <p>Eu sei que dá vergonha de aparecer muitas vezes, mas lembre: nem todo mundo vê sua mensagem no primeiro dia. Às vezes a pessoa só presta atenção na terceira ou quarta vez.</p>
+
+          <h4>3 kits sugeridos</h4>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Kit Carinho</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: saquinho kraft com 6 biscoitos, fita rosa empoeirada e etiqueta "Mãe, um carinho doce para você"]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>Para quem quer uma lembrança simples</h5>
+            <ul>
+              <li>6 amanteigados</li>
+              <li>Saquinho kraft</li>
+              <li>Papel manteiga</li>
+              <li>Fita delicada</li>
+              <li>Etiqueta especial</li>
+            </ul>
+          </div>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Kit Mãe</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa creme com 10 a 12 biscoitos, papel de seda, fita de cetim e bilhete manuscrito]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>Para presente intermediário</h5>
+            <ul>
+              <li>10 a 12 amanteigados</li>
+              <li>Caixa kraft ou creme</li>
+              <li>Papel de seda</li>
+              <li>Fita de cetim</li>
+              <li>Bilhete manuscrito</li>
+            </ul>
+          </div>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Kit Memória</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: lata premium com amanteigados sortidos, fita elegante, flor seca e cartão maior]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>Para quem quer um presente mais completo</h5>
+            <ul>
+              <li>Lata média ou grande</li>
+              <li>Amanteigados sortidos</li>
+              <li>Cartão especial</li>
+              <li>Fita bonita</li>
+              <li>Embalagem com acabamento caprichado</li>
+            </ul>
+          </div>
+
+          <h4>Linguagem dos anúncios</h4>
+          <div class="bonus-mensagem">Mãe lembra cuidado, café passado e coisa feita com carinho.<br>Este ano preparei kits de amanteigados artesanais para presentear no Dia das Mães.<br>Já estou aceitando encomendas.</div>
+          <div class="bonus-mensagem">Para quem quer fugir do presente comum: uma caixinha de amanteigados feitos em casa, com bilhete e embalagem delicada.<br>Um carinho simples para o Dia das Mães.</div>
+          <div class="bonus-mensagem">Abri a agenda dos kits de Dia das Mães.<br>Vou trabalhar com quantidade limitada por fornada, para conseguir entregar tudo com cuidado.<br>Quem quiser reservar, me chama.</div>
+          <div class="bonus-mensagem">Tem presente que não precisa ser grande.<br>Precisa ser escolhido com carinho.<br>Os kits de amanteigados para o Dia das Mães já estão disponíveis.</div>
+          <div class="bonus-mensagem">Últimos dias para encomendar os kits de Dia das Mães.<br>Caixinhas artesanais, biscoitos amanteigados e bilhete especial.<br>Depois encerro os pedidos para conseguir produzir com calma.</div>
+
+          <h4>Erros comuns</h4>
+          <ul class="bonus-erros">
+            <li>Fazer kit genérico demais</li>
+            <li>Não oferecer bilhete</li>
+            <li>Divulgar só na véspera</li>
+            <li>Não limitar encomendas</li>
+            <li>Não mostrar fotos da embalagem</li>
+            <li>Não deixar claro como reservar</li>
+          </ul>
+          <p>Personalização simples ajuda muito. Uma etiqueta com "Mãe" ou um bilhete escrito à mão já muda a sensação do presente.</p>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 7 -->
+      <section class="bonus-section">
+        <h2>Capítulo 7 — Junho — Festas Juninas</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: junho com bandeirinhas, xadrez e destaque para "kits juninos"]</div>
+
+          <p>Junho é uma delícia para quem trabalha com comida afetiva.</p>
+          <p>E sabe o que quase ninguém pensa? Amanteigado combina muito com Festa Junina. A maioria das pessoas pensa em bolo de milho, paçoca, pé de moleque e quentão. Mas um amanteigado de canela, milho, coco ou amendoim fica perfeito no tema.</p>
+
+          <h4>A oportunidade escondida</h4>
+          <p>Como pouca gente oferece amanteigado junino, você consegue aparecer de um jeito diferente. Você pode vender para:</p>
+          <ul>
+            <li>Condomínios</li>
+            <li>Escolas</li>
+            <li>Igrejas</li>
+            <li>Festinhas familiares</li>
+            <li>Mesas de doces</li>
+            <li>Lembrancinhas de arraiá</li>
+          </ul>
+
+          <h4>Kit sugerido: Arraiá Amanteigado</h4>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: saquinho kraft com tecido xadrez vermelho, palha decorativa, fita de juta e biscoitos de canela]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>O que incluir</h5>
+            <ul>
+              <li>Biscoitos de canela ou milho</li>
+              <li>Saquinho kraft</li>
+              <li>Retalho xadrez</li>
+              <li>Barbante de sisal</li>
+              <li>Etiqueta "Arraiá Amanteigado"</li>
+            </ul>
+          </div>
+
+          <h4>Onde divulgar</h4>
+          <p>Fale com antecedência em lugares onde as festas acontecem:</p>
+          <ul>
+            <li>Grupo do condomínio</li>
+            <li>Grupo da escola</li>
+            <li>Grupo da igreja</li>
+            <li>Grupo de mães</li>
+            <li>Comércio do bairro</li>
+            <li>Salão de beleza</li>
+            <li>Mercadinho local</li>
+          </ul>
+          <div class="bonus-mensagem">Junho chegou com cheirinho de canela e café.<br>Preparei uma versão junina dos meus amanteigados, com embalagem xadrez e sabor de festa boa.<br>Ideal para lembrancinhas e mesas de arraiá.</div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 8 -->
+      <section class="bonus-section">
+        <h2>Capítulo 8 — Julho — Férias Escolares e Dia dos Avós</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: julho com destaque para férias escolares e dia 26, Dia dos Avós]</div>
+
+          <p>Julho é mês de férias, casa cheia, criança em casa, visita na avó, café da tarde mais demorado. É um mês muito bom para trabalhar a ideia de família.</p>
+
+          <h4>Kit sugerido: Café da Tarde com Vovó</h4>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: lata simples com amanteigados sortidos, guardanapo de tecido xadrez, etiqueta "Café da Tarde com Vovó"]</div>
+          <p>Esse kit tem que ter cara de casa.</p>
+          <div class="bonus-kit-sugestao">
+            <h5>Sugestão de composição</h5>
+            <ul>
+              <li>Amanteigados tradicionais</li>
+              <li>Goiabinha amanteigada</li>
+              <li>Canela</li>
+              <li>Baunilha</li>
+              <li>Lata ou caixa kraft</li>
+              <li>Bilhete afetivo</li>
+            </ul>
+          </div>
+          <p>Frase para etiqueta: <em>"Para comer sem pressa, com café e conversa boa."</em></p>
+
+          <h4>Dia dos Avós — 26 de julho</h4>
+          <p>Essa data é muito subexplorada. Pouca gente vende para ela. E é justamente aí que mora a oportunidade.</p>
+          <p>As pessoas gostam de presentear avós, mas nem sempre sabem o quê. Um kit de amanteigados resolve de forma simples e carinhosa.</p>
+          <div class="bonus-mensagem">Dia 26 de julho é Dia dos Avós.<br>Preparei o Kit Café da Tarde com Vovó, com amanteigados artesanais para presentear com carinho e simplicidade.<br>Quem quiser reservar, me chama.</div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 9 -->
+      <section class="bonus-section">
+        <h2>Capítulo 9 — Agosto — Dia dos Pais + Primavera Chegando</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: agosto com Dia dos Pais e uma seta no fim do mês para "pré-primavera"]</div>
+
+          <p>Agosto tem o Dia dos Pais e também começa a abrir caminho para sabores mais leves da primavera.</p>
+          <p>Para Dia dos Pais, eu gosto de fugir da embalagem muito delicada. Aqui funciona melhor uma apresentação mais sóbria.</p>
+
+          <h4>Kit sugerido para Dia dos Pais</h4>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa kraft escura com biscoitos de café, mini pacote de café gourmet local, fita preta ou marrom]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>Sugestão de composição</h5>
+            <ul>
+              <li>Biscoitos amanteigados de café</li>
+              <li>Biscoitos de chocolate</li>
+              <li>Café gourmet local pequeno</li>
+              <li>Caixa kraft ou preta</li>
+              <li>Fita marrom, preta ou algodão cru</li>
+            </ul>
+          </div>
+          <p>Mensagem para bilhete: <em>"Para acompanhar um café sem pressa."</em></p>
+
+          <h4>Final de agosto: primavera chegando</h4>
+          <p>No final de agosto, comece a falar de sabores mais frescos: limão, laranja, baunilha, coco, ervas suaves. Não precisa lançar tudo. Só vá preparando a cliente para uma nova coleção.</p>
+          <div class="bonus-mensagem">Agosto ainda tem café forte, mas setembro já começa a pedir sabores mais leves.<br>Estou testando amanteigados de limão para a próxima fornada especial.</div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 10 -->
+      <section class="bonus-section">
+        <h2>Capítulo 10 — Setembro — Início de Temporada Alta</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: setembro com flores simples, dia 21 marcado como Primavera e indicação de "preparação para festas"]</div>
+
+          <p>Setembro é o mês em que a gente começa a sentir que o ano virou a esquina. Daqui para frente, as datas ficam mais próximas e as pessoas começam a pensar em festas, lembranças, encontros e fim de ano.</p>
+
+          <h4>Preparação para festas</h4>
+          <p>Use setembro para organizar:</p>
+          <ul>
+            <li>Lista de fornecedores</li>
+            <li>Embalagens de Natal</li>
+            <li>Teste de sabores</li>
+            <li>Fotos novas</li>
+            <li>Tabela de kits</li>
+            <li>Prazo de encomendas</li>
+          </ul>
+          <p>Setembro não precisa ser o mês de maior venda. Ele pode ser o mês que prepara os meses mais fortes.</p>
+
+          <h4>Kit sugerido: Primavera</h4>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa clara com amanteigados de limão siciliano, fita verde suave, flor seca pequena e papel de seda branco]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>Sugestão de composição</h5>
+            <ul>
+              <li>Amanteigado de limão</li>
+              <li>Amanteigado de baunilha</li>
+              <li>Caixa clara</li>
+              <li>Fita verde suave</li>
+              <li>Etiqueta "Primavera"</li>
+            </ul>
+          </div>
+
+          <h4>21 de setembro — Primavera</h4>
+          <div class="bonus-mensagem">A primavera está chegando e eu preparei uma fornada mais leve, com amanteigados de limão e baunilha.<br>Uma caixinha delicada para presentear ou acompanhar o café da tarde.</div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 11 -->
+      <section class="bonus-section">
+        <h2>Capítulo 11 — Outubro — Crianças, Professores e Halloween</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: outubro com dia 12, dia 15 e dia 31 destacados]</div>
+
+          <p>Outubro é cheio de oportunidades. É um mês que parece simples, mas pode render muitas encomendas pequenas.</p>
+
+          <h4>Dia das Crianças — 12 de outubro</h4>
+          <p>Para crianças, o visual conta muito. Você pode fazer:</p>
+          <ul>
+            <li>Biscoitos em formatos divertidos</li>
+            <li>Embalagem colorida sem exagero</li>
+            <li>Saquinhos individuais</li>
+            <li>Kits para lanche</li>
+            <li>Mini caixinhas</li>
+          </ul>
+          <p>Sabores bons: baunilha, chocolate, leite em pó, coco.</p>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: saquinho transparente próprio para alimentos com biscoitos em formato de estrela, fechado com fita colorida suave]</div>
+
+          <h4>Dia dos Professores — 15 de outubro</h4>
+          <p>Essa é uma data importantíssima. Kit professora vende em qualquer cidade, porque toda mãe conhece uma professora, uma auxiliar, uma coordenadora ou alguém da escola que merece um agradecimento.</p>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Kit Professora</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa kraft pequena com 6 biscoitos, etiqueta "Obrigada por ensinar com carinho" e mini lápis decorativo]</div>
+          <div class="bonus-kit-sugestao">
+            <h5>O que incluir</h5>
+            <ul>
+              <li>6 amanteigados</li>
+              <li>Caixa ou saquinho kraft</li>
+              <li>Etiqueta temática</li>
+              <li>Bilhete curto</li>
+              <li>Fita neutra</li>
+            </ul>
+          </div>
+          <div class="bonus-mensagem">Dia dos Professores está chegando.<br>Preparei uma lembrancinha artesanal com amanteigados e uma mensagem de agradecimento.<br>É simples, delicada e feita com carinho.</div>
+
+          <h4>Halloween — 31 de outubro</h4>
+          <p>O Halloween cresce no Brasil, principalmente em escolas, cursos de inglês, condomínios e festinhas. Você não precisa fazer nada assustador demais. Pode ser divertido e bonito.</p>
+          <div class="bonus-kit-sugestao">
+            <h5>Sugestão</h5>
+            <ul>
+              <li>Speculoos ou amanteigado com especiarias</li>
+              <li>Formato de gato, lua, abóbora ou fantasma</li>
+              <li>Caixa preta ou laranja queimado</li>
+              <li>Etiqueta divertida "Doces Travessuras"</li>
+            </ul>
+          </div>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa preta pequena com biscoitos em formato de gato e lua, fita laranja queimado e etiqueta "Doces Travessuras"]</div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 12 -->
+      <section class="bonus-section">
+        <h2>Capítulo 12 — Novembro — Black Friday + Pré-Natal</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: novembro com Black Friday e dia 15 marcado como "começa Natal"]</div>
+
+          <p>Novembro é mês de preparação forte. A Black Friday pode funcionar para doces, desde que você não transforme seu trabalho em liquidação sem sentido. O melhor jeito é criar combinação.</p>
+
+          <h4>Black Friday para amanteigados</h4>
+          <p>Em vez de simplesmente baixar preço, monte oferta de conjunto:</p>
+          <ul>
+            <li>Leve 3 kits e pague 2</li>
+            <li>Kit família com sabores variados</li>
+            <li>Combo de degustação</li>
+            <li>Caixa com sabores de Natal antecipados</li>
+          </ul>
+          <p>Cuidado para não prometer demais. Faça algo que você consegue entregar sem se apertar.</p>
+          <div class="bonus-mensagem">Nesta Black Friday vou fazer uma condição especial em kits selecionados de amanteigados.<br>Vai ser por encomenda e com quantidade limitada por fornada.<br>Quem quiser entrar na lista, me chama.</div>
+
+          <h4>Dia 15 de novembro: começa o Natal</h4>
+          <p>Na minha cabeça, Natal começa dia 15 de novembro. É nessa data que você começa a falar:</p>
+          <ul>
+            <li>Sabores natalinos</li>
+            <li>Latas especiais</li>
+            <li>Lista de espera</li>
+            <li>Prazo para encomenda</li>
+            <li>Quantidade limitada</li>
+          </ul>
+          <p>A lista de espera é importante porque a produção caseira tem limite. Você não é fábrica. Você precisa respeitar seu tempo, seu forno e suas mãos.</p>
+          <div class="bonus-mensagem">Já estou montando a lista de espera dos kits de Natal.<br>Este ano vou trabalhar com quantidade limitada para conseguir fazer tudo com cuidado.<br>Quem quiser ser avisada primeiro, me chama aqui.</div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 13 -->
+      <section class="bonus-section">
+        <h2>Capítulo 13 — Dezembro — A Safra do Ano</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: dezembro com destaque do dia 1 ao 15 para encomendas e do dia 16 ao 23 para produção/entregas]</div>
+
+          <p>Dezembro é a safra do ano para quem faz amanteigado. É o mês em que as pessoas procuram presente, lembrança, mesa bonita, visita, amigo secreto, agradecimento e café especial.</p>
+          <p>Mas dezembro também pode virar bagunça se você não organizar.</p>
+
+          <h4>Como organizar a produção em casa</h4>
+          <p>Separe dezembro em fases:</p>
+          <ul>
+            <li><strong>1 a 5:</strong> Divulgação forte e confirmação de pedidos.</li>
+            <li><strong>6 a 10:</strong> Compra de materiais e ingredientes.</li>
+            <li><strong>10 a 15:</strong> Fechamento dos últimos pedidos.</li>
+            <li><strong>16 a 23:</strong> Produção, embalagem e entrega.</li>
+          </ul>
+          <p>Depois do dia 23, evite aceitar pedido de última hora, a não ser que você tenha pronta entrega. Eu sei que dá vontade de aceitar tudo, mas pedido demais sem estrutura vira cansaço, erro e atraso. Melhor fazer menos e entregar bonito.</p>
+
+          <h4>5 kits de Natal</h4>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Kit Lembrancinha</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: saquinho kraft pequeno com fita vermelha, etiqueta natalina e 4 amanteigados]</div>
+          <p>Para vizinhos, colegas e pequenas lembranças.</p>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Kit Café de Natal</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa kraft com 10 amanteigados, sachê de chá ou café e papel de seda vermelho escuro]</div>
+          <p>Para presentear alguém próximo.</p>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Kit Família</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: lata média verde escura com biscoitos sortidos, fita xadrez e pinha pequena]</div>
+          <p>Para mesa de Natal ou visita em família.</p>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Kit Gratidão</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: caixa creme com bilhete especial, biscoitos variados e fita dourada fosca]</div>
+          <p>Para professores, clientes, líderes, vizinhas e pessoas queridas.</p>
+
+          <h5 style="margin: var(--space-4) 0 var(--space-2); color: var(--accent-primary); font-family: var(--font-display);">Cabaz Natalino</h5>
+          <div class="bonus-img-placeholder" aria-hidden="true">[KIT VISUAL: cesta ou caixa grande com lata de amanteigados, café, geleia, guardanapo de tecido, cartão e fita elegante]</div>
+          <p>O cabaz natalino é uma cesta montada com mais elementos. Ele vende mais caro porque entrega um presente completo.</p>
+          <div class="bonus-kit-sugestao">
+            <h5>O que pode incluir</h5>
+            <ul>
+              <li>Lata de amanteigados</li>
+              <li>Café pequeno</li>
+              <li>Geleia artesanal</li>
+              <li>Chá</li>
+              <li>Cartão</li>
+              <li>Guardanapo de tecido</li>
+              <li>Embalagem grande com laço</li>
+            </ul>
+          </div>
+
+          <h4>Fechamento de pedidos</h4>
+          <p>Defina uma data clara. Sugestão: fechar pedidos dia 15 de dezembro.</p>
+          <div class="bonus-mensagem">Aviso com carinho: os pedidos de Natal serão aceitos até dia 15 de dezembro.<br>Depois dessa data, vou focar na produção e nas entregas para fazer tudo com calma e cuidado.<br>Quem ainda quiser reservar, me chama.</div>
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 14 -->
+      <section class="bonus-section">
+        <h2>Capítulo 14 — As 10 Datas que Você Nunca Tinha Pensado</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[CALENDÁRIO VISUAL: lista de datas alternativas em pequenos cartões kraft]</div>
+
+          <p>Além das datas grandes, existem datas menores que podem funcionar muito bem, principalmente em cidade pequena, bairro, escola, igreja e grupos de WhatsApp. Você não precisa usar todas. Escolha as que combinam com sua realidade.</p>
+
+          <div class="bonus-kit-sugestao">
+            <h5>1. Dia do Café — 24 de maio</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Perfeito para amanteigado de café, baunilha, canela e chocolate.</p>
+            <p style="font-size: var(--text-sm); font-style: italic;">"Um café fica mais bonito quando vem acompanhado de um biscoito feito com carinho."</p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>2. Dia da Vizinhança — 27 de setembro</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Combina muito com mimo pequeno. Você pode vender kits de 4 a 6 biscoitos para presentear vizinhos.</p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>3. Dia do Chá — 15 de dezembro</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Ótimo para kits com sachê de chá e amanteigados delicados. Funciona bem junto com o Natal.</p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>4. Aniversário da cidade</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Cada cidade tem sua data. Você pode fazer uma edição especial com nome da cidade: <em>"Amanteigados da nossa terra."</em></p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>5. Dia dos Médicos — 18 de outubro</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Boa opção para lembrança de agradecimento em clínicas, consultórios e famílias que querem presentear.</p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>6. Dia do Cliente — 15 de setembro</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Se você já tem clientes, pode oferecer uma caixinha especial de agradecimento ou pronta entrega.</p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>7. Dia da Secretária — 30 de setembro</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Empresas pequenas podem comprar lembranças para presentear secretárias e atendentes.</p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>8. Dia do Amigo — 20 de julho</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Perfeito para kit simples com bilhete: <em>"Para acompanhar nossa próxima conversa."</em></p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>9. Dia Mundial da Gentileza — 13 de novembro</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Data bonita para kits pequenos de agradecimento.</p>
+          </div>
+
+          <div class="bonus-kit-sugestao">
+            <h5>10. Fim de ano escolar</h5>
+            <p style="font-size: var(--text-sm); margin: var(--space-1) 0;">Não é uma data fixa, mas toda escola encerra o ano. Professores, auxiliares e coordenadores recebem lembranças nessa época.</p>
           </div>
         </div>
       </section>
 
-
+      <!-- CAPÍTULO 15 -->
       <section class="bonus-section">
-        <h2>Quanto tempo antes começar a divulgar?</h2>
-        <!-- PLACEHOLDER: cronograma de divulgação -->
-        <ul class="bonus-lista">
-          <li><!-- PLACEHOLDER: semana 4 antes da data --></li>
-          <li><!-- PLACEHOLDER: semana 2 antes da data --></li>
-          <li><!-- PLACEHOLDER: semana 1 antes da data --></li>
-          <li><!-- PLACEHOLDER: dias antes --></li>
-        </ul>
+        <h2>Capítulo 15 — Como Organizar Encomendas das Vizinhas</h2>
+        <div class="bonus-richtext">
+          <div class="bonus-img-placeholder" aria-hidden="true">[IMAGEM: caderno simples aberto com colunas "quem", "o que" e "quando", caneta ao lado e etiquetas kraft]</div>
+
+          <p>Agora vamos para a parte prática, porque sem organização a gente se enrola.</p>
+          <p>Quando começam os pedidos, parece tudo fácil. Uma vizinha pediu 2 caixas, a outra pediu para sexta, a prima pediu sem canela, a professora quer 10 saquinhos, e de repente você já não sabe mais quem pagou, quem confirmou e quem vai buscar.</p>
+          <p>Por isso, tenha um sistema simples.</p>
+
+          <h4>Sistema de 3 colunas</h4>
+          <p>Pegue um caderno e faça assim:</p>
+          <table class="bonus-tabela">
+            <thead>
+              <tr>
+                <th>Quem</th>
+                <th>O que</th>
+                <th>Quando</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dona Maria</td>
+                <td>2 caixas Dia das Mães</td>
+                <td>Retirar sábado 10h</td>
+              </tr>
+              <tr>
+                <td>Carla</td>
+                <td>5 saquinhos professora</td>
+                <td>Entregar dia 14</td>
+              </tr>
+              <tr>
+                <td>Joana</td>
+                <td>1 lata Natal</td>
+                <td>Buscar dia 22</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Se quiser melhorar, adicione: valor total, sinal pago, falta pagar, observações, telefone. Mas comece simples. O que não pode é confiar só na memória.</p>
+
+          <h4>Como pedir 50% antecipado sem parecer desconfiada</h4>
+          <p>Você não pede uma parte antecipada porque desconfia da cliente. Você pede porque precisa comprar material, separar agenda e garantir a produção. Fale com naturalidade:</p>
+          <div class="bonus-mensagem">Para confirmar sua encomenda, peço 50% no momento da reserva e o restante na retirada ou entrega.<br>Faço assim para conseguir comprar os materiais e separar seu pedido com segurança.<br>Assim fica organizado para nós duas.</div>
+
+          <h4>Como dar prazo realista</h4>
+          <p>Não prometa para amanhã se você sabe que vai virar a noite. Diga sempre um prazo com folga. Se consegue entregar sexta, combine sábado. Se consegue fazer 20 kits, não aceite 40.</p>
+          <div class="bonus-mensagem">Para fazer com o cuidado que eu gosto, consigo entregar a partir de sábado.<br>Prefiro te passar um prazo certinho do que correr e não entregar do jeito que merece.</div>
+
+          <h4>Modelo de confirmação de pedido</h4>
+          <div class="bonus-mensagem">Pedido confirmado, minha querida.<br>Anotei aqui:<br>
+          Nome: [nome da cliente]<br>
+          Kit: [nome do kit]<br>
+          Quantidade: [quantidade]<br>
+          Data de retirada/entrega: [data e horário]<br>
+          Valor combinado: [valor]<br>
+          Sinal recebido: [sim/não]<br><br>
+          Vou preparar tudo com carinho.</div>
+
+          <h4>Modelo de pedido pronto</h4>
+          <div class="bonus-mensagem">Oi, minha querida. Seu pedido já está prontinho.<br>Preparei e embalei com bastante cuidado.<br>Você pode buscar a partir de [horário] ou combinamos a entrega como falamos.</div>
+
+          <h4>Quando a cliente esquece do pedido</h4>
+          <p>Isso acontece. A pessoa encomenda, confirma, mas esquece de buscar. Primeiro, mande uma mensagem gentil:</p>
+          <div class="bonus-mensagem">Oi, minha querida. Passando só para te lembrar que sua encomenda de amanteigados está pronta para retirada hoje.<br>Como é produto artesanal e fresquinho, o ideal é retirar no horário combinado.<br>Me avisa se precisar ajustar.</div>
+          <p>Se ela atrasar muito, mantenha educação, mas tenha regra:</p>
+          <div class="bonus-mensagem">Eu entendo que imprevistos acontecem.<br>Só peço que me avise com antecedência quando precisar mudar o horário, porque organizo minha produção e minhas entregas por agenda.<br>Assim consigo atender todo mundo com cuidado.</div>
+
+          <h4>Controle simples de encomendas</h4>
+          <p>No fim de cada dia, confira:</p>
+          <ul>
+            <li>Quem confirmou</li>
+            <li>Quem pagou o sinal</li>
+            <li>Quem falta responder</li>
+            <li>Quais materiais faltam</li>
+            <li>Quais pedidos são para o dia seguinte</li>
+            <li>Quais etiquetas precisam ser feitas</li>
+          </ul>
+          <p>Não deixe para conferir tudo no dia da entrega. É aí que mora a confusão.</p>
+        </div>
       </section>
 
-      <section class="bonus-section">
-        <h2>Como gerenciar encomendas sem se perder</h2>
-        <!-- PLACEHOLDER: sistema de controle de encomendas -->
-        <p>
-          <!-- PLACEHOLDER: dicas de controle -->
-          Dicas e modelo de controle de encomendas serão adicionados aqui.
-        </p>
-      </section>
+      <!-- ENCERRAMENTO -->
+      <div class="bonus-encerramento">
+        <div class="bonus-img-placeholder" aria-hidden="true">[IMAGEM: calendário impresso colado na geladeira, com caneta presa por imã e uma caixa de biscoitos ao lado]</div>
 
-      <section class="bonus-section">
-        <h2>Receitas recomendadas por data</h2>
-        <!-- PLACEHOLDER: mapa de receitas × datas comemorativas -->
-        <ul class="bonus-lista">
-          <li>Natal → <a href="receita.html?id=04" style="color: var(--accent-primary); font-weight: 600;">Speculoos Belga</a></li>
-          <li><!-- PLACEHOLDER: mais datas e receitas --></li>
-        </ul>
-      </section>
+        <h2>Recado da Rosana</h2>
+
+        <p>Minha filha, agora você tem o ano inteiro nas mãos.</p>
+        <p>Mas eu quero te falar uma coisa com sinceridade: não tente fazer todas as datas. Eu sei que dá vontade. A gente olha o calendário e pensa: "Posso vender em janeiro, fevereiro, março, abril…" Mas se você tentar abraçar tudo, pode acabar cansada, confusa e sem capricho.</p>
+        <p><strong>Escolha 4 ou 5 datas no ano e faça bem feito.</strong></p>
+        <p>Pode ser: Dia das Mães, Festa Junina, Dia dos Professores, Natal, Dia dos Avós. Ou pode ser outro conjunto que combine mais com sua cidade, sua família, sua rotina e suas clientes.</p>
+        <p>O importante é escolher, planejar e repetir. No primeiro ano, você testa. No segundo, melhora. No terceiro, você já sabe o que funciona melhor.</p>
+        <p>Imprima este calendário. Cole na geladeira. Marque com caneta as datas que fazem sentido para você. Anote quando precisa comprar embalagem, quando precisa divulgar e quando precisa fechar encomendas.</p>
+        <p>Não deixe para pensar em Natal no meio de dezembro.<br>
+        Não deixe Dia das Mães para a véspera.<br>
+        Não deixe a professora sem opção de lembrancinha.<br>
+        Não deixe sua vizinha descobrir tarde demais que você fazia um kit lindo.</p>
+        <p>O calendário não é para te prender. É para te dar paz.</p>
+        <p>Quando você sabe o que vem pela frente, trabalha com mais calma. Compra melhor. Divulga melhor. Entrega melhor.</p>
+        <p>E lembre sempre: seu negócio caseiro pode crescer com simplicidade. Um passo de cada vez. Uma data de cada vez. Uma fornada de cada vez.</p>
+        <p>O cuidado que você coloca no planejamento aparece na embalagem, no sabor, na entrega e no jeito que a cliente fala de você depois.</p>
+        <p>Use este calendário como uma amiga.</p>
+        <p>E quando bater dúvida, volte nele, olhe o mês, escolha uma ideia e comece.</p>
+        <p class="assinatura">Com carinho, Rosana</p>
+      </div>
 
       <div style="padding: var(--space-8) 0; text-align: center; border-top: 1px solid var(--border-light); margin-top: var(--space-8);">
         <p style="color: var(--text-muted); font-size: var(--text-sm); margin-bottom: var(--space-4);">
