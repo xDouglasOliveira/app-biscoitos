@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow, noarchive">
-  <title>Bônus 1: Guia de Embalagem — Coletânea Amanteigados da Rosana</title>
+  <title>Guia de Embalagem Artesanal — Amanteigados da Rosana</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,193 @@
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/bonus.css">
 
-  <style>body { background: #FAF6EF; }</style>
+  <style>
+    body { background: #FAF6EF; }
+
+    .bonus-section h4 {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin: 1.25rem 0 0.4rem;
+    }
+
+    ol.bonus-lista {
+      list-style: none;
+      padding: 0;
+      counter-reset: bonus-counter;
+    }
+    ol.bonus-lista li {
+      counter-increment: bonus-counter;
+      padding: 0.55rem 0 0.55rem 2.4rem;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    ol.bonus-lista li:last-child { border-bottom: none; }
+    ol.bonus-lista li::before {
+      content: counter(bonus-counter);
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      background: var(--accent-primary);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bonus-lista-erros li::before {
+      content: '✗';
+      color: #c0392b;
+      font-weight: 700;
+      background: none;
+      font-size: 1rem;
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+    }
+    .bonus-lista-erros li {
+      padding-left: 1.6rem;
+      border-bottom: none;
+    }
+    .bonus-lista-erros {
+      margin-top: 0.5rem;
+    }
+
+    .bonus-lista-neutro li::before {
+      content: '→';
+      color: var(--text-muted);
+      font-weight: 400;
+      background: none;
+      font-size: 1rem;
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+    }
+    .bonus-lista-neutro li {
+      padding-left: 1.6rem;
+      border-bottom: none;
+    }
+
+    .bonus-combinacao {
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.25rem 1rem;
+      margin-bottom: 1.25rem;
+      background: #fff;
+    }
+    .bonus-combinacao h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--accent-primary);
+      margin-bottom: 0.1rem;
+    }
+    .bonus-combinacao-subtitulo {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 0.75rem;
+    }
+
+    .bonus-ocasiao {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      padding: 0.65rem 0.9rem;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 0.75rem;
+    }
+    .bonus-ocasiao strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .bonus-bilhete {
+      border-left: 3px solid var(--accent-primary);
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      background: #fff;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .bonus-bilhete cite {
+      display: block;
+      margin-top: 0.4rem;
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .bonus-material {
+      border-top: 1px solid var(--border-light);
+      padding-top: 1.25rem;
+      margin-top: 1.25rem;
+    }
+    .bonus-material:first-child {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .bonus-material h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      margin-bottom: 0.3rem;
+    }
+
+    .bonus-barra-top {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-light);
+      padding: 0.75rem 0;
+      position: sticky;
+      top: var(--header-height, 64px);
+      z-index: 10;
+    }
+    .bonus-barra-top .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .bonus-barra-top .btn-voltar {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .bonus-barra-top .btn-voltar:hover { color: var(--accent-primary); }
+    .bonus-barra-numeracao {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+    }
+
+    .bonus-nav-continuar {
+      background: var(--bg-secondary);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .bonus-nav-continuar p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+  </style>
 
   <script>
     (function () {
@@ -29,8 +215,9 @@
     })();
   </script>
 </head>
-<body class="bonus-individual-page">
+<body class="bonus-page">
 
+  <!-- ---- HEADER ---- -->
   <header class="site-header">
     <div class="container">
       <a href="home.html" class="logo" aria-label="Início">
@@ -51,6 +238,7 @@
     </div>
   </header>
 
+  <!-- Overlay mobile -->
   <div class="nav-overlay" id="nav-overlay" hidden role="dialog" aria-modal="true" aria-label="Menu">
     <div class="nav-overlay-header">
       <span class="logo-text" aria-hidden="true">Amanteigados <span>da Rosana</span></span>
@@ -64,100 +252,608 @@
     </nav>
   </div>
 
+  <!-- ---- BARRA DE NAVEGAÇÃO STICKY ---- -->
+  <div class="bonus-barra-top" role="navigation" aria-label="Navegação do bônus">
+    <div class="container">
+      <a href="bonus.html" class="btn-voltar">← Bônus</a>
+      <span class="bonus-barra-numeracao">Bônus 1 de 3</span>
+    </div>
+  </div>
+
+  <!-- ---- CONTEÚDO PRINCIPAL ---- -->
   <main class="page-content" id="main">
-
-    <!-- Barra de voltar (sticky) -->
-    <div class="bonus-voltar-barra">
-      <div class="container">
-        <a href="bonus.html" class="btn-voltar" aria-label="Voltar para a página de bônus">
-          ← Bônus
-        </a>
-        <span style="font-size: var(--text-sm); color: var(--text-muted); font-weight: 600;">
-          BÔNUS 1 DE 3
-        </span>
-      </div>
-    </div>
-
-    <!-- Hero do bônus -->
-    <div class="bonus-hero">
-      <div class="container">
-        <div class="bonus-hero-texto">
-          <span class="bonus-hero-badge">📦 Bônus 1</span>
-          <h1 class="bonus-hero-titulo">Guia de Embalagem Artesanal</h1>
-          <p class="bonus-hero-desc">
-            Como transformar seus biscoitos em produtos que as pessoas pagam muito mais.
-            A embalagem certa pode triplicar o preço de venda sem mudar nada na receita.
-          </p>
-        </div>
-        <div class="bonus-hero-foto">
-          <!-- PLACEHOLDER: coloque aqui uma foto do material de embalagem -->
-          <div class="bonus-hero-foto-placeholder" aria-hidden="true">📦</div>
-        </div>
-      </div>
-    </div>
-
     <div class="container">
 
-      <!-- ======================================================
-           PLACEHOLDER: CONTEÚDO DO BÔNUS 1 VIRÁ DEPOIS
+      <!-- HERO -->
+      <div class="bonus-hero">
+        <div class="bonus-hero-badge">📦 Bônus 1</div>
+        <h1 class="bonus-hero-titulo">Guia de Embalagem Artesanal</h1>
+        <p class="bonus-hero-desc">
+          Como cobrar premium com materiais simples — do saquinho básico à caixa que transforma biscoitos em presente inesquecível.
+        </p>
+        <div class="bonus-hero-foto" aria-hidden="true">📦</div>
+        <!-- PLACEHOLDER IMAGEM: mesa de madeira clara com latas, sacos kraft, fitas de juta, etiquetas e biscoitos amanteigados dourados bem organizados, luz natural de janela -->
+      </div>
 
-           Quando tiver o conteúdo pronto, substitua cada seção
-           marcada com <!-- PLACEHOLDER --> pelo texto real.
-           Use a estrutura abaixo como guia.
-           ====================================================== -->
-
-      <section class="bonus-section">
-        <h2>Por que a embalagem importa tanto?</h2>
-        <!-- PLACEHOLDER: texto sobre a importância da embalagem -->
-        <div class="bonus-img-placeholder" aria-hidden="true">
-          📷 Foto: exemplo de embalagem artesanal antes e depois
-        </div>
+      <!-- INTRODUÇÃO -->
+      <section class="bonus-section" aria-label="Introdução">
         <p>
-          <!-- PLACEHOLDER: conteúdo desta seção -->
-          O conteúdo detalhado deste bônus será adicionado em breve.
+          Quando comecei a vender, eu embrulhava os biscoitos em papel filme e colocava num saquinho plástico transparente. Achava que era suficiente — afinal, o gosto era o mesmo.
+        </p>
+        <p>
+          Mas uma vizinha me pediu um lote para dar de presente para a chefe dela. Quando fui entregar, ela olhou para a embalagem e disse: <em>"Tem como caprichar um pouco mais? Precisa parecer um presente de verdade."</em>
+        </p>
+        <p>
+          Aquilo foi como um balde de água fria — e ao mesmo tempo uma revelação. Porque a partir daí comecei a estudar embalagem com a mesma seriedade que estudava receita. E descobri que embalagem não é frescura. É precificação.
+        </p>
+        <p>
+          Este guia é tudo que aprendi nesse processo — sem gastar muito, sem precisar de loja especializada, sem nada sofisticado. Só inteligência, bom gosto e o desejo de cobrar o que você merece.
         </p>
       </section>
 
-      <section class="bonus-section">
-        <h2>Os 3 tipos de embalagem que mais vendem</h2>
+      <!-- CAPÍTULO 1 -->
+      <section class="bonus-section" aria-labelledby="cap1-titulo">
+        <h2 id="cap1-titulo">1. A Regra dos 3 Segundos</h2>
 
-        <!-- PLACEHOLDER: conteúdo das 3 embalagens -->
+        <!-- PLACEHOLDER IMAGEM: três embalagens lado a lado com o mesmo biscoito: lata simples, saquinho kraft e caixa com fita -->
+
+        <p>
+          Quando alguém recebe um produto artesanal, os primeiros 3 segundos são decisivos. Nesse tempo, a pessoa já decidiu (inconscientemente) quanto aquilo vale. Antes de abrir, antes de provar. Só de olhar.
+        </p>
+        <p>
+          Esse é o poder da embalagem. Ela não é acessório — ela é o primeiro sabor.
+        </p>
+
         <div class="bonus-destaque-box">
-          <p>💡 <strong>Dica rápida:</strong> O conteúdo completo deste guia será adicionado aqui em breve.</p>
+          <strong>A Regra dos 3 Segundos:</strong> Se sua embalagem não comunica valor nos primeiros 3 segundos, o preço premium vai parecer abusivo — mesmo que o biscoito seja perfeito.
         </div>
 
+        <h3>Presente vs. Produto</h3>
+        <p>
+          Existe uma diferença fundamental entre vender um produto e entregar um presente. O produto é consumido. O presente é lembrado. E o que as pessoas pagam mais — às vezes o dobro — não é pelo biscoito em si, mas pela sensação de dar algo bonito.
+        </p>
+        <p>
+          Sua missão não é só fazer biscoito gostoso. É fazer a pessoa que compra sentir que está dando algo especial. A embalagem é o que faz essa mágica acontecer.
+        </p>
+
+        <h3>Os 3 tipos de embalagem que você precisa dominar</h3>
         <ul class="bonus-lista">
-          <li><!-- PLACEHOLDER: tipo de embalagem 1 --></li>
-          <li><!-- PLACEHOLDER: tipo de embalagem 2 --></li>
-          <li><!-- PLACEHOLDER: tipo de embalagem 3 --></li>
+          <li><strong>Embalagem básica:</strong> saquinho individual com tag. Boa para vendas unitárias, feiras e pedidos menores. Custo baixo, praticidade alta.</li>
+          <li><strong>Embalagem intermediária:</strong> caixa kraft ou lata com fita e etiqueta. Para presentes, encomendas de aniversário e datas comemorativas.</li>
+          <li><strong>Embalagem premium:</strong> caixa com papel de seda, bilhete manuscrito e fita dupla-face. Para presentes corporativos, casamentos e kits especiais. Justifica preço elevado.</li>
         </ul>
       </section>
 
-      <section class="bonus-section">
-        <h2>Onde comprar embalagens mais baratas</h2>
-        <!-- PLACEHOLDER: lista de fornecedores e lojas -->
+      <!-- CAPÍTULO 2 -->
+      <section class="bonus-section" aria-labelledby="cap2-titulo">
+        <h2 id="cap2-titulo">2. Os 5 Materiais que Você Precisa</h2>
+
+        <!-- PLACEHOLDER IMAGEM: flat lay com cinco materiais separados e identificados: lata, saco kraft, fita, etiqueta e papel manteiga -->
+
         <p>
-          <!-- PLACEHOLDER: conteúdo desta seção -->
-          Lista de fornecedores e onde encontrar materiais será adicionada aqui.
+          Você não precisa de tudo ao mesmo tempo. Comece com 2 ou 3 materiais e vá adicionando conforme seu volume de vendas cresce. O importante é ter qualidade em cada um que escolher.
         </p>
+
+        <!-- Material 1 -->
+        <div class="bonus-material">
+          <h3>1. Saco Kraft</h3>
+          <p>O mais versátil e acessível. Dá sensação artesanal sem esforço. Ótimo para o dia a dia.</p>
+          <h4>Onde comprar</h4>
+          <p>Atacadão de embalagens, Mercado Livre, lojas de festas no atacado. Compre sempre em quantidade.</p>
+          <h4>Tamanhos</h4>
+          <p>Mini (para 3–5 biscoitos), médio (para 10–15 biscoitos), grande (para kits ou presentão).</p>
+          <h4>Quantidade ideal para começar</h4>
+          <p>100 unidades de cada tamanho. O custo unitário cai muito na compra em quantidade.</p>
+          <h4>Erros comuns</h4>
+          <ul class="bonus-lista bonus-lista-erros">
+            <li>Comprar saco muito fino (rasga fácil e parece barato)</li>
+            <li>Não vedar corretamente (biscoito perde crocância)</li>
+            <li>Deixar sem nenhuma identificação ou etiqueta</li>
+          </ul>
+        </div>
+
+        <!-- Material 2 -->
+        <div class="bonus-material">
+          <h3>2. Lata de Biscoito</h3>
+          <p>A lata transforma qualquer biscoito em item colecionável. A pessoa guarda a lata — e junto com ela, guarda a memória do sabor.</p>
+          <h4>Onde comprar</h4>
+          <p>Lojas de embalagem, Americanas, shopee, aliexpress (com antecedência). Lata redonda é mais versátil.</p>
+          <h4>Tamanhos</h4>
+          <p>Pequena (200g), média (400g), grande (700g+). A média é a mais vendida como presente.</p>
+          <h4>Quantidade ideal para começar</h4>
+          <p>12 latas de cada tamanho. São reutilizáveis — invista numa boa quantidade de uma vez.</p>
+          <h4>Erros comuns</h4>
+          <ul class="bonus-lista bonus-lista-erros">
+            <li>Comprar lata com cheiro forte de metal (impregna no biscoito)</li>
+            <li>Não forrar o interior com papel manteiga</li>
+            <li>Deixar biscoitos soltos dentro sem organização</li>
+          </ul>
+        </div>
+
+        <!-- Material 3 -->
+        <div class="bonus-material">
+          <h3>3. Fita de Juta ou Cetim</h3>
+          <p>A fita é o detalhe que eleva qualquer embalagem. Um simples laço já transforma o conjunto.</p>
+          <h4>Onde comprar</h4>
+          <p>Armarinho, lojas de festas, shopee. Juta dá tom rústico; cetim dá elegância. Tenha as duas.</p>
+          <h4>Larguras</h4>
+          <p>Fina (0,5–1cm) para pacotinhos, larga (2–4cm) para caixas e laços.</p>
+          <h4>Quantidade ideal para começar</h4>
+          <p>Rolos de 10m de cada cor/material. Um rolo dura bastante.</p>
+          <h4>Erros comuns</h4>
+          <ul class="bonus-lista bonus-lista-erros">
+            <li>Laço frouxo que desmonta no transporte</li>
+            <li>Usar fita brilhante de natal fora de época (parece descuido)</li>
+            <li>Misturar muitas cores numa só embalagem</li>
+          </ul>
+        </div>
+
+        <!-- Material 4 -->
+        <div class="bonus-material">
+          <h3>4. Etiqueta Kraft</h3>
+          <p>A etiqueta é o "rosto" do produto. Com nome, ingredientes principais e um toque pessoal, ela profissionaliza tudo.</p>
+          <h4>Onde comprar</h4>
+          <p>Shopee, Mercado Livre, gráficas locais. Etiquetas autoadesivas kraft são práticas e bonitas.</p>
+          <h4>Formatos</h4>
+          <p>Redonda (para saquinhos), retangular (para caixas), tags penduradas com furo (para latas e laços).</p>
+          <h4>Quantidade ideal para começar</h4>
+          <p>100 unidades de cada formato. Personalize com carimbo ou escreva à mão.</p>
+          <h4>Erros comuns</h4>
+          <ul class="bonus-lista bonus-lista-erros">
+            <li>Etiqueta torta ou com bolha de ar</li>
+            <li>Letra ilegível ou muito pequena</li>
+            <li>Não informar ingredientes (obrigatório para venda)</li>
+          </ul>
+        </div>
+
+        <!-- Material 5 -->
+        <div class="bonus-material">
+          <h3>5. Papel Manteiga e Papel de Seda</h3>
+          <p>O papel manteiga protege o biscoito dentro da embalagem. O papel de seda decora e surpreende quando a caixa é aberta.</p>
+          <h4>Onde comprar</h4>
+          <p>Supermercado (papel manteiga), lojas de festas e papelaria (papel de seda). Cores neutras funcionam melhor.</p>
+          <h4>Usos</h4>
+          <p>Papel manteiga: forrar latas e caixas. Papel de seda: embrulhar os biscoitos dentro da caixa antes de fechar.</p>
+          <h4>Quantidade ideal para começar</h4>
+          <p>1 rolo de papel manteiga + 50 folhas de papel de seda bege/branco/creme.</p>
+          <h4>Erros comuns</h4>
+          <ul class="bonus-lista bonus-lista-erros">
+            <li>Papel de seda muito colorido que tira o foco dos biscoitos</li>
+            <li>Não usar papel manteiga entre camadas (biscoitos se quebram)</li>
+            <li>Dobrar o papel de seda de qualquer jeito (perde o charme)</li>
+          </ul>
+        </div>
+
       </section>
 
-      <section class="bonus-section">
-        <h2>Como precificar a embalagem no produto final</h2>
-        <!-- PLACEHOLDER: cálculo de precificação incluindo embalagem -->
+      <!-- CAPÍTULO 3 -->
+      <section class="bonus-section" aria-labelledby="cap3-titulo">
+        <h2 id="cap3-titulo">3. 10 Combinações que Funcionam</h2>
+
+        <!-- PLACEHOLDER IMAGEM: dez embalagens artesanais organizadas em uma mesa, todas com tons kraft, creme, caramelo e fitas naturais -->
+
         <p>
-          <!-- PLACEHOLDER: conteúdo desta seção -->
-          Guia de precificação será adicionado aqui.
+          Aqui estão 10 combinações testadas e aprovadas — do mais simples ao mais elaborado. Cada uma com materiais, passo a passo e sugestão de ocasião.
         </p>
+
+        <!-- Combinação 1 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 1 — O Clássico Artesanal</h3>
+          <p class="bonus-combinacao-subtitulo">Simples, bonito, econômico. Ótimo para começar.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Saco kraft médio</li>
+            <li>Fita de juta fina</li>
+            <li>Tag kraft redonda</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Coloque os biscoitos no saco com o lado mais bonito para frente</li>
+            <li>Dobre o topo do saco duas vezes para fechar</li>
+            <li>Passe a fita de juta ao redor e faça um laço simples</li>
+            <li>Prenda a tag na fita com o nome do biscoito e ingredientes</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> vendas do dia a dia, feiras, pedidos avulsos e degustação.</div>
+        </div>
+
+        <!-- Combinação 2 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 2 — A Lata da Vovó</h3>
+          <p class="bonus-combinacao-subtitulo">Nostálgica e encantadora. As pessoas guardam a lata para sempre.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Lata redonda média</li>
+            <li>Papel manteiga para forrar</li>
+            <li>Etiqueta kraft retangular</li>
+            <li>Fita de cetim bege (2cm)</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Forre o interior da lata com papel manteiga cortado em círculo</li>
+            <li>Arrume os biscoitos em camadas, do maior para o menor</li>
+            <li>Entre camadas, coloque papel manteiga para proteger</li>
+            <li>Feche a lata e amarre a fita ao redor com laço no topo</li>
+            <li>Cole a etiqueta na lateral com nome, ingredientes e contato</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> presentes de aniversário, Natal, Dia das Mães e lembrança de casamento.</div>
+        </div>
+
+        <!-- Combinação 3 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 3 — O Mini Presentinho</h3>
+          <p class="bonus-combinacao-subtitulo">Para quando menos é mais. Perfeito para lembrancinhas.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Saco kraft mini</li>
+            <li>Fita de juta dupla (cruzada)</li>
+            <li>Carimbo personalizado ou caneta preta</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Coloque 3–5 biscoitos no saquinho mini</li>
+            <li>Dobre o topo e passe a fita de juta cruzando pelos dois lados</li>
+            <li>Faça um laço duplo no topo — fica mais volumoso e bonito</li>
+            <li>Carimbe ou escreva o nome do sabor no saco com caneta</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> lembrancinhas de festa, lembrança de nascimento, amigo secreto e mimo avulso.</div>
+        </div>
+
+        <!-- Combinação 4 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 4 — A Caixa Surpresa</h3>
+          <p class="bonus-combinacao-subtitulo">A que justifica cobrar o dobro. Abre e dá vontade de chorar de emoção.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Caixa kraft com tampa</li>
+            <li>Papel de seda bege ou branco</li>
+            <li>Fita de cetim larga (4cm)</li>
+            <li>Tag kraft com bilhete escrito à mão</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Forre o interior da caixa com papel de seda deixando dobras visíveis nas laterais</li>
+            <li>Arrume os biscoitos com capricho — os mais bonitos por cima</li>
+            <li>Dobre suavemente o papel de seda sobre os biscoitos antes de fechar</li>
+            <li>Feche a tampa e amarre a fita cruzando pela caixa toda</li>
+            <li>Pendure a tag na fita com o bilhete personalizado</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> presentes corporativos, aniversários especiais, Dia dos Namorados e Natal premium.</div>
+        </div>
+
+        <!-- Combinação 5 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 5 — O Duo Kraft</h3>
+          <p class="bonus-combinacao-subtitulo">Dois sabores, uma embalagem. Aumenta o ticket médio.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Dois sacos kraft pequenos dentro de um grande</li>
+            <li>Divisória de papelão ou papel dobrado</li>
+            <li>Etiqueta com os dois sabores identificados</li>
+            <li>Fita dupla</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Coloque cada sabor em um saco pequeno separado e feche</li>
+            <li>Ponha os dois sacos dentro do grande com divisória entre eles</li>
+            <li>Dobre e amarre como o Clássico Artesanal</li>
+            <li>Cole etiqueta indicando os dois sabores</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> presentes para quem não sabe qual sabor prefere, kits degustação e feiras.</div>
+        </div>
+
+        <!-- Combinação 6 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 6 — A Lata Personalizada</h3>
+          <p class="bonus-combinacao-subtitulo">Com adesivo ou etiqueta especial. Parece produto de loja.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Lata pequena ou média</li>
+            <li>Adesivo personalizado (Canva + impressora) ou etiqueta escrita à mão</li>
+            <li>Papel manteiga interno</li>
+            <li>Fita simples</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Cole o adesivo personalizado na lateral da lata antes de rechear</li>
+            <li>Forre com papel manteiga e organize os biscoitos</li>
+            <li>Feche e amarre a fita — pode ser só um laço simples mesmo</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> fidelizar cliente recorrente, venda online com foto bonita, presente com identidade.</div>
+        </div>
+
+        <!-- Combinação 7 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 7 — O Sachê Rústico</h3>
+          <p class="bonus-combinacao-subtitulo">Charmoso e rápido de montar. Parece feito por artesã experiente.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Saco kraft com fundo reto (fica em pé)</li>
+            <li>Carimbo ou caneta de tinta permanente</li>
+            <li>Grampo de papel</li>
+            <li>Tag redonda furada</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Coloque os biscoitos no saco com fundo reto</li>
+            <li>Dobre o topo duas vezes</li>
+            <li>Grampeie o topo dobrado com dois grampos</li>
+            <li>Sobre os grampos, penda a tag redonda com nome e ingredientes</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> vendas rápidas, feiras e mercadinhos, pedidos de grande volume.</div>
+        </div>
+
+        <!-- Combinação 8 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 8 — A Cesta Composta</h3>
+          <p class="bonus-combinacao-subtitulo">Vários itens, uma apresentação. Ticket alto garantido.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Cesta de palha ou caixa quadrada</li>
+            <li>Papel de seda para forrar</li>
+            <li>Biscoitos em sacos individuais + outros produtos artesanais</li>
+            <li>Fita larga para laço final</li>
+            <li>Celofane para cobrir a cesta inteira</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Forre a cesta com papel de seda colorido (uma cor base)</li>
+            <li>Distribua os itens pelo tamanho — maiores atrás, menores na frente</li>
+            <li>Coloque os biscoitos em sacos individuais visíveis</li>
+            <li>Cubra tudo com celofane transparente e amarre com fita larga</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> Páscoa, Natal, kits corporativos, casamentos e chás de bebê.</div>
+        </div>
+
+        <!-- Combinação 9 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 9 — O Saquinho Enrolado</h3>
+          <p class="bonus-combinacao-subtitulo">Técnica simples que parece profissional na foto.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Papel manteiga grande</li>
+            <li>Barbante de algodão cru</li>
+            <li>Carimbo ou etiqueta</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Coloque os biscoitos no centro do papel manteiga</li>
+            <li>Enrole como se fosse um embrulho de presente, fechando as pontas</li>
+            <li>Amarre com barbante fazendo um laço visível no topo</li>
+            <li>Carimbe ou cole etiqueta por cima do barbante</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> mercados de produtor, feiras orgânicas, estética "fazenda" ou campestre.</div>
+        </div>
+
+        <!-- Combinação 10 -->
+        <div class="bonus-combinacao">
+          <h3>Combinação 10 — A Caixa com Visor</h3>
+          <p class="bonus-combinacao-subtitulo">O produto aparece. A compra por impulso aumenta muito.</p>
+          <h4>Materiais</h4>
+          <ul class="bonus-lista bonus-lista-neutro">
+            <li>Caixa kraft com janela transparente</li>
+            <li>Papel manteiga interno</li>
+            <li>Adesivo de fechamento</li>
+            <li>Etiqueta lateral</li>
+          </ul>
+          <h4>Montagem</h4>
+          <ol class="bonus-lista">
+            <li>Forre o fundo da caixa com papel manteiga</li>
+            <li>Organize os biscoitos mais bonitos na frente (perto da janela)</li>
+            <li>Feche com adesivo kraft</li>
+            <li>Cole etiqueta com nome, ingredientes e sabor</li>
+          </ol>
+          <div class="bonus-ocasiao"><strong>Ideal para:</strong> ponto de venda físico, cafeterias, bancas, exposição em vitrine.</div>
+        </div>
+
       </section>
 
-      <!-- Botão para próximo bônus -->
-      <div style="padding: var(--space-8) 0; text-align: center; border-top: 1px solid var(--border-light); margin-top: var(--space-8);">
-        <p style="color: var(--text-muted); font-size: var(--text-sm); margin-bottom: var(--space-4);">
-          Continue explorando seus bônus:
+      <!-- CAPÍTULO 4 -->
+      <section class="bonus-section" aria-labelledby="cap4-titulo">
+        <h2 id="cap4-titulo">4. Etiquetas que Vendem</h2>
+
+        <!-- PLACEHOLDER IMAGEM: mãos escrevendo uma etiqueta kraft com caneta preta fina, biscoitos ao fundo desfocados -->
+
+        <p>
+          A etiqueta é o momento em que você se apresenta. É quando a cliente decide se vai confiar no seu produto — mesmo antes de provar. Uma etiqueta bem feita comunica: <em>essa mulher sabe o que está fazendo.</em>
         </p>
-        <a href="bonus-2.html" class="btn btn-primary btn-lg">
-          Próximo: Calendário de Datas →
+
+        <h3>A escrita à mão tem um poder que a impressão não tem</h3>
+        <p>
+          Lettering artesanal, mesmo imperfeito, transmite calor humano. Uma etiqueta impressa em casa com tinta seca tem menos charme que uma etiqueta simples escrita com dedicação.
+        </p>
+        <p>
+          Você não precisa ter letra bonita. Precisa ter letra legível e constante. Treine escrever sempre no mesmo tamanho e inclinação — isso já dá identidade.
+        </p>
+
+        <h3>5 estilos de letra que funcionam em embalagem artesanal</h3>
+
+        <div class="bonus-destaque-box">
+          <strong>Bastão reto e fino:</strong> claro, moderno, fácil de ler. Funciona para etiquetas de ingredientes e preço. Use caneta 0.4 ou 0.5mm.
+        </div>
+        <div class="bonus-destaque-box">
+          <strong>Lettering cursivo simples:</strong> dá sensação artesanal e feminina. Treine o "a" minúsculo com rabo — já parece lettering. Caneta brush fina funciona bem.
+        </div>
+        <div class="bonus-destaque-box">
+          <strong>Caixa alta espaçada:</strong> NOME DO BISCOITO em maiúsculas com espaço entre as letras. Parece design profissional e é fácil de fazer.
+        </div>
+        <div class="bonus-destaque-box">
+          <strong>Misto: título em caixa alta + ingredientes em bastão:</strong> hierarquia visual sem precisar de software. O nome grande, as informações menores.
+        </div>
+        <div class="bonus-destaque-box">
+          <strong>Carimbo + complemento à mão:</strong> carimbe o nome da marca, escreva à mão o sabor e ingredientes. Velocidade + personalização.
+        </div>
+
+        <h3>O que toda etiqueta deve ter (por lei e por profissionalismo)</h3>
+        <ul class="bonus-lista">
+          <li>Nome do produto (sabor)</li>
+          <li>Ingredientes principais (especialmente alergênicos: glúten, lactose, ovo)</li>
+          <li>Peso aproximado ou quantidade de biscoitos</li>
+          <li>Data de validade ou "consumir em X dias"</li>
+          <li>Seu nome ou nome da marca + contato (WhatsApp ou Instagram)</li>
+        </ul>
+
+        <h3>Erros que fazem sua etiqueta parecer amadora</h3>
+        <ul class="bonus-lista bonus-lista-erros">
+          <li>Etiqueta colada torta ou com bolha</li>
+          <li>Letra muito pequenininha — parece que está escondendo algo</li>
+          <li>Muita informação em pouco espaço (sufoca o visual)</li>
+          <li>Caneta azul ou colorida em etiqueta kraft (quebra a estética)</li>
+          <li>Não mencionar ingredientes alergênicos</li>
+        </ul>
+
+        <!-- PLACEHOLDER IMAGEM: notebook aberto no Canva com modelos de etiquetas kraft na tela -->
+
+        <h3>Como usar o Canva para criar etiquetas simples</h3>
+        <ol class="bonus-lista">
+          <li>Abra o Canva (canva.com) — é grátis</li>
+          <li>Pesquise "etiqueta redonda" ou "tag kraft" nos templates</li>
+          <li>Escolha um template com tons neutros: bege, marrom, creme</li>
+          <li>Substitua o texto com o nome do seu produto e ingredientes</li>
+          <li>Baixe em PDF de alta qualidade e imprima em papel adesivo kraft</li>
+          <li>Corte com tesoura ou corte a laser (papelarias oferecem esse serviço)</li>
+        </ol>
+
+        <div class="bonus-destaque-box">
+          <strong>Dica de ouro:</strong> crie um template base no Canva e salve. Cada novo sabor é só trocar o texto — você vai ganhar horas de trabalho.
+        </div>
+      </section>
+
+      <!-- CAPÍTULO 5 -->
+      <section class="bonus-section" aria-labelledby="cap5-titulo">
+        <h2 id="cap5-titulo">5. A Arte de Apresentar</h2>
+
+        <!-- PLACEHOLDER IMAGEM: caixa aberta com papel de seda, biscoitos organizados e bilhete manuscrito ao lado -->
+
+        <p>
+          Uma embalagem bem montada segue uma lógica simples: há uma camada externa (o que a pessoa vê primeiro), uma camada interna (o que ela vê ao abrir) e o produto em si. Cada camada deve surpreender.
+        </p>
+
+        <h3>A caixa dentro da caixa</h3>
+        <p>
+          Quando alguém abre uma caixa e encontra papel de seda, a expectativa aumenta. Quando abre o papel de seda e encontra biscoitos perfeitamente organizados, a emoção é real. Você não está vendendo biscoito — está vendendo aquele momento.
+        </p>
+
+        <h3>Os elementos de um presente que encanta</h3>
+        <ul class="bonus-lista">
+          <li><strong>Surpresa visual:</strong> algo inesperado ao abrir — papel de seda colorido, pétala seca, florzinha de tecido</li>
+          <li><strong>Aroma:</strong> biscoito bem embalado que cheira ao abrir já provoca saudade antes mesmo de comer</li>
+          <li><strong>Organização:</strong> biscoitos arrumados com intenção, não jogados. Use tamanhos iguais por camada</li>
+          <li><strong>Personalização:</strong> bilhete, nome da pessoa, detalhes que mostram que você pensou nela</li>
+          <li><strong>Acabamento:</strong> fita, laço, adesivo de fechamento — o que fecha a embalagem com charme</li>
+        </ul>
+
+        <h3>Como dobrar o papel de seda do jeito certo</h3>
+        <ul class="bonus-lista">
+          <li>Use duas folhas sobrepostas, não uma só</li>
+          <li>Coloque no fundo da caixa deixando 10cm sobrando em cada lado</li>
+          <li>Ponha os biscoitos no centro</li>
+          <li>Dobre as laterais por cima dos biscoitos com dobras suaves, não amassadas</li>
+          <li>Não aperte demais — o papel de seda deve parecer leve e arejado</li>
+        </ul>
+
+        <!-- PLACEHOLDER IMAGEM: celular fotografando uma embalagem de biscoitos perto da janela, com fundo limpo -->
+
+        <h3>Como fotografar sua embalagem para vender mais</h3>
+        <p>
+          A foto é a embalagem digital. Antes de qualquer venda online, ela já convenceu (ou afastou) a cliente.
+        </p>
+        <ul class="bonus-lista">
+          <li>Luz natural de janela, nunca flash direto — sombras suaves ficam mais bonitas</li>
+          <li>Fundo limpo: papel kraft, madeira clara, mesa branca — sem bagunça ao redor</li>
+          <li>Fotografe de cima (flat lay) ou levemente inclinado — nunca de frente direto</li>
+          <li>Coloque elementos complementares: biscoito aberto ao lado, fita solta, folhas secas</li>
+          <li>Edite só brilho e contraste — não use filtros pesados que mudam a cor real</li>
+        </ul>
+      </section>
+
+      <!-- CAPÍTULO 6 -->
+      <section class="bonus-section" aria-labelledby="cap6-titulo">
+        <h2 id="cap6-titulo">6. Embalagem por Ocasião</h2>
+
+        <!-- PLACEHOLDER IMAGEM: calendário artesanal com mini embalagens em cada data comemorativa -->
+
+        <p>
+          Cada data pede uma comunicação diferente. Adaptar a embalagem para a ocasião é o que transforma uma venda comum numa venda emocional.
+        </p>
+
+        <ul class="bonus-lista">
+          <li><strong>Dia das Mães:</strong> rosa seco, bilhete manuscrito, fita de cetim rosa ou vinho. "Para a mãe mais doce que existe."</li>
+          <li><strong>Natal:</strong> papel de seda vermelho ou verde, fita dourada, tag com mensagem natalina. Lata com adesivo especial.</li>
+          <li><strong>Dia dos Namorados:</strong> papel de seda rosa, coração impresso na tag, embalagem dupla (um para cada).</li>
+          <li><strong>Páscoa:</strong> palha de papel colorida, cesta pequena, biscoitos em formato de ovo ou coelho se possível.</li>
+          <li><strong>Aniversário:</strong> tag com "Feliz Aniversário, [nome]" escrito à mão. Fita da cor favorita se souber.</li>
+          <li><strong>Chá de bebê:</strong> tons pastéis (azul ou rosa), laço duplo, biscoitos pequenos e delicados.</li>
+          <li><strong>Casamento / Lembrança:</strong> lata pequena, adesivo com nome dos noivos e data. Clássico e inesquecível.</li>
+          <li><strong>Presente corporativo:</strong> caixa com visor, etiqueta profissional com logo da empresa (se pedirem), embalagem neutra e elegante.</li>
+          <li><strong>Amigo secreto:</strong> embalagem surpresa — feche sem mostrar o que tem dentro. Adesivo "Não abrir antes da hora!"</li>
+          <li><strong>Sem motivo (o melhor de todos):</strong> embalagem com bilhete "Só porque você merece." — a que mais fideliza.</li>
+        </ul>
+      </section>
+
+      <!-- CAPÍTULO 7 -->
+      <section class="bonus-section" aria-labelledby="cap7-titulo">
+        <h2 id="cap7-titulo">7. Bilhetes que Tocam o Coração</h2>
+
+        <!-- PLACEHOLDER IMAGEM: pequeno bilhete manuscrito ao lado de uma lata de biscoitos aberta -->
+
+        <p>
+          Um bilhete manuscrito custa nada e vale tudo. É o que faz a cliente guardar a embalagem — e voltar a comprar. Use as mensagens abaixo como base e adapte com o nome da pessoa sempre que possível.
+        </p>
+
+        <blockquote class="bonus-bilhete">
+          "Esses biscoitos foram feitos com manteiga de verdade, farinha de qualidade e muito carinho. Espero que cada mordida traga um sorriso."
+          <cite>— Para clientes de primeira compra</cite>
+        </blockquote>
+
+        <blockquote class="bonus-bilhete">
+          "Obrigada por escolher algo feito à mão. Quando você compra de mim, você está apoiando um sonho real. Do fundo do coração."
+          <cite>— Para clientes fiéis</cite>
+        </blockquote>
+
+        <blockquote class="bonus-bilhete">
+          "Feito especialmente para você. Que esse presente chegue com todo o amor de quem o escolheu."
+          <cite>— Para quem compra como presente</cite>
+        </blockquote>
+
+        <blockquote class="bonus-bilhete">
+          "Biscoito bom é o que combina com chá, café e conversa boa. Aproveite cada um."
+          <cite>— Para kits de degustação</cite>
+        </blockquote>
+
+        <blockquote class="bonus-bilhete">
+          "Você me pediu com tanto carinho que eu coloquei um pouquinho a mais. Shhh — isso é segredo nosso."
+          <cite>— Para clientes especiais ou pedidos grandes</cite>
+        </blockquote>
+      </section>
+
+      <!-- ENCERRAMENTO -->
+      <section class="bonus-section" aria-labelledby="enc-titulo">
+        <h2 id="enc-titulo">Para Fechar</h2>
+
+        <!-- PLACEHOLDER IMAGEM: Rosana sorrindo em uma cozinha simples, segurando uma caixa kraft com biscoitos amanteigados -->
+
+        <p>
+          Embalagem é uma habilidade. Assim como você aprendeu a fazer o ponto certo da massa, você vai aprender a montar embalagens com velocidade e identidade. Quanto mais você faz, mais rápido fica — e mais bonito fica.
+        </p>
+        <p>
+          Não tente acertar tudo de uma vez. Comece com uma combinação só. Domine ela. Depois adicione uma segunda. A consistência cria identidade, e identidade cria marca.
+        </p>
+        <p>
+          E lembre: o preço que você cobra é uma declaração do que você acredita que vale. A embalagem é a prova disso.
+        </p>
+
+        <div class="bonus-destaque-box">
+          <strong>Respeito pela cliente começa antes da mordida.</strong><br>
+          Começa quando ela pega a embalagem na mão, sente o peso, olha o laço, lê o bilhete — e pensa: <em>"Uau, que capricho."</em><br><br>
+          Esse é o momento que você está construindo com este guia.
+        </div>
+      </section>
+
+      <!-- NAVEGAÇÃO PARA PRÓXIMO BÔNUS -->
+      <div class="bonus-nav-continuar">
+        <p>Continue explorando seus bônus:</p>
+        <a href="bonus-2.html" class="btn btn-primary">
+          Bônus 2 — Calendário de Datas e Encomendas →
         </a>
       </div>
 
@@ -168,6 +864,7 @@
     <p>
       <a href="https://wa.me/NUMERO" target="_blank" rel="noopener">Dúvidas? Fale com a Rosana no WhatsApp</a>
     </p>
+    <p>Esta área é exclusiva para alunas da Coletânea Amanteigados da Rosana.</p>
   </footer>
 
   <script src="assets/js/auth.js"></script>
