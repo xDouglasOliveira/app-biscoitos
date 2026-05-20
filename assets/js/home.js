@@ -12,11 +12,14 @@ if (!window.__recipesCache) {
 
 // Mapa de IDs de categoria para nome de exibição
 const NOMES_CATEGORIAS = {
-  classicos:  "Os Clássicos",
-  vendedores: "Sabores que Vendem",
-  premium:    "Premium",
-  sazonais:   "Sazonais",
-  especiais:  "Os Especiais"
+  classicos:   "Os Clássicos",
+  vendedores:  "Sabores que Vendem",
+  premium:     "Premium",
+  brasileiros: "Sabores do Brasil",
+  refrescantes:"Os Refrescantes",
+  sazonais:    "Sazonais",
+  especiais:   "Os Especiais",
+  salgados:    "Os Salgados"
 };
 
 // Converte minutos em texto legível

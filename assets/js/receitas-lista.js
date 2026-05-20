@@ -10,11 +10,14 @@ if (!window.__recipesCache) window.__recipesCache = null;
 
 // Nomes de exibição para as categorias
 const CATEGORIAS_NOME = {
-  classicos:  "Os Clássicos",
-  vendedores: "Sabores que Vendem",
-  premium:    "Premium",
-  sazonais:   "Sazonais",
-  especiais:  "Os Especiais"
+  classicos:   "Os Clássicos",
+  vendedores:  "Sabores que Vendem",
+  premium:     "Premium",
+  brasileiros: "Sabores do Brasil",
+  refrescantes:"Os Refrescantes",
+  sazonais:    "Sazonais",
+  especiais:   "Os Especiais",
+  salgados:    "Os Salgados"
 };
 
 // Estado atual dos filtros

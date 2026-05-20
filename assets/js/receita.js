@@ -10,11 +10,14 @@ if (!window.__recipesCache) window.__recipesCache = null;
 
 // Categorias para exibição
 const CAT_NOMES = {
-  classicos:  "Os Clássicos Indispensáveis",
-  vendedores: "Sabores que Vendem Muito",
-  premium:    "Os Premium",
-  sazonais:   "Os Sazonais",
-  especiais:  "Os Especiais"
+  classicos:   "Os Clássicos Indispensáveis",
+  vendedores:  "Sabores que Vendem Muito",
+  premium:     "Os Premium",
+  brasileiros: "Sabores do Brasil",
+  refrescantes:"Os Refrescantes",
+  sazonais:    "Os Sazonais",
+  especiais:   "Os Especiais",
+  salgados:    "Os Salgados Premium"
 };
 
 // Nomes dos níveis

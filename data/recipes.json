@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalReceitas": 40,
-    "ultimaAtualizacao": "2026-05-19"
+    "totalReceitas": 15,
+    "ultimaAtualizacao": "2026-05-20"
   },
   "categorias": [
     {
@@ -23,16 +23,34 @@
       "ordem": 3
     },
     {
+      "id": "brasileiros",
+      "nome": "Sabores do Brasil",
+      "descricao": "Receitas com ingredientes e referências tipicamente brasileiras",
+      "ordem": 4
+    },
+    {
+      "id": "refrescantes",
+      "nome": "Os Refrescantes",
+      "descricao": "Sabores cítricos e leves para chás e eventos diurnos",
+      "ordem": 5
+    },
+    {
       "id": "sazonais",
       "nome": "Os Sazonais",
       "descricao": "Receitas temáticas para datas específicas do ano",
-      "ordem": 4
+      "ordem": 6
     },
     {
       "id": "especiais",
       "nome": "Os Especiais",
       "descricao": "Sem glúten, sem lactose, veganos — nichos lucrativos",
-      "ordem": 5
+      "ordem": 7
+    },
+    {
+      "id": "salgados",
+      "nome": "Os Salgados Premium",
+      "descricao": "Amanteigados salgados para aperitivos, vinhos e eventos noturnos",
+      "ordem": 8
     }
   ],
   "receitas": [
@@ -47,7 +65,7 @@
       "tempoDescanso": 40,
       "tempoForno": 30,
       "rendimento": "~24 biscoitos",
-      "foto": "/assets/img/receitas/01.jpg",
+      "foto": "assets/img/receitas/01.jpg",
       "fotoAlt": "Shortbread tradicional dourado em lata vintage",
       "tags": ["clássico", "iniciantes", "base", "tradicional"],
       "equipamentos": ["tigela grande", "espátula ou colher de pau", "papel manteiga", "assadeira", "faca afiada", "rolo de macarrão", "garfo"],
@@ -112,7 +130,7 @@
       "tempoDescanso": 40,
       "tempoForno": 25,
       "rendimento": "~28 biscoitos",
-      "foto": "/assets/img/receitas/02.jpg",
+      "foto": "assets/img/receitas/02.jpg",
       "fotoAlt": "Biscoito de café e avelã com chocolate, em lata marrom escuro",
       "tags": ["café", "avelã", "vendas", "popular", "cafeteria"],
       "equipamentos": ["tigela", "espátula", "frigideira seca", "faca ou processador", "papel manteiga", "assadeira"],
@@ -178,7 +196,7 @@
       "tempoDescanso": 45,
       "tempoForno": 22,
       "rendimento": "~24 biscoitos",
-      "foto": "/assets/img/receitas/03.jpg",
+      "foto": "assets/img/receitas/03.jpg",
       "fotoAlt": "Biscoito verde de pistache com pistaches decorando o topo",
       "tags": ["pistache", "premium", "gourmet", "alta margem", "presente"],
       "equipamentos": ["processador", "tigela", "espátula", "papel manteiga", "assadeira", "cortador redondo 4 cm"],
@@ -242,7 +260,7 @@
       "tempoDescanso": 120,
       "tempoForno": 15,
       "rendimento": "~35 biscoitos",
-      "foto": "/assets/img/receitas/04.jpg",
+      "foto": "assets/img/receitas/04.jpg",
       "fotoAlt": "Speculoos de Natal em formato de estrelas e árvores, dourados e crocantes",
       "tags": ["natal", "especiarias", "sazonal", "presente", "dezembro"],
       "equipamentos": ["tigela", "espátula", "papel manteiga", "assadeira", "cortadores temáticos (estrela, árvore, casinha)"],
@@ -309,7 +327,7 @@
       "tempoDescanso": 30,
       "tempoForno": 22,
       "rendimento": "~22 biscoitos",
-      "foto": "/assets/img/receitas/05.jpg",
+      "foto": "assets/img/receitas/05.jpg",
       "fotoAlt": "Biscoito sem glúten redondo com açúcar de confeiteiro polvilhado",
       "tags": ["sem glúten", "especial", "celíaco", "nicho", "diferenciação"],
       "equipamentos": ["tigela", "espátula", "peneira fina", "papel manteiga", "assadeira", "rolo de macarrão"],
@@ -362,6 +380,591 @@
       "embalagem": "Embalagem clean e informativa: lata branca ou off-white com etiqueta destacando 'SEM GLÚTEN' de forma elegante (não gritante). Inclua na etiqueta os ingredientes — transparência é o que cliente celíaco valoriza. Adicione um cartão pequeno explicando o cuidado com contaminação cruzada. Posicione como produto de cuidado e atenção, não como 'doce de dieta'.",
       "publicada": true,
       "destaque": false
+    },
+    {
+      "id": "06",
+      "slug": "limao-siciliano",
+      "nome": "Amanteigado de Limão Siciliano",
+      "categoria": "refrescantes",
+      "nivel": 2,
+      "tempoTotal": 80,
+      "tempoPreparo": 15,
+      "tempoDescanso": 30,
+      "tempoForno": 22,
+      "rendimento": "~25 biscoitos",
+      "foto": "assets/img/receitas/06.jpg",
+      "fotoAlt": "Biscoito amanteigado de limão siciliano dourado com raspas de limão amarelo",
+      "tags": ["limão", "cítrico", "frescor", "chá da tarde", "elegante"],
+      "equipamentos": ["tigela", "espátula", "ralador de casca (zester)", "assadeira"],
+      "historia": "O limão siciliano traz um ar de sofisticação imediato a qualquer doce. O segredo aqui não é o suco, mas sim os óleos essenciais presentes na casca. Esta receita é perfeita para vender como acompanhamento para chás da tarde ou eventos diurnos. O contraste do cítrico com o amanteigado cria uma experiência que faz o cliente comer um atrás do outro sem enjoar.",
+      "ingredientes": [
+        { "id": "ing-06-1", "quantidade": "300g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-06-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "em temperatura ambiente" },
+        { "id": "ing-06-3", "quantidade": "100g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-06-4", "quantidade": "raspas de 2", "item": "limões sicilianos", "obs": "só a parte amarela" },
+        { "id": "ing-06-5", "quantidade": "1 col. de sopa", "item": "suco de limão siciliano", "obs": "" },
+        { "id": "ing-06-6", "quantidade": "1 pitada", "item": "sal", "obs": "" }
+      ],
+      "passos": [
+        { "id": "passo-06-1", "ordem": 1, "texto": "Lave bem os limões e seque. Com um ralador fino, rale apenas a parte amarela da casca. A parte branca amarga a receita.", "tempo": null, "destaque": true },
+        { "id": "passo-06-2", "ordem": 2, "texto": "Em uma tigela, coloque o açúcar e as raspas de limão. Esfregue com as pontas dos dedos por 1 minuto. Isso libera os óleos essenciais da casca e deixa o açúcar perfumado e úmido.", "tempo": 1, "destaque": true },
+        { "id": "passo-06-3", "ordem": 3, "texto": "Adicione a manteiga macia e bata com a espátula até virar um creme claro.", "tempo": 4, "destaque": false },
+        { "id": "passo-06-4", "ordem": 4, "texto": "Adicione o suco de limão e o sal, misturando bem.", "tempo": null, "destaque": false },
+        { "id": "passo-06-5", "ordem": 5, "texto": "Incorpore a farinha peneirada aos poucos, mexendo apenas até a massa se unir.", "tempo": null, "destaque": false },
+        { "id": "passo-06-6", "ordem": 6, "texto": "Forme um disco, embrulhe em plástico filme e leve à geladeira por 30 minutos.", "tempo": 30, "destaque": false },
+        { "id": "passo-06-7", "ordem": 7, "texto": "Pré-aqueça o forno a 160°C.", "tempo": null, "destaque": false },
+        { "id": "passo-06-8", "ordem": 8, "texto": "Abra a massa (1 cm de espessura) entre duas folhas de papel manteiga.", "tempo": null, "destaque": false },
+        { "id": "passo-06-9", "ordem": 9, "texto": "Corte em formatos redondos ou florais e disponha na assadeira forrada.", "tempo": null, "destaque": false },
+        { "id": "passo-06-10", "ordem": 10, "texto": "Asse por 20 a 25 minutos. As bordas devem ficar ligeiramente douradas.", "tempo": 22, "destaque": false },
+        { "id": "passo-06-11", "ordem": 11, "texto": "Deixe esfriar na assadeira.", "tempo": 10, "destaque": false }
+      ],
+      "dicas": [
+        "Esfregar as raspas no açúcar é o truque de mestre das confeitarias francesas. Nunca pule essa etapa.",
+        "Se não achar o limão siciliano, pode usar o tahiti (o verde comum), mas o sabor será mais intenso e menos perfumado.",
+        "Ficam incrivelmente elegantes com uma fina camada de glacê de limão (açúcar de confeiteiro + gotinhas de suco de limão) por cima depois de frios."
+      ],
+      "errosComuns": [
+        "Ralar a parte branca do limão: arruína o biscoito com um sabor amargo persistente.",
+        "Colocar muito suco de limão: a acidez em excesso quebra a estrutura da massa e ela esparrama no forno."
+      ],
+      "precificacao": {
+        "custoMin": 0.40,
+        "custoMax": 0.60,
+        "vendaUnitariaMin": 3.00,
+        "vendaUnitariaMax": 4.50,
+        "vendaLataMin": 35.00,
+        "vendaLataMax": 50.00,
+        "unidadesPorLata": 12,
+        "observacao": "Estes valores são referências. O preço final depende do seu mercado local e custo dos ingredientes."
+      },
+      "embalagem": "Combina perfeitamente com embalagens brancas ou amarelas em tons pastéis. Um saquinho de organza com fita amarela ou uma lata branca com detalhes florais passam a ideia de frescor e delicadeza.",
+      "publicada": true,
+      "destaque": false
+    },
+    {
+      "id": "07",
+      "slug": "gotas-chocolate",
+      "nome": "Amanteigado com Gotas de Chocolate",
+      "categoria": "vendedores",
+      "nivel": 2,
+      "tempoTotal": 90,
+      "tempoPreparo": 20,
+      "tempoDescanso": 45,
+      "tempoForno": 24,
+      "rendimento": "~20 biscoitos",
+      "foto": "assets/img/receitas/07.jpg",
+      "fotoAlt": "Biscoito amanteigado com pedaços rústicos de chocolate nobre",
+      "tags": ["chocolate", "infantil", "popular", "best-seller"],
+      "equipamentos": ["tigela", "espátula", "faca", "assadeira"],
+      "historia": "Não confunda este biscoito com os 'cookies americanos' tradicionais (que são macios no centro). Este é um shortbread firme, que derrete na boca, mas com pedaços rústicos de chocolate nobre. É a união do melhor dos dois mundos. Se você for fazer degustação para atrair clientes, use este. É impossível alguém provar e não querer comprar.",
+      "ingredientes": [
+        { "id": "ing-07-1", "quantidade": "280g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-07-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "em temperatura ambiente" },
+        { "id": "ing-07-3", "quantidade": "90g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-07-4", "quantidade": "100g", "item": "chocolate meio amargo em barra", "obs": "nobre, não cobertura fracionada" },
+        { "id": "ing-07-5", "quantidade": "1 col. de chá", "item": "essência de baunilha", "obs": "" },
+        { "id": "ing-07-6", "quantidade": "1 pitada", "item": "sal", "obs": "" }
+      ],
+      "passos": [
+        { "id": "passo-07-1", "ordem": 1, "texto": "Pique a barra de chocolate em pedaços pequenos e irregulares. O visual rústico é o charme aqui.", "tempo": null, "destaque": true },
+        { "id": "passo-07-2", "ordem": 2, "texto": "Bata a manteiga com o açúcar até formar um creme fofo e claro.", "tempo": 5, "destaque": false },
+        { "id": "passo-07-3", "ordem": 3, "texto": "Adicione a baunilha e o sal. Misture.", "tempo": null, "destaque": false },
+        { "id": "passo-07-4", "ordem": 4, "texto": "Incorpore a farinha de trigo peneirada aos poucos.", "tempo": null, "destaque": false },
+        { "id": "passo-07-5", "ordem": 5, "texto": "Quando a massa estiver quase totalmente unida, adicione os pedaços de chocolate e misture com as mãos rapidamente, apenas para distribuir.", "tempo": null, "destaque": true },
+        { "id": "passo-07-6", "ordem": 6, "texto": "Forme um cilindro grosso com a massa (como um salame), enrole no plástico filme e leve à geladeira por 45 minutos.", "tempo": 45, "destaque": false },
+        { "id": "passo-07-7", "ordem": 7, "texto": "Pré-aqueça o forno a 165°C.", "tempo": null, "destaque": false },
+        { "id": "passo-07-8", "ordem": 8, "texto": "Retire o cilindro da geladeira e, com uma faca lisa e afiada, corte rodelas de 1,5 cm de espessura.", "tempo": null, "destaque": false },
+        { "id": "passo-07-9", "ordem": 9, "texto": "Coloque na assadeira forrada com papel manteiga, deixando espaço entre eles.", "tempo": null, "destaque": false },
+        { "id": "passo-07-10", "ordem": 10, "texto": "Asse por 22 a 25 minutos até dourarem nas bordas.", "tempo": 24, "destaque": false },
+        { "id": "passo-07-11", "ordem": 11, "texto": "Deixe esfriar completamente na assadeira.", "tempo": 10, "destaque": false }
+      ],
+      "dicas": [
+        "Use chocolate nobre, de preferência meio amargo (50% a 70% cacau). O contraste do chocolate amargo com a massa doce é o que vicia o paladar.",
+        "O formato de rodelas cortadas à faca agiliza a produção. Você não perde tempo abrindo massa com rolo.",
+        "Você pode congelar os cilindros de massa crua por até 2 meses e cortar apenas a quantidade de pedidos do dia."
+      ],
+      "errosComuns": [
+        "Usar cobertura fracionada sabor chocolate: deixa gosto de gordura na boca e acaba com a qualidade premium do produto.",
+        "Bater demais a massa após colocar o chocolate: o calor das mãos derrete os pedaços e a massa fica manchada."
+      ],
+      "precificacao": {
+        "custoMin": 0.50,
+        "custoMax": 0.80,
+        "vendaUnitariaMin": 3.50,
+        "vendaUnitariaMax": 5.00,
+        "vendaLataMin": 20.00,
+        "vendaLataMax": 28.00,
+        "unidadesPorLata": 6,
+        "observacao": "O custo varia com o preço do chocolate. Chocolate nobre encarece mas é o que diferencia o produto."
+      },
+      "embalagem": "Sacos de papel kraft com visor transparente e fechamento em adesivo personalizado. Remete a um produto rústico, de padaria artesanal de alta qualidade.",
+      "publicada": true,
+      "destaque": true
+    },
+    {
+      "id": "08",
+      "slug": "marmore-mesclado",
+      "nome": "Amanteigado Mármore (Baunilha e Cacau)",
+      "categoria": "classicos",
+      "nivel": 3,
+      "tempoTotal": 100,
+      "tempoPreparo": 20,
+      "tempoDescanso": 60,
+      "tempoForno": 21,
+      "rendimento": "~24 biscoitos",
+      "foto": "assets/img/receitas/08.jpg",
+      "fotoAlt": "Biscoito mármore com listras de baunilha e cacau intercaladas",
+      "tags": ["visual", "duas cores", "chocolate", "baunilha", "clássico"],
+      "equipamentos": ["duas tigelas", "espátula", "papel manteiga", "assadeira"],
+      "historia": "O amanteigado mármore chama atenção pela estética. A mistura de cores cria um padrão único em cada biscoito, entregando dois sabores na mesma mordida. Eles parecem difíceis de fazer, o que aumenta a percepção de valor na cabeça do seu cliente, mas na verdade, são apenas duas massas básicas misturadas de forma inteligente.",
+      "ingredientes": [
+        { "id": "ing-08-1", "quantidade": "150g", "item": "farinha de trigo", "obs": "para a massa de baunilha" },
+        { "id": "ing-08-2", "quantidade": "100g", "item": "manteiga sem sal", "obs": "macia — para a massa de baunilha" },
+        { "id": "ing-08-3", "quantidade": "50g", "item": "açúcar refinado", "obs": "para a massa de baunilha" },
+        { "id": "ing-08-4", "quantidade": "1 col. de chá", "item": "baunilha", "obs": "para a massa de baunilha" },
+        { "id": "ing-08-5", "quantidade": "130g", "item": "farinha de trigo", "obs": "para a massa de cacau" },
+        { "id": "ing-08-6", "quantidade": "20g", "item": "cacau em pó 100%", "obs": "para a massa de cacau" },
+        { "id": "ing-08-7", "quantidade": "100g", "item": "manteiga sem sal", "obs": "macia — para a massa de cacau" },
+        { "id": "ing-08-8", "quantidade": "50g", "item": "açúcar refinado", "obs": "para a massa de cacau" }
+      ],
+      "passos": [
+        { "id": "passo-08-1", "ordem": 1, "texto": "Faça a massa de baunilha: bata a manteiga com o açúcar, adicione a baunilha e depois a farinha. Forme uma bola e reserve.", "tempo": 10, "destaque": false },
+        { "id": "passo-08-2", "ordem": 2, "texto": "Faça a massa de cacau: misture o cacau com a farinha. Bata a manteiga com açúcar e adicione os secos. Forme uma bola e reserve.", "tempo": 10, "destaque": false },
+        { "id": "passo-08-3", "ordem": 3, "texto": "Pegue pedaços irregulares (do tamanho de nozes) das duas massas e junte-os, apertando levemente para que grudem, mas não amasse demais para não virar uma cor só.", "tempo": null, "destaque": true },
+        { "id": "passo-08-4", "ordem": 4, "texto": "Forme um cilindro único com essa mistura de cores, enrole em plástico filme e role na bancada para alisar.", "tempo": null, "destaque": false },
+        { "id": "passo-08-5", "ordem": 5, "texto": "Leve à geladeira por 1 hora. O cilindro precisa estar bem firme.", "tempo": 60, "destaque": true },
+        { "id": "passo-08-6", "ordem": 6, "texto": "Pré-aqueça o forno a 160°C.", "tempo": null, "destaque": false },
+        { "id": "passo-08-7", "ordem": 7, "texto": "Com uma faca afiada, corte rodelas de 1 cm de espessura e coloque na assadeira forrada com papel manteiga.", "tempo": null, "destaque": false },
+        { "id": "passo-08-8", "ordem": 8, "texto": "Asse por 20 a 22 minutos. Atenção: a parte de baunilha deve ficar levemente dourada, não deixe escurecer muito.", "tempo": 21, "destaque": false },
+        { "id": "passo-08-9", "ordem": 9, "texto": "Esfrie na assadeira.", "tempo": 10, "destaque": false }
+      ],
+      "dicas": [
+        "Use cacau em pó 100% ou 70%, nunca achocolatado. O achocolatado tem muito açúcar e vai alterar a textura, além de não dar a cor escura e bonita.",
+        "Para um visual ainda mais impressionante, role o cilindro de massa em açúcar cristal antes de fatiar. Isso cria uma borda crocante e brilhante."
+      ],
+      "errosComuns": [
+        "Amassar demais na hora de unir as massas: o contraste de cores some e vira um marrom feio e desbotado.",
+        "Cortar com faca cega: o formato redondo achata e o biscoito perde a beleza."
+      ],
+      "precificacao": {
+        "custoMin": 0.35,
+        "custoMax": 0.55,
+        "vendaUnitariaMin": 2.50,
+        "vendaUnitariaMax": 4.00,
+        "vendaLataMin": 35.00,
+        "vendaLataMax": 55.00,
+        "unidadesPorLata": 12,
+        "observacao": "Lata mista com Mármore + Tradicional aumenta o ticket médio e surpreende o cliente."
+      },
+      "embalagem": "Como eles são muito bonitos, a embalagem precisa ter transparência. Caixas de acetato com fita preta ou dourada dão um contraste lindo com as listras dos biscoitos.",
+      "publicada": true,
+      "destaque": false
+    },
+    {
+      "id": "09",
+      "slug": "red-velvet",
+      "nome": "Amanteigado Red Velvet",
+      "categoria": "premium",
+      "nivel": 3,
+      "tempoTotal": 105,
+      "tempoPreparo": 20,
+      "tempoDescanso": 45,
+      "tempoForno": 20,
+      "rendimento": "~22 biscoitos",
+      "foto": "assets/img/receitas/09.jpg",
+      "fotoAlt": "Biscoitos Red Velvet vermelhos em formato de coração",
+      "tags": ["red velvet", "instagram", "dia dos namorados", "luxo", "cor"],
+      "equipamentos": ["tigela", "espátula", "corante gel vermelho", "assadeira"],
+      "historia": "Esta é a receita para fazer o Instagram da sua confeitaria caseira bombar. O Red Velvet tem um apelo visual gigantesco. O vermelho vivo contrastando com um leve toque de chocolate e baunilha atrai os olhares e o desejo de imediato. É o produto perfeito para vender em datas como Dia dos Namorados, Dia das Mães ou para montar caixas de presentes sofisticadas.",
+      "ingredientes": [
+        { "id": "ing-09-1", "quantidade": "280g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-09-2", "quantidade": "10g", "item": "cacau em pó", "obs": "1 colher de sopa" },
+        { "id": "ing-09-3", "quantidade": "200g", "item": "manteiga sem sal", "obs": "macia" },
+        { "id": "ing-09-4", "quantidade": "100g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-09-5", "quantidade": "1 col. de chá", "item": "essência de baunilha", "obs": "" },
+        { "id": "ing-09-6", "quantidade": "1 a 2 col. de chá", "item": "corante alimentício vermelho", "obs": "obrigatoriamente em GEL ou pó lipossolúvel" },
+        { "id": "ing-09-7", "quantidade": "1 pitada", "item": "sal", "obs": "" }
+      ],
+      "passos": [
+        { "id": "passo-09-1", "ordem": 1, "texto": "Em uma tigela, bata a manteiga com o açúcar até formar um creme.", "tempo": 5, "destaque": false },
+        { "id": "passo-09-2", "ordem": 2, "texto": "Adicione a baunilha e o corante em gel. Comece com 1 colher de chá e misture. A cor crua deve ser um vermelho intenso, pois ela desbota um pouco ao assar.", "tempo": null, "destaque": true },
+        { "id": "passo-09-3", "ordem": 3, "texto": "Peneire juntos a farinha, o cacau e o sal. O cacau é o que dá o fundo de sabor característico do Red Velvet e escurece o vermelho, deixando-o elegante.", "tempo": null, "destaque": false },
+        { "id": "passo-09-4", "ordem": 4, "texto": "Incorpore os secos ao creme vermelho até formar a massa.", "tempo": null, "destaque": false },
+        { "id": "passo-09-5", "ordem": 5, "texto": "Embrulhe em plástico filme e gele por 45 minutos.", "tempo": 45, "destaque": false },
+        { "id": "passo-09-6", "ordem": 6, "texto": "Pré-aqueça o forno a 155°C — temperatura bem baixa, crucial para manter a cor.", "tempo": null, "destaque": true },
+        { "id": "passo-09-7", "ordem": 7, "texto": "Abra a massa com 1 cm de espessura e corte com cortadores de coração ou redondos.", "tempo": null, "destaque": false },
+        { "id": "passo-09-8", "ordem": 8, "texto": "Coloque na assadeira forrada com papel manteiga.", "tempo": null, "destaque": false },
+        { "id": "passo-09-9", "ordem": 9, "texto": "Asse por 18 a 22 minutos. Atenção redobrada: se o forno estiver quente ou assar demais, o vermelho vira marrom e perde todo o encanto.", "tempo": 20, "destaque": false },
+        { "id": "passo-09-10", "ordem": 10, "texto": "Esfrie na assadeira.", "tempo": 10, "destaque": false }
+      ],
+      "dicas": [
+        "Corante TEM que ser em gel ou pó lipossolúvel. Corante líquido altera a estrutura da massa e não dá a cor viva.",
+        "Mergulhar metade deste biscoito em chocolate branco derretido (e esperar secar) duplica o valor percebido do produto."
+      ],
+      "errosComuns": [
+        "Forno acima de 160°C: o biscoito queima rapidamente por fora e fica com uma cor de ferrugem.",
+        "Não usar o cacau: sem o cacau, ele fica apenas um biscoito vermelho com gosto de massa básica, perdendo a essência veludo vermelho."
+      ],
+      "precificacao": {
+        "custoMin": 0.45,
+        "custoMax": 0.65,
+        "vendaUnitariaMin": 4.00,
+        "vendaUnitariaMax": 6.00,
+        "vendaLataMin": 45.00,
+        "vendaLataMax": 65.00,
+        "unidadesPorLata": 10,
+        "observacao": "Caixa com 10 corações para Dia dos Namorados é um dos produtos com maior margem de lucro da linha."
+      },
+      "embalagem": "Caixas kraft rígidas, fundo forrado com papel seda branco e uma fita de cetim vermelha ou bordô fechando. Se usar formato de coração, é o presente de Dia dos Namorados mais lucrativo que você pode fazer.",
+      "publicada": true,
+      "destaque": true
+    },
+    {
+      "id": "10",
+      "slug": "coco-queimado",
+      "nome": "Amanteigado de Coco Queimado",
+      "categoria": "brasileiros",
+      "nivel": 2,
+      "tempoTotal": 90,
+      "tempoPreparo": 20,
+      "tempoDescanso": 30,
+      "tempoForno": 22,
+      "rendimento": "~25 biscoitos",
+      "foto": "assets/img/receitas/10.jpg",
+      "fotoAlt": "Biscoito amanteigado de coco queimado dourado e rústico",
+      "tags": ["coco", "tropical", "brasileiro", "café", "rústico"],
+      "equipamentos": ["frigideira", "tigela", "espátula", "assadeira"],
+      "historia": "Juntamos a técnica do biscoito europeu com um dos ingredientes mais amados do Brasil. O segredo desta receita é não usar apenas o coco ralado comum, mas sim tostá-lo na frigideira antes. Isso extrai os óleos essenciais e dá um sabor caramelizado profundo que nenhum aromatizante artificial consegue copiar. Um sucesso absoluto no boca a boca.",
+      "ingredientes": [
+        { "id": "ing-10-1", "quantidade": "250g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-10-2", "quantidade": "50g", "item": "coco ralado em flocos", "obs": "sem açúcar" },
+        { "id": "ing-10-3", "quantidade": "200g", "item": "manteiga sem sal", "obs": "macia" },
+        { "id": "ing-10-4", "quantidade": "100g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-10-5", "quantidade": "1 pitada", "item": "sal", "obs": "" },
+        { "id": "ing-10-6", "quantidade": "1/2 col. de chá", "item": "baunilha", "obs": "" }
+      ],
+      "passos": [
+        { "id": "passo-10-1", "ordem": 1, "texto": "Em uma frigideira seca, em fogo baixo, toste o coco ralado, mexendo sem parar até ficar dourado e perfumado (cerca de 5 minutos). Transfira para um prato e deixe esfriar completamente.", "tempo": 5, "destaque": true },
+        { "id": "passo-10-2", "ordem": 2, "texto": "Bata a manteiga macia com o açúcar até esbranquiçar.", "tempo": 5, "destaque": false },
+        { "id": "passo-10-3", "ordem": 3, "texto": "Adicione a baunilha e o sal.", "tempo": null, "destaque": false },
+        { "id": "passo-10-4", "ordem": 4, "texto": "Incorpore o coco queimado já frio.", "tempo": null, "destaque": false },
+        { "id": "passo-10-5", "ordem": 5, "texto": "Adicione a farinha de trigo peneirada, misturando até a massa soltar das mãos.", "tempo": null, "destaque": false },
+        { "id": "passo-10-6", "ordem": 6, "texto": "Forme uma bola, embrulhe no filme e deixe na geladeira por 30 minutos.", "tempo": 30, "destaque": false },
+        { "id": "passo-10-7", "ordem": 7, "texto": "Pré-aqueça o forno a 160°C.", "tempo": null, "destaque": false },
+        { "id": "passo-10-8", "ordem": 8, "texto": "Abra a massa com quase 1 cm de espessura e use um cortador redondo ondulado.", "tempo": null, "destaque": false },
+        { "id": "passo-10-9", "ordem": 9, "texto": "Coloque na assadeira e asse por 20 a 25 minutos. Este biscoito pode ficar um tom mais dourado que o shortbread tradicional.", "tempo": 22, "destaque": false },
+        { "id": "passo-10-10", "ordem": 10, "texto": "Deixe esfriar antes de manusear.", "tempo": 10, "destaque": false }
+      ],
+      "dicas": [
+        "Use coco em flocos em vez de coco ralado muito fino. A textura dos flocos no meio da massa derretendo na boca é o grande diferencial.",
+        "Para um acabamento visual mais bonito, pincele clara de ovo ligeiramente batida e jogue um pouco de coco ralado cru por cima de cada biscoito antes de ir ao forno."
+      ],
+      "errosComuns": [
+        "Usar coco adoçado de pacotinho sem ajustar a receita: o biscoito fica enjoativo e queima rápido no forno.",
+        "Colocar o coco quente na massa: vai derreter a manteiga e desandar a estrutura do biscoito."
+      ],
+      "precificacao": {
+        "custoMin": 0.40,
+        "custoMax": 0.60,
+        "vendaUnitariaMin": 3.00,
+        "vendaUnitariaMax": 4.50,
+        "vendaLataMin": 35.00,
+        "vendaLataMax": 45.00,
+        "unidadesPorLata": 12,
+        "observacao": "Pesquise coco em flocos sem açúcar em atacadistas para reduzir o custo."
+      },
+      "embalagem": "Lata em tom de cobre ou papelão kraft com barbante de rami. Combina muito com uma estética rústica e tropical. Uma tag com folhas de palmeira minimalistas completa o visual.",
+      "publicada": true,
+      "destaque": false
+    },
+    {
+      "id": "11",
+      "slug": "casadinho-goiabada",
+      "nome": "Casadinho de Goiabada Premium",
+      "categoria": "brasileiros",
+      "nivel": 3,
+      "tempoTotal": 120,
+      "tempoPreparo": 30,
+      "tempoDescanso": 30,
+      "tempoForno": 17,
+      "rendimento": "~20 casadinhos",
+      "foto": "assets/img/receitas/11.jpg",
+      "fotoAlt": "Casadinhos de goiabada com açúcar cristal brilhante",
+      "tags": ["goiabada", "clássico", "festas", "casamento", "campeão de vendas"],
+      "equipamentos": ["tigela", "espátula", "rolo", "cortador redondo pequeno", "panela pequena"],
+      "historia": "O casadinho é aquele produto que vende o ano inteiro, não importa a época. O diferencial do seu produto para o de padaria será a massa que derrete de verdade (com a nossa base escocesa) e uma goiabada derretida e cremosa no meio, e não aquele recheio duro e seco comum por aí. Ao vender, posicione como 'Casadinho Gourmet'.",
+      "ingredientes": [
+        { "id": "ing-11-1", "quantidade": "300g", "item": "farinha de trigo", "obs": "para a massa" },
+        { "id": "ing-11-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "macia" },
+        { "id": "ing-11-3", "quantidade": "100g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-11-4", "quantidade": "1 pitada", "item": "sal", "obs": "" },
+        { "id": "ing-11-5", "quantidade": "150g", "item": "goiabada cascão ou em barra firme", "obs": "para o recheio" },
+        { "id": "ing-11-6", "quantidade": "2 col. de sopa", "item": "água", "obs": "para o recheio" },
+        { "id": "ing-11-7", "quantidade": "a gosto", "item": "açúcar cristal", "obs": "para o acabamento" }
+      ],
+      "passos": [
+        { "id": "passo-11-1", "ordem": 1, "texto": "Prepare a massa básica: bata manteiga e açúcar, adicione sal e farinha.", "tempo": 10, "destaque": false },
+        { "id": "passo-11-2", "ordem": 2, "texto": "Gele a massa por 30 minutos.", "tempo": 30, "destaque": false },
+        { "id": "passo-11-3", "ordem": 3, "texto": "Pré-aqueça o forno a 160°C.", "tempo": null, "destaque": false },
+        { "id": "passo-11-4", "ordem": 4, "texto": "Abra a massa um pouco mais fina (cerca de 0,4 cm), pois vamos empilhar dois biscoitos.", "tempo": null, "destaque": true },
+        { "id": "passo-11-5", "ordem": 5, "texto": "Corte discos de 3 cm (bem pequenos, tamanho de um brigadeiro).", "tempo": null, "destaque": false },
+        { "id": "passo-11-6", "ordem": 6, "texto": "Asse por 15 a 18 minutos. Eles devem ficar bem clarinhos. Deixe esfriar completamente.", "tempo": 17, "destaque": false },
+        { "id": "passo-11-7", "ordem": 7, "texto": "Para o recheio: pique a goiabada, coloque em uma panelinha com a água e leve ao fogo baixo, mexendo até derreter e virar um creme espesso. Deixe amornar — não use quente senão escorre.", "tempo": 10, "destaque": true },
+        { "id": "passo-11-8", "ordem": 8, "texto": "Coloque uma gota generosa de goiabada no centro de um biscoito e aperte outro por cima suavemente, até a goiabada chegar na bordinha.", "tempo": null, "destaque": false },
+        { "id": "passo-11-9", "ordem": 9, "texto": "Passe as laterais do casadinho no açúcar cristal para um acabamento brilhante e profissional.", "tempo": null, "destaque": false }
+      ],
+      "dicas": [
+        "Use goiabada de boa qualidade, preferencialmente a 'cascão', que tem um sabor de fruta mais intenso e menos gosto de açúcar puro.",
+        "Você pode substituir a goiabada por doce de leite firme, criando o casadinho de doce de leite. É ter dois produtos no cardápio fazendo apenas uma massa."
+      ],
+      "errosComuns": [
+        "Fazer a massa grossa demais: fica desproporcional e difícil de morder.",
+        "Usar recheio líquido: vaza pelos lados, mela a embalagem e o biscoito amolece em um dia."
+      ],
+      "precificacao": {
+        "custoMin": 0.60,
+        "custoMax": 0.90,
+        "vendaUnitariaMin": 3.50,
+        "vendaUnitariaMax": 5.00,
+        "vendaLataMin": 45.00,
+        "vendaLataMax": 60.00,
+        "unidadesPorLata": 15,
+        "observacao": "Venda como 'Casadinho Gourmet' para justificar o preço premium em relação ao de padaria."
+      },
+      "embalagem": "Caixinhas de base branca com tampa de acetato transparente (para a pessoa ver os casadinhos alinhados). O contraste da massa clara com a listra vermelha da goiabada é o que vende o produto.",
+      "publicada": true,
+      "destaque": false
+    },
+    {
+      "id": "12",
+      "slug": "canela-acucar",
+      "nome": "Amanteigado de Canela",
+      "categoria": "vendedores",
+      "nivel": 1,
+      "tempoTotal": 75,
+      "tempoPreparo": 15,
+      "tempoDescanso": null,
+      "tempoForno": 20,
+      "rendimento": "~24 biscoitos",
+      "foto": "assets/img/receitas/12.jpg",
+      "fotoAlt": "Biscoito de canela com crosta crocante e bordas rachadas rústicas",
+      "tags": ["canela", "café", "simples", "outono", "rápido"],
+      "equipamentos": ["tigela", "espátula", "prato fundo", "assadeira"],
+      "historia": "Inspirado no famoso 'Snickerdoodle' americano, mas usando a base do nosso amanteigado de derreter na boca. Esta é a receita mais rápida da lista porque não precisa usar o rolo de massa. O cheiro que isso deixa na casa enquanto assa é indescritível e a crosta de canela crocante cria um contraste perfeito com o centro macio e amanteigado.",
+      "ingredientes": [
+        { "id": "ing-12-1", "quantidade": "300g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-12-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "macia" },
+        { "id": "ing-12-3", "quantidade": "100g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-12-4", "quantidade": "1 col. de chá", "item": "baunilha", "obs": "" },
+        { "id": "ing-12-5", "quantidade": "1 pitada", "item": "sal", "obs": "" },
+        { "id": "ing-12-6", "quantidade": "4 col. de sopa", "item": "açúcar cristal", "obs": "para a cobertura" },
+        { "id": "ing-12-7", "quantidade": "1 col. de sopa cheia", "item": "canela em pó", "obs": "para a cobertura" }
+      ],
+      "passos": [
+        { "id": "passo-12-1", "ordem": 1, "texto": "Misture o açúcar cristal e a canela em um prato fundo. Reserve.", "tempo": null, "destaque": false },
+        { "id": "passo-12-2", "ordem": 2, "texto": "Na tigela principal, bata a manteiga macia com o açúcar refinado até virar um creme claro.", "tempo": 5, "destaque": false },
+        { "id": "passo-12-3", "ordem": 3, "texto": "Adicione a baunilha e o sal.", "tempo": null, "destaque": false },
+        { "id": "passo-12-4", "ordem": 4, "texto": "Adicione a farinha e incorpore até formar a massa.", "tempo": null, "destaque": false },
+        { "id": "passo-12-5", "ordem": 5, "texto": "Pegue porções (cerca de 20g) e enrole bolinhas com as mãos, do tamanho de um brigadeiro médio.", "tempo": null, "destaque": false },
+        { "id": "passo-12-6", "ordem": 6, "texto": "Role cada bolinha na mistura de açúcar com canela até ficar completamente coberta.", "tempo": null, "destaque": false },
+        { "id": "passo-12-7", "ordem": 7, "texto": "Coloque na assadeira forrada e, com o fundo de um copo liso, achate cada bolinha suavemente até ficar com cerca de 1 cm de espessura. As bordinhas vão rachar levemente — esse é o visual característico.", "tempo": null, "destaque": true },
+        { "id": "passo-12-8", "ordem": 8, "texto": "Asse em forno pré-aquecido a 165°C por 18 a 22 minutos.", "tempo": 20, "destaque": false },
+        { "id": "passo-12-9", "ordem": 9, "texto": "Deixe esfriar na assadeira.", "tempo": 10, "destaque": false }
+      ],
+      "dicas": [
+        "Esta é a melhor receita para quando você estiver com pressa. Fica pronto para o forno em 15 minutos — não precisa de rolo nem geladeira.",
+        "Açúcar cristal na cobertura é muito melhor que o refinado, pois ele não derrete no forno e cria uma crosta brilhante e texturizada que valoriza o produto."
+      ],
+      "errosComuns": [
+        "Achatar demais a bolinha: o biscoito fica fino, torra rápido e vira uma pedra.",
+        "Forno alto: o açúcar cristal com canela da cobertura queima e amarga."
+      ],
+      "precificacao": {
+        "custoMin": 0.35,
+        "custoMax": 0.50,
+        "vendaUnitariaMin": 2.50,
+        "vendaUnitariaMax": 4.00,
+        "vendaLataMin": 15.00,
+        "vendaLataMax": 22.00,
+        "unidadesPorLata": 6,
+        "observacao": "Pacote com 6 unidades para acompanhar café. Alta rotatividade e custo muito baixo."
+      },
+      "embalagem": "Sacos herméticos (zip lock) de papel kraft com visor. Transmite a sensação de conforto, comfort food e lanche de fim de tarde.",
+      "publicada": true,
+      "destaque": false
+    },
+    {
+      "id": "13",
+      "slug": "matcha",
+      "nome": "Amanteigado de Matcha",
+      "categoria": "premium",
+      "nivel": 3,
+      "tempoTotal": 100,
+      "tempoPreparo": 20,
+      "tempoDescanso": 45,
+      "tempoForno": 19,
+      "rendimento": "~22 biscoitos",
+      "foto": "assets/img/receitas/13.jpg",
+      "fotoAlt": "Biscoitos de matcha verde vibrante com ponta em chocolate branco",
+      "tags": ["matcha", "chá verde", "gringo", "tendência", "sofisticado"],
+      "equipamentos": ["tigela", "peneira", "papel manteiga", "assadeira"],
+      "historia": "Se você quer se posicionar como uma marca boutique, o Matcha é obrigatório. Esta é a maior tendência gringa do momento nas padarias artesanais de Nova York e Paris. O pó de chá verde japonês traz uma cor verde natural lindíssima e um sabor levemente herbáceo que quebra o doce da manteiga. É um produto de nicho, voltado para clientes dispostos a pagar mais caro por sofisticação.",
+      "ingredientes": [
+        { "id": "ing-13-1", "quantidade": "280g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-13-2", "quantidade": "15g", "item": "matcha em pó culinário", "obs": "chá verde japonês em pó — não usar chá de sachê" },
+        { "id": "ing-13-3", "quantidade": "200g", "item": "manteiga sem sal", "obs": "macia" },
+        { "id": "ing-13-4", "quantidade": "100g", "item": "açúcar de confeiteiro", "obs": "não refinado — o de confeiteiro é fundamental aqui" },
+        { "id": "ing-13-5", "quantidade": "1 pitada", "item": "sal", "obs": "" }
+      ],
+      "passos": [
+        { "id": "passo-13-1", "ordem": 1, "texto": "Peneire muito bem a farinha de trigo, o matcha e o sal em uma tigela. O matcha costuma empedrar, então a peneira é obrigatória.", "tempo": null, "destaque": true },
+        { "id": "passo-13-2", "ordem": 2, "texto": "Bata a manteiga com o açúcar de confeiteiro até formar um creme pálido.", "tempo": 5, "destaque": false },
+        { "id": "passo-13-3", "ordem": 3, "texto": "Incorpore os ingredientes secos aos poucos, misturando sem sovar, apenas até não ver mais farinha branca ou verde escuro.", "tempo": null, "destaque": false },
+        { "id": "passo-13-4", "ordem": 4, "texto": "A massa ficará com um verde vibrante. Embrulhe em filme plástico e refrigere por 45 minutos.", "tempo": 45, "destaque": false },
+        { "id": "passo-13-5", "ordem": 5, "texto": "Pré-aqueça o forno a 155°C — temperatura bem baixa.", "tempo": null, "destaque": true },
+        { "id": "passo-13-6", "ordem": 6, "texto": "Abra a massa (1 cm de espessura) entre papéis manteiga.", "tempo": null, "destaque": false },
+        { "id": "passo-13-7", "ordem": 7, "texto": "Corte em formato retangular ou quadrado — formatos modernos e minimalistas, combinando com a proposta do Matcha.", "tempo": null, "destaque": false },
+        { "id": "passo-13-8", "ordem": 8, "texto": "Asse por 18 a 20 minutos. Não deixe as bordas dourarem — se dourar, a cor verde fica manchada. Eles parecem um pouco moles ao sair, mas firmam ao esfriar.", "tempo": 19, "destaque": true },
+        { "id": "passo-13-9", "ordem": 9, "texto": "Esfrie na assadeira.", "tempo": 10, "destaque": false }
+      ],
+      "dicas": [
+        "Use açúcar de confeiteiro, não o refinado. O de confeiteiro garante a textura veludo que o amanteigado de matcha exige.",
+        "Pode finalizar mergulhando a pontinha do biscoito em chocolate branco. A combinação de cores (verde e branco) vende muito bem."
+      ],
+      "errosComuns": [
+        "Usar chá verde comum de sachê batido no liquidificador: não funciona, a cor fica feia e a textura cheia de fiapos. Tem que ser o pó de Matcha.",
+        "Forno alto: o verde desbota e amarela completamente."
+      ],
+      "precificacao": {
+        "custoMin": 0.70,
+        "custoMax": 1.20,
+        "vendaUnitariaMin": 5.00,
+        "vendaUnitariaMax": 7.50,
+        "vendaLataMin": 55.00,
+        "vendaLataMax": 75.00,
+        "unidadesPorLata": 10,
+        "observacao": "O matcha bom é um ingrediente premium. Pesquise fornecedores online para conseguir preço de atacado."
+      },
+      "embalagem": "Extremo minimalismo. Caixas ou latas brancas opacas com uma etiqueta preta de fonte limpa (sem cursiva). A beleza e a cor do produto devem ser o foco.",
+      "publicada": true,
+      "destaque": false
+    },
+    {
+      "id": "14",
+      "slug": "laranja-cardamomo",
+      "nome": "Amanteigado Laranja com Cardamomo",
+      "categoria": "premium",
+      "nivel": 2,
+      "tempoTotal": 90,
+      "tempoPreparo": 15,
+      "tempoDescanso": 35,
+      "tempoForno": 22,
+      "rendimento": "~24 biscoitos",
+      "foto": "assets/img/receitas/14.jpg",
+      "fotoAlt": "Biscoito amanteigado de laranja com cardamomo em formato de losango",
+      "tags": ["elegante", "especiarias", "cítrico", "presentes", "adulto"],
+      "equipamentos": ["ralador", "pilão (opcional)", "espátula", "assadeira"],
+      "historia": "Esta é a receita para aquele cliente que diz 'não gosto de nada muito doce'. A laranja traz o perfume, e o cardamomo traz um toque levemente picante, exótico e muito chique. É um sabor com perfil adulto, perfeito para acompanhar cafés expressos de alta qualidade ou ser dado como lembrancinha em eventos corporativos ou casamentos.",
+      "ingredientes": [
+        { "id": "ing-14-1", "quantidade": "300g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-14-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "macia" },
+        { "id": "ing-14-3", "quantidade": "90g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-14-4", "quantidade": "raspas de 1", "item": "laranja pêra ou bahia", "obs": "apenas a parte laranja, sem a parte branca" },
+        { "id": "ing-14-5", "quantidade": "1/2 col. de chá", "item": "cardamomo em pó", "obs": "ou sementes trituradas no pilão — não exceder a medida" },
+        { "id": "ing-14-6", "quantidade": "1 pitada", "item": "sal", "obs": "" }
+      ],
+      "passos": [
+        { "id": "passo-14-1", "ordem": 1, "texto": "Lave e seque a laranja. Rale a casca, evitando a parte branca.", "tempo": null, "destaque": false },
+        { "id": "passo-14-2", "ordem": 2, "texto": "Na tigela, esfregue as raspas de laranja e o cardamomo no açúcar por 1 minuto. O cheiro que vai subir é maravilhoso e garante que todo o biscoito fique aromatizado.", "tempo": 1, "destaque": true },
+        { "id": "passo-14-3", "ordem": 3, "texto": "Adicione a manteiga e bata até virar um creme claro.", "tempo": 5, "destaque": false },
+        { "id": "passo-14-4", "ordem": 4, "texto": "Adicione o sal.", "tempo": null, "destaque": false },
+        { "id": "passo-14-5", "ordem": 5, "texto": "Incorpore a farinha peneirada, misturando até formar a massa.", "tempo": null, "destaque": false },
+        { "id": "passo-14-6", "ordem": 6, "texto": "Modele em formato de disco, embale no filme plástico e gele por 30 a 40 minutos.", "tempo": 35, "destaque": false },
+        { "id": "passo-14-7", "ordem": 7, "texto": "Pré-aqueça o forno a 160°C.", "tempo": null, "destaque": false },
+        { "id": "passo-14-8", "ordem": 8, "texto": "Abra a massa com 1 cm e corte em losangos ou retângulos pequenos.", "tempo": null, "destaque": false },
+        { "id": "passo-14-9", "ordem": 9, "texto": "Coloque na assadeira e fure a superfície com um garfo delicadamente.", "tempo": null, "destaque": false },
+        { "id": "passo-14-10", "ordem": 10, "texto": "Asse por 20 a 25 minutos até dourarem sutilmente.", "tempo": 22, "destaque": false }
+      ],
+      "dicas": [
+        "Se comprar o cardamomo em semente e amassar na hora em um pilão, o sabor é infinitamente superior ao em pó já comprado pronto.",
+        "Você pode adicionar 30g de pistache picado a esta massa. Laranja, cardamomo e pistache é o trio de ouro da confeitaria do Oriente Médio — e você pode cobrar o dobro do preço."
+      ],
+      "errosComuns": [
+        "Exagerar no cardamomo: é uma especiaria muito forte. Mais de 1/2 colher de chá fará o biscoito parecer remédio ou sabonete. Siga a medida exata."
+      ],
+      "precificacao": {
+        "custoMin": 0.40,
+        "custoMax": 0.65,
+        "vendaUnitariaMin": 3.50,
+        "vendaUnitariaMax": 5.50,
+        "vendaLataMin": 40.00,
+        "vendaLataMax": 60.00,
+        "unidadesPorLata": 12,
+        "observacao": "Perfeito para lembranças corporativas e casamentos. Posicione como 'amanteigado de especiarias exóticas'."
+      },
+      "embalagem": "Caixas de acetato rígido transparente com fita de cetim laranja queimado ou terracota. Etiqueta elegante com o nome exótico da receita.",
+      "publicada": true,
+      "destaque": false
+    },
+    {
+      "id": "15",
+      "slug": "parmesao-alecrim",
+      "nome": "Sablé de Parmesão com Alecrim",
+      "categoria": "salgados",
+      "nivel": 2,
+      "tempoTotal": 80,
+      "tempoPreparo": 20,
+      "tempoDescanso": 40,
+      "tempoForno": 20,
+      "rendimento": "~30 biscoitos",
+      "foto": "assets/img/receitas/15.jpg",
+      "fotoAlt": "Biscoitos salgados de parmesão com alecrim dourados em pote rústico",
+      "tags": ["salgado", "aperitivo", "vinho", "queijo", "festas"],
+      "equipamentos": ["ralador", "espátula", "assadeira"],
+      "historia": "Um menu inteligente não vive só de açúcar. Os 'Sablés' salgados (nome chique para amanteigado salgado) são sucessos absolutos para acompanhar tábuas de frios, vinhos, queijos e eventos noturnos. Quando um cliente comprar seus doces para uma festa, você oferece a opção salgada como um upsell imediato. A margem de lucro aqui é maravilhosa.",
+      "ingredientes": [
+        { "id": "ing-15-1", "quantidade": "250g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-15-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "macia — sem sal para controlar o sal do queijo" },
+        { "id": "ing-15-3", "quantidade": "150g", "item": "queijo parmesão", "obs": "de boa qualidade, ralado fino na hora" },
+        { "id": "ing-15-4", "quantidade": "1 col. de sopa", "item": "alecrim fresco picado", "obs": "bem fininho — não use seco" },
+        { "id": "ing-15-5", "quantidade": "1/2 col. de chá", "item": "sal", "obs": "ajuste conforme o queijo" },
+        { "id": "ing-15-6", "quantidade": "a gosto", "item": "pimenta-do-reino", "obs": "moída na hora" },
+        { "id": "ing-15-7", "quantidade": "1 unidade", "item": "gema de ovo", "obs": "opcional — para pincelar" }
+      ],
+      "passos": [
+        { "id": "passo-15-1", "ordem": 1, "texto": "Rale o parmesão na hora, bem fininho. Não use queijo de saquinho — eles têm muito amido e sal artificial que estragam a textura.", "tempo": null, "destaque": true },
+        { "id": "passo-15-2", "ordem": 2, "texto": "Pique o alecrim fresco bem miudinho. Não use seco — fica parecendo palha na boca.", "tempo": null, "destaque": false },
+        { "id": "passo-15-3", "ordem": 3, "texto": "Na tigela, misture a manteiga macia, o queijo ralado, o alecrim, o sal e a pimenta-do-reino.", "tempo": 5, "destaque": false },
+        { "id": "passo-15-4", "ordem": 4, "texto": "Adicione a farinha de trigo e misture até virar uma massa homogênea.", "tempo": null, "destaque": false },
+        { "id": "passo-15-5", "ordem": 5, "texto": "Divida a massa e forme dois cilindros de cerca de 3 a 4 cm de diâmetro. Esses biscoitos devem ser menores, para comer de uma mordida.", "tempo": null, "destaque": true },
+        { "id": "passo-15-6", "ordem": 6, "texto": "Enrole no plástico filme e leve à geladeira por 40 minutos para firmar.", "tempo": 40, "destaque": false },
+        { "id": "passo-15-7", "ordem": 7, "texto": "Pré-aqueça o forno a 165°C.", "tempo": null, "destaque": false },
+        { "id": "passo-15-8", "ordem": 8, "texto": "Retire do plástico e corte rodelas de 0,8 cm a 1 cm.", "tempo": null, "destaque": false },
+        { "id": "passo-15-9", "ordem": 9, "texto": "Coloque na assadeira forrada com papel manteiga. Se quiser, pincele um pouco de gema batida e salpique queijo ralado por cima de cada um antes de assar.", "tempo": null, "destaque": false },
+        { "id": "passo-15-10", "ordem": 10, "texto": "Asse por 18 a 22 minutos, até ficarem dourados — eles devem dourar mais que os biscoitos doces.", "tempo": 20, "destaque": false },
+        { "id": "passo-15-11", "ordem": 11, "texto": "Esfrie na assadeira.", "tempo": 10, "destaque": false }
+      ],
+      "dicas": [
+        "Este é o único biscoito da lista que pode e deve ser comido logo, até levemente morno, embora dure até 10 dias em pote fechado.",
+        "Você pode criar uma linha inteira variando o sabor: gorgonzola com nozes, provolone com orégano ou gruyère com pimenta calabresa."
+      ],
+      "errosComuns": [
+        "Usar parmesão de saquinho: o queijo não derrete direito na massa e deixa um gosto residual de conservante.",
+        "Fazer o biscoito muito grande: salgados devem ser tamanho aperitivo. Muito grande fica enjoativo e pesado."
+      ],
+      "precificacao": {
+        "custoMin": 0.50,
+        "custoMax": 0.80,
+        "vendaUnitariaMin": 0,
+        "vendaUnitariaMax": 0,
+        "vendaLataMin": 45.00,
+        "vendaLataMax": 65.00,
+        "unidadesPorLata": 30,
+        "observacao": "Venda em pote grande com 30 unidades para petisco. Não vende unitário — ofereça como aperitivo de festa ou para cestas gourmet."
+      },
+      "embalagem": "Latas ou potes de vidro herméticos redondos (estilo pote de geleia rústico), com fita xadrez ou cordão de sisal. Perfeito para cestas de café da manhã ou cestas de queijos e vinhos.",
+      "publicada": true,
+      "destaque": true
     }
   ]
 }
