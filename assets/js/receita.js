@@ -343,7 +343,7 @@ function inicializarNavegacao(receitaAtual, todasPublicadas) {
   if (anterior) {
     btnAnterior.href = `receita.html?id=${anterior.id}`;
     btnAnterior.title = anterior.nome;
-    btnAnterior.innerHTML = `← <span>${anterior.nome}</span>`;
+    btnAnterior.innerHTML = `<span class="nav-dir">←</span><span class="nav-nome">${anterior.nome}</span>`;
   } else {
     btnAnterior.style.visibility = 'hidden';
   }
@@ -351,7 +351,7 @@ function inicializarNavegacao(receitaAtual, todasPublicadas) {
   if (proxima) {
     btnProxima.href = `receita.html?id=${proxima.id}`;
     btnProxima.title = proxima.nome;
-    btnProxima.innerHTML = `<span>${proxima.nome}</span> →`;
+    btnProxima.innerHTML = `<span class="nav-nome">${proxima.nome}</span><span class="nav-dir">→</span>`;
   } else {
     btnProxima.style.visibility = 'hidden';
   }

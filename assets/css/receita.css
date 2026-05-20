@@ -631,7 +631,23 @@
 .receita-nav-rodape a {
   flex: 1;
   max-width: calc(50% - var(--space-2));
-  text-align: center;
+  flex-direction: column;
+  white-space: normal;
+  height: auto;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+}
+
+.receita-nav-rodape .nav-dir {
+  font-size: var(--text-lg);
+}
+
+.receita-nav-rodape .nav-nome {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  line-height: 1.4;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ====================================================
