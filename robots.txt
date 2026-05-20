@@ -1,0 +1,5 @@
+# Este app é uma área de membros privada.
+# Nenhuma página deve ser indexada por buscadores.
+
+User-agent: *
+Disallow: /

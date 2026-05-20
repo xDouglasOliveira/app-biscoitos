@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Bônus — Coletânea Amanteigados da Rosana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/bonus.css">
+
+  <style>body { background: #FAF6EF; }</style>
+
+  <script>
+    (function () {
+      try {
+        var t = JSON.parse(sessionStorage.getItem('auth_token') || 'null');
+        if (!t || !t.autenticado || Date.now() > t.expira) {
+          sessionStorage.removeItem('auth_token');
+          location.replace('index.html' + (t ? '?expirou=1' : ''));
+        }
+      } catch (e) { location.replace('index.html'); }
+    })();
+  </script>
+</head>
+<body class="bonus-page">
+
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo" aria-label="Início">
+        <span class="logo-text">Amanteigados <span>da Rosana</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="home.html"     class="nav-link">Início</a>
+        <a href="receitas.html" class="nav-link">Receitas</a>
+        <a href="bonus.html"    class="nav-link">Bônus</a>
+        <button class="btn-sair-header" onclick="fazerLogout()">Sair</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-expanded="false"
+              aria-controls="nav-overlay" aria-label="Abrir menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" hidden role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-overlay-header">
+      <span class="logo-text" aria-hidden="true">Amanteigados <span>da Rosana</span></span>
+      <button class="nav-overlay-close" id="nav-close" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav>
+      <a href="home.html"     class="nav-overlay-link">🏠 Início</a>
+      <a href="receitas.html" class="nav-overlay-link">📖 Receitas</a>
+      <a href="bonus.html"    class="nav-overlay-link">🎁 Bônus</a>
+      <button class="nav-overlay-link nav-overlay-sair" onclick="fazerLogout()">← Sair</button>
+    </nav>
+  </div>
+
+  <main class="page-content" id="main">
+    <div class="container">
+
+      <!-- Cabeçalho da seção de bônus -->
+      <header class="bonus-header">
+        <div class="bonus-header-icon" aria-hidden="true">🎁</div>
+        <h1>Seus Bônus Inclusos</h1>
+        <p>3 conteúdos extras que vão te ajudar a vender mais e se organizar melhor.</p>
+      </header>
+
+      <!-- Grid com os 3 bônus -->
+      <div class="bonus-grid">
+
+        <!-- BÔNUS 1 -->
+        <article class="bonus-card">
+          <div class="bonus-card-foto">
+            <!-- PLACEHOLDER: coloque uma foto do bônus 1 -->
+            <div class="bonus-card-foto-placeholder" aria-hidden="true">📦</div>
+            <span class="bonus-numero-badge">Bônus 1</span>
+          </div>
+          <div class="bonus-card-content">
+            <h2 class="bonus-card-titulo">Guia de Embalagem Artesanal</h2>
+            <p class="bonus-card-desc">
+              Como transformar seus biscoitos em presentes que as pessoas pagam mais.
+              Tipos de embalagem, onde comprar, como montar e precificar.
+            </p>
+            <a href="bonus-1.html" class="btn btn-primary">Acessar →</a>
+          </div>
+        </article>
+
+        <!-- BÔNUS 2 -->
+        <article class="bonus-card">
+          <div class="bonus-card-foto">
+            <!-- PLACEHOLDER: coloque uma foto do bônus 2 -->
+            <div class="bonus-card-foto-placeholder" aria-hidden="true">📅</div>
+            <span class="bonus-numero-badge">Bônus 2</span>
+          </div>
+          <div class="bonus-card-content">
+            <h2 class="bonus-card-titulo">Calendário de Datas e Encomendas</h2>
+            <p class="bonus-card-desc">
+              Planejamento anual com as datas mais lucrativas para vender biscoitos.
+              Nunca mais perder o Dia das Mães, Natal ou Páscoa sem estoque.
+            </p>
+            <a href="bonus-2.html" class="btn btn-primary">Acessar →</a>
+          </div>
+        </article>
+
+        <!-- BÔNUS 3 -->
+        <article class="bonus-card">
+          <div class="bonus-card-foto">
+            <!-- PLACEHOLDER: coloque uma foto do bônus 3 -->
+            <div class="bonus-card-foto-placeholder" aria-hidden="true">📋</div>
+            <span class="bonus-numero-badge">Bônus 3</span>
+          </div>
+          <div class="bonus-card-content">
+            <h2 class="bonus-card-titulo">Fichas de Produção + Controle</h2>
+            <p class="bonus-card-desc">
+              Fichas para calcular custo, controlar estoque e anotar encomendas.
+              Pare de perder dinheiro por falta de organização.
+            </p>
+            <a href="bonus-3.html" class="btn btn-primary">Acessar →</a>
+          </div>
+        </article>
+
+      </div><!-- /bonus-grid -->
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="https://wa.me/NUMERO" target="_blank" rel="noopener">Dúvidas? Fale com a Rosana no WhatsApp</a>
+    </p>
+    <p>Esta área é exclusiva para alunas da Coletânea Amanteigados da Rosana.</p>
+  </footer>
+
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/nav.js"></script>
+
+</body>
+</html>

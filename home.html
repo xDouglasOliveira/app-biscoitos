@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Início — Coletânea Amanteigados da Rosana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+
+  <!-- CSS crítico inline -->
+  <style>body { background: #FAF6EF; }</style>
+
+  <!-- PROTEÇÃO: verifica autenticação antes de renderizar qualquer conteúdo -->
+  <script>
+    (function () {
+      try {
+        var t = JSON.parse(sessionStorage.getItem('auth_token') || 'null');
+        if (!t || !t.autenticado || Date.now() > t.expira) {
+          sessionStorage.removeItem('auth_token');
+          location.replace('index.html' + (t ? '?expirou=1' : ''));
+        }
+      } catch (e) { location.replace('index.html'); }
+    })();
+  </script>
+</head>
+<body class="home-page">
+
+  <!-- ---- HEADER ---- -->
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo" aria-label="Coletânea Amanteigados da Rosana — Início">
+        <!-- PLACEHOLDER: quando tiver logo, substitua o span pelo <img> -->
+        <span class="logo-text">Amanteigados <span>da Rosana</span></span>
+      </a>
+
+      <!-- Nav desktop (some em mobile) -->
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="home.html"     class="nav-link">Início</a>
+        <a href="receitas.html" class="nav-link">Receitas</a>
+        <a href="bonus.html"    class="nav-link">Bônus</a>
+        <button class="btn-sair-header" onclick="fazerLogout()" aria-label="Sair da área de membros">
+          Sair
+        </button>
+      </nav>
+
+      <!-- Botão hambúrguer (aparece só em mobile) -->
+      <button class="hamburger" id="hamburger" aria-expanded="false"
+              aria-controls="nav-overlay" aria-label="Abrir menu de navegação">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay de navegação mobile (cobre tela inteira) -->
+  <div class="nav-overlay" id="nav-overlay" hidden role="dialog" aria-modal="true" aria-label="Menu de navegação">
+    <div class="nav-overlay-header">
+      <span class="logo-text" aria-hidden="true">Amanteigados <span>da Rosana</span></span>
+      <button class="nav-overlay-close" id="nav-close" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav aria-label="Menu mobile">
+      <a href="home.html"     class="nav-overlay-link">🏠 Início</a>
+      <a href="receitas.html" class="nav-overlay-link">📖 Receitas</a>
+      <a href="bonus.html"    class="nav-overlay-link">🎁 Bônus</a>
+      <button class="nav-overlay-link nav-overlay-sair" onclick="fazerLogout()">
+        ← Sair da área de membros
+      </button>
+    </nav>
+  </div>
+
+  <!-- ---- CONTEÚDO PRINCIPAL ---- -->
+  <main class="page-content" id="main">
+    <div class="container">
+
+      <!-- Boas-vindas -->
+      <section class="boas-vindas" aria-label="Boas-vindas">
+        <h1>Olá! Bem-vinda à sua cozinha.</h1>
+        <p>Você tem acesso vitalício a todas as receitas e bônus aqui dentro.</p>
+      </section>
+
+      <!-- ---- ATALHOS PRINCIPAIS ---- -->
+      <section class="home-section" aria-label="Por onde começar">
+        <h2 class="home-section-titulo">Por onde começar</h2>
+
+        <div class="atalhos-grid">
+          <!-- Card 1: Comece aqui -->
+          <a href="receitas.html?categoria=classicos" class="atalho-card" aria-label="Comece pelos clássicos">
+            <div class="atalho-icon" aria-hidden="true">⭐</div>
+            <div class="atalho-titulo">Comece Aqui</div>
+            <p class="atalho-desc">Os clássicos indispensáveis — a base de tudo. Perfeito para quem está começando.</p>
+            <span class="atalho-cta" aria-hidden="true">Ver receitas →</span>
+          </a>
+
+          <!-- Card 2: Todas as receitas -->
+          <a href="receitas.html" class="atalho-card" aria-label="Ver todas as receitas">
+            <div class="atalho-icon" aria-hidden="true">📖</div>
+            <div class="atalho-titulo">Todas as Receitas</div>
+            <p class="atalho-desc">A coletânea completa — 40 receitas de biscoitos amanteigados prontas para você explorar.</p>
+            <span class="atalho-cta" aria-hidden="true">Ver coletânea →</span>
+          </a>
+
+          <!-- Card 3: Bônus -->
+          <a href="bonus.html" class="atalho-card" aria-label="Ver extras e bônus">
+            <div class="atalho-icon" aria-hidden="true">🎁</div>
+            <div class="atalho-titulo">Extras e Bônus</div>
+            <p class="atalho-desc">Guia de embalagem, calendário de datas e fichas de produção. Tudo para vender melhor.</p>
+            <span class="atalho-cta" aria-hidden="true">Ver bônus →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- ---- RECEITAS EM DESTAQUE ---- -->
+      <section class="home-section" aria-label="Receitas em destaque">
+        <h2 class="home-section-titulo">Receitas em destaque</h2>
+        <!-- Preenchido via home.js com receitas que têm destaque: true no JSON -->
+        <div class="destaques-grid" id="destaques-grid" aria-live="polite">
+          <!-- Cards injetados pelo JavaScript -->
+          <div class="loading-state">
+            <div class="loading-spinner" aria-hidden="true"></div>
+            <p>Carregando receitas...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---- RECADO DA ROSANA ---- -->
+      <!-- PLACEHOLDER: edite este bloco para mudar o recado -->
+      <section class="recado-rosana" aria-label="Mensagem da Rosana">
+        <div class="recado-header">💌 Recado da Rosana</div>
+        <div class="recado-corpo">
+          <div class="recado-foto" aria-hidden="true">
+            <!-- PLACEHOLDER: coloque uma foto da Rosana aqui -->
+            <!-- <img src="/assets/img/rosana.jpg" alt=""> -->
+            👩‍🍳
+          </div>
+          <div class="recado-texto">
+            <p class="recado-quote">
+              "Cada receita aqui foi testada por mim inúmeras vezes. Se algo der errado, geralmente é manteiga muito mole. Vá com calma. Você consegue."
+            </p>
+            <p class="recado-assinatura">— Rosana</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Erro (escondido por padrão, mostrado se o JSON falhar) -->
+      <div id="erro-home" style="display:none" role="alert">
+        <p class="text-muted text-center">Erro ao carregar as receitas. Tente recarregar a página.</p>
+      </div>
+
+    </div><!-- /container -->
+  </main>
+
+  <!-- ---- FOOTER ---- -->
+  <footer class="site-footer">
+    <p>
+      Dúvidas?
+      <!-- PLACEHOLDER: substitua NUMERO pelo número da Rosana -->
+      <a href="https://wa.me/NUMERO" target="_blank" rel="noopener">Fale com a Rosana no WhatsApp</a>
+    </p>
+    <p>Esta área é exclusiva para alunas da Coletânea Amanteigados da Rosana.</p>
+  </footer>
+
+  <!-- Scripts — na ordem correta de dependências -->
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/home.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Bônus 3: Fichas de Produção — Coletânea Amanteigados da Rosana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/bonus.css">
+
+  <style>body { background: #FAF6EF; }</style>
+
+  <script>
+    (function () {
+      try {
+        var t = JSON.parse(sessionStorage.getItem('auth_token') || 'null');
+        if (!t || !t.autenticado || Date.now() > t.expira) {
+          sessionStorage.removeItem('auth_token');
+          location.replace('index.html' + (t ? '?expirou=1' : ''));
+        }
+      } catch (e) { location.replace('index.html'); }
+    })();
+  </script>
+</head>
+<body class="bonus-individual-page">
+
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo" aria-label="Início">
+        <span class="logo-text">Amanteigados <span>da Rosana</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="home.html"     class="nav-link">Início</a>
+        <a href="receitas.html" class="nav-link">Receitas</a>
+        <a href="bonus.html"    class="nav-link">Bônus</a>
+        <button class="btn-sair-header" onclick="fazerLogout()">Sair</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-expanded="false"
+              aria-controls="nav-overlay" aria-label="Abrir menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" hidden role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-overlay-header">
+      <span class="logo-text" aria-hidden="true">Amanteigados <span>da Rosana</span></span>
+      <button class="nav-overlay-close" id="nav-close" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav>
+      <a href="home.html"     class="nav-overlay-link">🏠 Início</a>
+      <a href="receitas.html" class="nav-overlay-link">📖 Receitas</a>
+      <a href="bonus.html"    class="nav-overlay-link">🎁 Bônus</a>
+      <button class="nav-overlay-link nav-overlay-sair" onclick="fazerLogout()">← Sair</button>
+    </nav>
+  </div>
+
+  <main class="page-content" id="main">
+
+    <div class="bonus-voltar-barra">
+      <div class="container">
+        <a href="bonus.html" class="btn-voltar" aria-label="Voltar para a página de bônus">
+          ← Bônus
+        </a>
+        <span style="font-size: var(--text-sm); color: var(--text-muted); font-weight: 600;">
+          BÔNUS 3 DE 3
+        </span>
+      </div>
+    </div>
+
+    <div class="bonus-hero">
+      <div class="container">
+        <div class="bonus-hero-texto">
+          <span class="bonus-hero-badge">📋 Bônus 3</span>
+          <h1 class="bonus-hero-titulo">Fichas de Produção + Controle</h1>
+          <p class="bonus-hero-desc">
+            Modelos prontos para calcular custo real, controlar estoque e anotar
+            encomendas. Organize sua produção e pare de perder dinheiro por falta
+            de controle.
+          </p>
+        </div>
+        <div class="bonus-hero-foto">
+          <!-- PLACEHOLDER: foto das fichas ou planilha -->
+          <div class="bonus-hero-foto-placeholder" aria-hidden="true">📋</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- ======================================================
+           PLACEHOLDER: CONTEÚDO DO BÔNUS 3 VIRÁ DEPOIS
+           ====================================================== -->
+
+      <section class="bonus-section">
+        <h2>Por que usar fichas de produção?</h2>
+
+        <div class="bonus-destaque-box">
+          <p>
+            📊 <strong>Sem controle, você trabalha sem saber se está lucrando.</strong>
+            As fichas te mostram exatamente quanto custa cada lata e qual é o lucro real
+            depois de descontar ingredientes, embalagem e seu tempo.
+          </p>
+        </div>
+
+        <p>
+          <!-- PLACEHOLDER: explicação mais detalhada -->
+          O conteúdo completo deste bônus será adicionado em breve.
+        </p>
+      </section>
+
+      <section class="bonus-section">
+        <h2>Ficha de Custo por Receita</h2>
+        <!-- PLACEHOLDER: modelo de ficha de custo -->
+        <div class="bonus-img-placeholder" aria-hidden="true">
+          📷 Imagem: modelo de ficha de custo preenchida
+        </div>
+        <ul class="bonus-lista">
+          <li><!-- PLACEHOLDER: como usar a ficha de custo --></li>
+          <li><!-- PLACEHOLDER: campos da ficha --></li>
+          <li><!-- PLACEHOLDER: dica de preenchimento --></li>
+        </ul>
+      </section>
+
+      <section class="bonus-section">
+        <h2>Ficha de Controle de Encomendas</h2>
+        <!-- PLACEHOLDER: modelo de controle de pedidos -->
+        <div class="bonus-img-placeholder" aria-hidden="true">
+          📷 Imagem: modelo de controle de encomendas
+        </div>
+        <p>
+          <!-- PLACEHOLDER: como registrar e acompanhar pedidos -->
+          Modelo de controle de encomendas será adicionado aqui.
+        </p>
+      </section>
+
+      <section class="bonus-section">
+        <h2>Como calcular seu preço de venda</h2>
+        <!-- PLACEHOLDER: fórmula de precificação -->
+        <div class="bonus-destaque-box">
+          <p>
+            💰 <strong>Fórmula básica:</strong>
+            Custo total ÷ quantidade de biscoitos × margem de lucro desejada = preço de venda mínimo.
+          </p>
+        </div>
+        <p>
+          <!-- PLACEHOLDER: explicação detalhada da fórmula e exemplos práticos -->
+          Guia de precificação com exemplos práticos será adicionado aqui.
+        </p>
+      </section>
+
+      <!-- Voltar para explorar as receitas -->
+      <div style="padding: var(--space-8) 0; text-align: center; border-top: 1px solid var(--border-light); margin-top: var(--space-8);">
+        <p style="color: var(--text-muted); font-size: var(--text-sm); margin-bottom: var(--space-4);">
+          Você chegou ao final dos bônus! Agora, bora cozinhar:
+        </p>
+        <a href="receitas.html" class="btn btn-primary btn-lg">
+          Ver todas as receitas →
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <a href="https://wa.me/NUMERO" target="_blank" rel="noopener">Dúvidas? Fale com a Rosana no WhatsApp</a>
+    </p>
+    <p>Esta área é exclusiva para alunas da Coletânea Amanteigados da Rosana.</p>
+  </footer>
+
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/nav.js"></script>
+
+</body>
+</html>

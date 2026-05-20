@@ -1,0 +1,74 @@
+/* =====================================================
+   RESET CSS — NORMALIZAÇÃO BASE
+   Garante comportamento consistente em todos os
+   navegadores (Chrome, Safari, Firefox, Samsung).
+   ===================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Evita zoom involuntário ao focar inputs no iOS */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* Renderização de fontes mais nítida */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Herdar fonte em todos os elementos de formulário */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Evitar overflow de textos longos */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remover estilos padrão de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Remover sublinhado padrão de links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Botões sem estilos padrão do navegador */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Foco visível para acessibilidade por teclado */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Remover outline padrão (mas manter :focus-visible) */
+:focus:not(:focus-visible) {
+  outline: none;
+}

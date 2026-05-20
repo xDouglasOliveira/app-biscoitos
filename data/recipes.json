@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "totalReceitas": 40,
+    "ultimaAtualizacao": "2026-05-19"
+  },
+  "categorias": [
+    {
+      "id": "classicos",
+      "nome": "Os Clássicos Indispensáveis",
+      "descricao": "Receitas base que toda confeiteira precisa dominar primeiro",
+      "ordem": 1
+    },
+    {
+      "id": "vendedores",
+      "nome": "Sabores que Vendem Muito",
+      "descricao": "Os campeões de venda — fazem fila de encomenda",
+      "ordem": 2
+    },
+    {
+      "id": "premium",
+      "nome": "Os Premium",
+      "descricao": "Para cobrar mais caro com diferenciação real",
+      "ordem": 3
+    },
+    {
+      "id": "sazonais",
+      "nome": "Os Sazonais",
+      "descricao": "Receitas temáticas para datas específicas do ano",
+      "ordem": 4
+    },
+    {
+      "id": "especiais",
+      "nome": "Os Especiais",
+      "descricao": "Sem glúten, sem lactose, veganos — nichos lucrativos",
+      "ordem": 5
+    }
+  ],
+  "receitas": [
+    {
+      "id": "01",
+      "slug": "shortbread-tradicional",
+      "nome": "Shortbread Tradicional Escocês Adaptado",
+      "categoria": "classicos",
+      "nivel": 2,
+      "tempoTotal": 90,
+      "tempoPreparo": 20,
+      "tempoDescanso": 40,
+      "tempoForno": 30,
+      "rendimento": "~24 biscoitos",
+      "foto": "/assets/img/receitas/01.jpg",
+      "fotoAlt": "Shortbread tradicional dourado em lata vintage",
+      "tags": ["clássico", "iniciantes", "base", "tradicional"],
+      "equipamentos": ["tigela grande", "espátula ou colher de pau", "papel manteiga", "assadeira", "faca afiada", "rolo de macarrão", "garfo"],
+      "historia": "Esta é a receita mãe de todos os amanteigados que você vai aprender aqui. Os escoceses fazem essa receita há mais de 500 anos com apenas 3 ingredientes. A mágica está na proporção 3-2-1: três partes de farinha, duas de manteiga, uma de açúcar. Eu testei essa proporção com 4 marcas diferentes de manteiga brasileira até achar o resultado que funciona com qualquer manteiga sem sal que você encontrar no mercado.",
+      "ingredientes": [
+        { "id": "ing-01-1", "quantidade": "300g", "item": "farinha de trigo comum", "obs": "não use farinha 'para bolo'" },
+        { "id": "ing-01-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "em temperatura ambiente, macia mas não derretida" },
+        { "id": "ing-01-3", "quantidade": "100g", "item": "açúcar refinado", "obs": "não use açúcar de confeiteiro" },
+        { "id": "ing-01-4", "quantidade": "1 pitada", "item": "sal", "obs": "aproximadamente 2g" },
+        { "id": "ing-01-5", "quantidade": "1 col. de chá", "item": "essência de baunilha", "obs": "opcional, mas recomendo" }
+      ],
+      "passos": [
+        { "id": "passo-01-1", "ordem": 1, "texto": "Tire a manteiga da geladeira 30 minutos antes de começar. Ela tem que estar macia ao toque, mas não derretida. Esse é o erro número 1 que arruína a receita.", "tempo": 30, "destaque": true },
+        { "id": "passo-01-2", "ordem": 2, "texto": "Pré-aqueça o forno a 160°C (forno baixo) com a grelha na altura do meio.", "tempo": null, "destaque": false },
+        { "id": "passo-01-3", "ordem": 3, "texto": "Em uma tigela grande, coloque a manteiga macia e o açúcar. Com uma espátula ou colher de pau, misture pressionando contra o fundo até virar um creme claro e fofo. Demora uns 3 a 5 minutos. Não use batedeira — incorpora ar demais e o biscoito vira biscoito de massa fofa, não de amanteigado.", "tempo": 5, "destaque": false },
+        { "id": "passo-01-4", "ordem": 4, "texto": "Adicione a pitada de sal e a baunilha. Misture.", "tempo": null, "destaque": false },
+        { "id": "passo-01-5", "ordem": 5, "texto": "Peneire a farinha por cima da mistura. Peneirar é importante: tira os grumos e deixa a massa mais leve.", "tempo": null, "destaque": false },
+        { "id": "passo-01-6", "ordem": 6, "texto": "Incorpore a farinha aos poucos, com movimentos suaves de baixo para cima, até formar uma massa firme. Pare de mexer assim que não houver mais farinha solta — se mexer demais, ativa o glúten e o biscoito fica duro.", "tempo": null, "destaque": false },
+        { "id": "passo-01-7", "ordem": 7, "texto": "Forme uma bola, achate em disco e enrole no plástico filme. Leve à geladeira por 40 minutos. Esse descanso é essencial para o biscoito não derreter no forno.", "tempo": 40, "destaque": true },
+        { "id": "passo-01-8", "ordem": 8, "texto": "Abra a massa entre duas folhas de papel manteiga com um rolo, deixando com 1 cm de espessura.", "tempo": null, "destaque": false },
+        { "id": "passo-01-9", "ordem": 9, "texto": "Corte em retângulos de aproximadamente 3×5 cm (formato clássico escocês) ou use cortadores se preferir formato redondo.", "tempo": null, "destaque": false },
+        { "id": "passo-01-10", "ordem": 10, "texto": "Coloque os biscoitos em assadeira forrada com papel manteiga, deixando 2 cm entre eles.", "tempo": null, "destaque": false },
+        { "id": "passo-01-11", "ordem": 11, "texto": "Fure cada biscoito 3 vezes com um garfo. É o detalhe visual clássico do shortbread — não pule.", "tempo": null, "destaque": false },
+        { "id": "passo-01-12", "ordem": 12, "texto": "Asse por 25 a 30 minutos ou até as bordas ficarem douradas. O centro deve continuar claro, quase pálido — esse é o ponto certo.", "tempo": 30, "destaque": false },
+        { "id": "passo-01-13", "ordem": 13, "texto": "Tire do forno e deixe esfriar na própria assadeira por 10 minutos antes de mover. Eles continuam cozinhando com o calor residual e endurecem ao esfriar.", "tempo": 10, "destaque": false },
+        { "id": "passo-01-14", "ordem": 14, "texto": "Polvilhe açúcar refinado por cima ainda morno. Opcional, mas dá o acabamento profissional.", "tempo": null, "destaque": false }
+      ],
+      "dicas": [
+        "A manteiga é tudo. Use sempre manteiga, nunca margarina nesta receita. Aqui o sabor da manteiga é o protagonista. Marcas que testei e funcionaram bem: Aviação, Itambé, Tirolez (versão sem sal).",
+        "Se a massa rachar quando você abrir, é porque está fria demais. Deixe descansar 5 minutos fora da geladeira e tente de novo.",
+        "Massa muito mole? Volta pra geladeira por mais 15 minutos. Pressa estraga shortbread.",
+        "Forno bem baixo é o segredo. Forno alto deixa a borda queimada e o centro cru. 160°C é firme."
+      ],
+      "errosComuns": [
+        "Forno acima de 180°C: o biscoito carameliza demais e fica amargo.",
+        "Bater a manteiga em batedeira: vira biscoito de massa fofa, não amanteigado.",
+        "Tirar do forno cedo demais: parece cru porque shortbread fica claro mesmo, mas ao esfriar endurece. Confie no tempo.",
+        "Não furar com garfo: estética pode parecer detalhe bobo, mas é o que diferencia o 'feito em casa' do 'feito profissionalmente'."
+      ],
+      "precificacao": {
+        "custoMin": 0.30,
+        "custoMax": 0.50,
+        "vendaUnitariaMin": 2.00,
+        "vendaUnitariaMax": 3.50,
+        "vendaLataMin": 28.00,
+        "vendaLataMax": 45.00,
+        "unidadesPorLata": 12,
+        "observacao": "Estes valores são referências. O preço final depende do seu mercado local, custo dos seus ingredientes e tempo investido."
+      },
+      "embalagem": "Esta receita pede embalagem clássica e atemporal: lata redonda dourada ou cor caramelo, com biscoitos empilhados em camadas separadas por papel manteiga. Etiqueta de papel kraft com nome em letra cursiva. Combina com fitilho de juta. Evite cores chamativas — a sofisticação está na simplicidade.",
+      "publicada": true,
+      "destaque": true
+    },
+    {
+      "id": "02",
+      "slug": "cafe-avela",
+      "nome": "Amanteigado de Café e Avelã",
+      "categoria": "vendedores",
+      "nivel": 3,
+      "tempoTotal": 105,
+      "tempoPreparo": 25,
+      "tempoDescanso": 40,
+      "tempoForno": 25,
+      "rendimento": "~28 biscoitos",
+      "foto": "/assets/img/receitas/02.jpg",
+      "fotoAlt": "Biscoito de café e avelã com chocolate, em lata marrom escuro",
+      "tags": ["café", "avelã", "vendas", "popular", "cafeteria"],
+      "equipamentos": ["tigela", "espátula", "frigideira seca", "faca ou processador", "papel manteiga", "assadeira"],
+      "historia": "Este é o biscoito que vai vender mais rápido no seu negócio. Café é a paixão nacional brasileira — todo mundo quer um doce para acompanhar o cafezinho. Adaptei essa receita da versão clássica francesa de 'biscuit au café' usando café solúvel comum (não precisa ser café especial) para que qualquer pessoa consiga fazer. As avelãs trazem o crocante. Se quiser, pode substituir por castanha-do-pará picadinha — fica delicioso e fica mais barato.",
+      "ingredientes": [
+        { "id": "ing-02-1", "quantidade": "280g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-02-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "em temperatura ambiente" },
+        { "id": "ing-02-3", "quantidade": "100g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-02-4", "quantidade": "40g", "item": "avelãs torradas e bem picadas", "obs": "ou castanha-do-pará em mesma quantidade" },
+        { "id": "ing-02-5", "quantidade": "2 col. de sopa", "item": "café solúvel", "obs": "qualquer marca — Estuário, Pelé, Nescafé" },
+        { "id": "ing-02-6", "quantidade": "2 col. de sopa", "item": "água quente", "obs": "para dissolver o café" },
+        { "id": "ing-02-7", "quantidade": "1 pitada", "item": "sal", "obs": "" },
+        { "id": "ing-02-8", "quantidade": "1/2 col. de chá", "item": "essência de baunilha", "obs": "" }
+      ],
+      "passos": [
+        { "id": "passo-02-1", "ordem": 1, "texto": "Pré-aqueça o forno a 165°C.", "tempo": null, "destaque": false },
+        { "id": "passo-02-2", "ordem": 2, "texto": "Dissolva o café solúvel em 2 colheres de água quente. Espere amornar. Esse vai ser o nosso 'concentrado' de café.", "tempo": 5, "destaque": false },
+        { "id": "passo-02-3", "ordem": 3, "texto": "Toste as avelãs (se ainda não estiverem tostadas): coloque em frigideira seca e mexa em fogo baixo por 5 minutos. Espere esfriar e pique bem fino com faca ou processador. Não vire farinha — queremos pedacinhos pequenos.", "tempo": 5, "destaque": true },
+        { "id": "passo-02-4", "ordem": 4, "texto": "Bata a manteiga macia com o açúcar numa tigela, com espátula, até virar creme claro.", "tempo": 5, "destaque": false },
+        { "id": "passo-02-5", "ordem": 5, "texto": "Adicione o café dissolvido e a baunilha. Misture bem.", "tempo": null, "destaque": false },
+        { "id": "passo-02-6", "ordem": 6, "texto": "Adicione as avelãs picadas e a pitada de sal. Misture.", "tempo": null, "destaque": false },
+        { "id": "passo-02-7", "ordem": 7, "texto": "Peneire a farinha por cima e incorpore aos poucos. Não trabalhe demais a massa.", "tempo": null, "destaque": false },
+        { "id": "passo-02-8", "ordem": 8, "texto": "Forme um disco, embrulhe e leve à geladeira por 40 minutos.", "tempo": 40, "destaque": false },
+        { "id": "passo-02-9", "ordem": 9, "texto": "Abra a massa com 1 cm de espessura entre duas folhas de papel manteiga.", "tempo": null, "destaque": false },
+        { "id": "passo-02-10", "ordem": 10, "texto": "Corte em discos com cortador de 4 cm ou em retângulos pequenos.", "tempo": null, "destaque": false },
+        { "id": "passo-02-11", "ordem": 11, "texto": "Disponha em assadeira forrada, com 2 cm de distância.", "tempo": null, "destaque": false },
+        { "id": "passo-02-12", "ordem": 12, "texto": "Asse por 22 a 25 minutos até as bordas ficarem douradas.", "tempo": 25, "destaque": false },
+        { "id": "passo-02-13", "ordem": 13, "texto": "Deixe esfriar na assadeira por 10 minutos.", "tempo": 10, "destaque": false },
+        { "id": "passo-02-14", "ordem": 14, "texto": "Opcional para presente premium: mergulhe metade do biscoito em chocolate meio amargo derretido e deixe secar sobre papel manteiga.", "tempo": null, "destaque": false }
+      ],
+      "dicas": [
+        "Café solúvel comum funciona perfeitamente. Não precisa de café especial. Estuário, Pelé, qualquer um.",
+        "Tostar a avelã intensifica o sabor em 10x. Não pule esse passo.",
+        "Para vendas em embalagem grande: estes biscoitos duram 15 dias em pote bem fechado. Avise o cliente."
+      ],
+      "errosComuns": [
+        "Café em pó adicionado seco: fica com gosto amargo e bolinhas amargas no biscoito. Sempre dissolva em água quente primeiro.",
+        "Avelãs grandes demais: o biscoito quebra ao cortar. Pique fino.",
+        "Manteiga gelada: não incorpora o café. Sempre temperatura ambiente."
+      ],
+      "precificacao": {
+        "custoMin": 0.45,
+        "custoMax": 0.70,
+        "vendaUnitariaMin": 3.00,
+        "vendaUnitariaMax": 4.50,
+        "vendaLataMin": 32.00,
+        "vendaLataMax": 50.00,
+        "unidadesPorLata": 10,
+        "observacao": "Avelã encarece a receita. Pode substituir por castanha-do-pará para reduzir o custo mantendo a qualidade."
+      },
+      "embalagem": "Aqui vai bem lata cor marrom escuro com etiqueta cor café com leite. Use papel manteiga marrom como divisor entre camadas. Sugestão de nome estético: 'Café Noir' ou 'Espresso Cookie'. Pode amarrar com barbante natural e prender um grão de café decorativo.",
+      "publicada": true,
+      "destaque": true
+    },
+    {
+      "id": "03",
+      "slug": "pistache",
+      "nome": "Amanteigado de Pistache",
+      "categoria": "premium",
+      "nivel": 3,
+      "tempoTotal": 110,
+      "tempoPreparo": 25,
+      "tempoDescanso": 45,
+      "tempoForno": 22,
+      "rendimento": "~24 biscoitos",
+      "foto": "/assets/img/receitas/03.jpg",
+      "fotoAlt": "Biscoito verde de pistache com pistaches decorando o topo",
+      "tags": ["pistache", "premium", "gourmet", "alta margem", "presente"],
+      "equipamentos": ["processador", "tigela", "espátula", "papel manteiga", "assadeira", "cortador redondo 4 cm"],
+      "historia": "O pistache é o ingrediente que justifica cobrar caro. Uma lata de amanteigado de pistache vende facilmente por R$ 60 a R$ 80 reais. O segredo aqui não é a receita — é a apresentação e a comunicação. Você vai comprar pistache nacional sem casca (mais barato), processar parte dele em farinha, e adicionar à massa. Visualmente lindo, sabor sofisticado, custo manejável.",
+      "ingredientes": [
+        { "id": "ing-03-1", "quantidade": "250g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-03-2", "quantidade": "80g", "item": "pistache sem casca, sem sal", "obs": "cru ou torrado — nunca o salgado de boteco" },
+        { "id": "ing-03-3", "quantidade": "200g", "item": "manteiga sem sal", "obs": "em temperatura ambiente" },
+        { "id": "ing-03-4", "quantidade": "100g", "item": "açúcar de confeiteiro", "obs": "aqui é confeiteiro — não refinado" },
+        { "id": "ing-03-5", "quantidade": "1 pitada", "item": "sal", "obs": "" },
+        { "id": "ing-03-6", "quantidade": "1/2 col. de chá", "item": "essência de baunilha", "obs": "" },
+        { "id": "ing-03-7", "quantidade": "15g", "item": "pistaches extras picados", "obs": "para decorar o topo de cada biscoito" }
+      ],
+      "passos": [
+        { "id": "passo-03-1", "ordem": 1, "texto": "Pré-aqueça o forno a 160°C.", "tempo": null, "destaque": false },
+        { "id": "passo-03-2", "ordem": 2, "texto": "Processe 80g de pistache no processador até virar farinha grossa. Não passe do ponto — vira pasta. 30 segundos pulsando é suficiente.", "tempo": 1, "destaque": true },
+        { "id": "passo-03-3", "ordem": 3, "texto": "Em uma tigela, bata a manteiga macia com o açúcar de confeiteiro peneirado até obter um creme bem branco e fofo. Leva uns 5 minutos no braço.", "tempo": 5, "destaque": false },
+        { "id": "passo-03-4", "ordem": 4, "texto": "Adicione a baunilha e o sal. Misture.", "tempo": null, "destaque": false },
+        { "id": "passo-03-5", "ordem": 5, "texto": "Adicione a farinha de pistache. Misture até incorporar.", "tempo": null, "destaque": false },
+        { "id": "passo-03-6", "ordem": 6, "texto": "Peneire a farinha de trigo por cima e incorpore aos poucos.", "tempo": null, "destaque": false },
+        { "id": "passo-03-7", "ordem": 7, "texto": "A massa vai ficar levemente esverdeada e perfumada. Forme um disco, embrulhe e leve à geladeira por 45 minutos.", "tempo": 45, "destaque": false },
+        { "id": "passo-03-8", "ordem": 8, "texto": "Abra a massa com 1 cm entre papéis manteiga.", "tempo": null, "destaque": false },
+        { "id": "passo-03-9", "ordem": 9, "texto": "Corte com cortador redondo de 4 cm. O formato clássico valoriza o pistache.", "tempo": null, "destaque": false },
+        { "id": "passo-03-10", "ordem": 10, "texto": "Disponha em assadeira forrada.", "tempo": null, "destaque": false },
+        { "id": "passo-03-11", "ordem": 11, "texto": "Polvilhe pistaches picados por cima de cada biscoito, pressionando levemente para grudar.", "tempo": null, "destaque": false },
+        { "id": "passo-03-12", "ordem": 12, "texto": "Asse por 20 a 22 minutos até as bordas levemente douradas. Não deixe escurecer — o verde do pistache tem que aparecer.", "tempo": 22, "destaque": true },
+        { "id": "passo-03-13", "ordem": 13, "texto": "Deixe esfriar na assadeira por 15 minutos.", "tempo": 15, "destaque": false }
+      ],
+      "dicas": [
+        "Pistache sem sal é fundamental. Pistache de boteco é salgado, estraga a receita inteira. Compre o cru ou torrado sem sal em lojas de produtos naturais.",
+        "Açúcar de confeiteiro dá uma textura mais delicada que combina com pistache. Vale o investimento.",
+        "Para conservar a cor verde, assar em temperatura mais baixa por mais tempo é o segredo."
+      ],
+      "errosComuns": [
+        "Processar o pistache demais: vira pasta, dá errado.",
+        "Forno alto: torra o pistache e escurece o biscoito, perdendo a cor característica.",
+        "Comprar pistache torrado e salgado: arruína o sabor e a textura."
+      ],
+      "precificacao": {
+        "custoMin": 1.20,
+        "custoMax": 1.80,
+        "vendaUnitariaMin": 5.00,
+        "vendaUnitariaMax": 8.00,
+        "vendaLataMin": 55.00,
+        "vendaLataMax": 80.00,
+        "unidadesPorLata": 8,
+        "observacao": "Pistache tem grande variação de preço — pesquise atacadistas. O preço premium é justificado pelo ingrediente e pela apresentação."
+      },
+      "embalagem": "Esta receita pede embalagem premium de presente: caixa de papelão rígido cor verde sálvia ou off-white, com etiqueta dourada ou prateada. Coloque os biscoitos em forminhas de papel cor neutra. Amarre com fita de cetim verde clara. Indicado para datas comemorativas: Dia das Mães, Páscoa, Natal, casamentos. Posicione como 'presente gourmet artesanal'.",
+      "publicada": true,
+      "destaque": true
+    },
+    {
+      "id": "04",
+      "slug": "speculoos-natal",
+      "nome": "Speculoos Belga (Versão de Natal)",
+      "categoria": "sazonais",
+      "nivel": 3,
+      "tempoTotal": 165,
+      "tempoPreparo": 30,
+      "tempoDescanso": 120,
+      "tempoForno": 15,
+      "rendimento": "~35 biscoitos",
+      "foto": "/assets/img/receitas/04.jpg",
+      "fotoAlt": "Speculoos de Natal em formato de estrelas e árvores, dourados e crocantes",
+      "tags": ["natal", "especiarias", "sazonal", "presente", "dezembro"],
+      "equipamentos": ["tigela", "espátula", "papel manteiga", "assadeira", "cortadores temáticos (estrela, árvore, casinha)"],
+      "historia": "O speculoos é o biscoito mais vendido na Europa entre novembro e dezembro. É aquele biscoitinho marrom temperado que vem com o café no avião. No Brasil quase ninguém conhece o nome, mas todo mundo gosta do sabor. Em dezembro, esse é seu produto-estrela: faça lotes grandes, embale em sacos transparentes com fita vermelha e venda como 'biscoito de Natal artesanal'. Esgota. O tempo mostrado é para o descanso mínimo de 2 horas — o ideal é fazer a massa na véspera (12 horas) para as especiarias se integrarem ainda mais.",
+      "ingredientes": [
+        { "id": "ing-04-1", "quantidade": "300g", "item": "farinha de trigo", "obs": "" },
+        { "id": "ing-04-2", "quantidade": "200g", "item": "manteiga sem sal", "obs": "em temperatura ambiente" },
+        { "id": "ing-04-3", "quantidade": "150g", "item": "açúcar mascavo", "obs": "dá a cor caramelizada característica" },
+        { "id": "ing-04-4", "quantidade": "1 unidade", "item": "ovo", "obs": "" },
+        { "id": "ing-04-5", "quantidade": "2 col. de chá", "item": "canela em pó", "obs": "" },
+        { "id": "ing-04-6", "quantidade": "1 col. de chá", "item": "gengibre em pó", "obs": "" },
+        { "id": "ing-04-7", "quantidade": "1/2 col. de chá", "item": "cravo em pó", "obs": "" },
+        { "id": "ing-04-8", "quantidade": "1/2 col. de chá", "item": "noz-moscada ralada", "obs": "" },
+        { "id": "ing-04-9", "quantidade": "1/4 col. de chá", "item": "cardamomo em pó", "obs": "opcional, mas faz diferença" },
+        { "id": "ing-04-10", "quantidade": "1 pitada", "item": "sal", "obs": "" },
+        { "id": "ing-04-11", "quantidade": "1 col. de chá", "item": "fermento em pó", "obs": "" }
+      ],
+      "passos": [
+        { "id": "passo-04-1", "ordem": 1, "texto": "Em uma tigela, misture todas as especiarias secas com a farinha e o sal. Reserve.", "tempo": null, "destaque": false },
+        { "id": "passo-04-2", "ordem": 2, "texto": "Bata a manteiga com o açúcar mascavo até virar creme. O mascavo vai dar a cor caramelizada característica.", "tempo": 5, "destaque": false },
+        { "id": "passo-04-3", "ordem": 3, "texto": "Adicione o ovo e misture bem.", "tempo": null, "destaque": false },
+        { "id": "passo-04-4", "ordem": 4, "texto": "Adicione a mistura de farinha com especiarias aos poucos, incorporando com espátula.", "tempo": null, "destaque": false },
+        { "id": "passo-04-5", "ordem": 5, "texto": "A massa fica firme e marrom dourada. Forme um disco, embrulhe e leve à geladeira por no mínimo 2 horas — idealmente de um dia para o outro. Esse descanso é o que intensifica o sabor das especiarias.", "tempo": 120, "destaque": true },
+        { "id": "passo-04-6", "ordem": 6, "texto": "No dia seguinte (ou após 2h), pré-aqueça o forno a 170°C.", "tempo": null, "destaque": false },
+        { "id": "passo-04-7", "ordem": 7, "texto": "Abra a massa com 0,5 cm de espessura. Mais fina que os outros amanteigados — speculoos é crocante.", "tempo": null, "destaque": true },
+        { "id": "passo-04-8", "ordem": 8, "texto": "Corte com cortadores de Natal: estrelas, árvores, anjos, casinhas, sinos.", "tempo": null, "destaque": false },
+        { "id": "passo-04-9", "ordem": 9, "texto": "Disponha em assadeira forrada com papel manteiga.", "tempo": null, "destaque": false },
+        { "id": "passo-04-10", "ordem": 10, "texto": "Asse por 12 a 15 minutos até dourar bem. Speculoos é assado mais escuro que os outros amanteigados.", "tempo": 15, "destaque": false },
+        { "id": "passo-04-11", "ordem": 11, "texto": "Deixe esfriar completamente na assadeira antes de mover. São finos e quebram fácil quentes.", "tempo": 15, "destaque": false },
+        { "id": "passo-04-12", "ordem": 12, "texto": "Para venda: embale em sacos de celofane transparente com fita de cetim vermelha e etiqueta natalina.", "tempo": null, "destaque": false }
+      ],
+      "dicas": [
+        "Faça em outubro o teste para validar a receita antes da temporada de dezembro. As pessoas começam a encomendar presentes em meados de novembro.",
+        "Cardamomo é o diferencial. É a especiaria que ninguém usa e que torna seu speculoos único. Compre uma vez por ano.",
+        "Embalagens temáticas valorizam absurdamente. Investir em fita boa, etiqueta caprichada e saco bonito triplica o preço de venda."
+      ],
+      "errosComuns": [
+        "Cortar grosso: speculoos tem que ser fino para ficar crocante. 0,5 cm é o ponto.",
+        "Não respeitar o descanso: sem as 2 horas de geladeira, as especiarias não se integram e o sabor fica 'cru'.",
+        "Forno muito quente: queima as bordas antes de cozinhar o centro."
+      ],
+      "precificacao": {
+        "custoMin": 0.40,
+        "custoMax": 0.60,
+        "vendaUnitariaMin": 2.50,
+        "vendaUnitariaMax": 4.00,
+        "vendaLataMin": 45.00,
+        "vendaLataMax": 70.00,
+        "unidadesPorLata": 12,
+        "observacao": "Em dezembro, com posicionamento de Natal, o markup pode ser maior. Saquinho de 5 unidades para presente: R$ 18 a R$ 28."
+      },
+      "embalagem": "Esta é a receita onde a embalagem importa mais que o biscoito. Saquinho de celofane transparente fechado com fita vermelha de cetim, etiqueta kraft com fonte natalina 'Feliz Natal' ou 'Biscoito Artesanal de Natal', pinha pequena ou raminho de pinheiro anexado. Para encomendas grandes: caixinha de papelão rígido vermelho com tampa, biscoitos arrumados sobre papel de seda dourado. Vende sozinho.",
+      "publicada": true,
+      "destaque": false
+    },
+    {
+      "id": "05",
+      "slug": "sem-gluten-arroz",
+      "nome": "Amanteigado Sem Glúten (Farinha de Arroz)",
+      "categoria": "especiais",
+      "nivel": 2,
+      "tempoTotal": 90,
+      "tempoPreparo": 20,
+      "tempoDescanso": 30,
+      "tempoForno": 22,
+      "rendimento": "~22 biscoitos",
+      "foto": "/assets/img/receitas/05.jpg",
+      "fotoAlt": "Biscoito sem glúten redondo com açúcar de confeiteiro polvilhado",
+      "tags": ["sem glúten", "especial", "celíaco", "nicho", "diferenciação"],
+      "equipamentos": ["tigela", "espátula", "peneira fina", "papel manteiga", "assadeira", "rolo de macarrão"],
+      "historia": "A demanda por doces sem glúten cresce 30% por ano no Brasil. Ter uma versão sem glúten te abre um nicho de cliente fiel que paga mais caro, indica para outros e compra recorrente. Adaptei essa receita usando farinha de arroz (encontrada em qualquer mercado grande) e amido de milho. O resultado é um biscoito quase indistinguível do tradicional — quando você diz que é sem glúten, as pessoas se surpreendem.",
+      "ingredientes": [
+        { "id": "ing-05-1", "quantidade": "200g", "item": "farinha de arroz branca", "obs": "encontrada em qualquer mercado grande" },
+        { "id": "ing-05-2", "quantidade": "50g", "item": "amido de milho (Maizena)", "obs": "" },
+        { "id": "ing-05-3", "quantidade": "200g", "item": "manteiga sem sal", "obs": "em temperatura ambiente" },
+        { "id": "ing-05-4", "quantidade": "100g", "item": "açúcar refinado", "obs": "" },
+        { "id": "ing-05-5", "quantidade": "1 unidade", "item": "gema de ovo", "obs": "" },
+        { "id": "ing-05-6", "quantidade": "1 pitada", "item": "sal", "obs": "" },
+        { "id": "ing-05-7", "quantidade": "1 col. de chá", "item": "essência de baunilha", "obs": "" },
+        { "id": "ing-05-8", "quantidade": "raspas de 1 limão", "item": "raspas de casca de limão", "obs": "opcional — dá frescor ao biscoito" }
+      ],
+      "passos": [
+        { "id": "passo-05-1", "ordem": 1, "texto": "Pré-aqueça o forno a 160°C.", "tempo": null, "destaque": false },
+        { "id": "passo-05-2", "ordem": 2, "texto": "Em uma tigela, peneire juntos a farinha de arroz e o amido de milho. Peneirar é importante porque essas farinhas formam grumos. Reserve.", "tempo": null, "destaque": true },
+        { "id": "passo-05-3", "ordem": 3, "texto": "Bata a manteiga com o açúcar até virar um creme claro e fofo.", "tempo": 5, "destaque": false },
+        { "id": "passo-05-4", "ordem": 4, "texto": "Adicione a gema, o sal, a baunilha e as raspas de limão. Misture bem.", "tempo": null, "destaque": false },
+        { "id": "passo-05-5", "ordem": 5, "texto": "Adicione a mistura de farinhas peneiradas em 3 partes, incorporando devagar com espátula.", "tempo": null, "destaque": false },
+        { "id": "passo-05-6", "ordem": 6, "texto": "A massa vai ficar mais 'areada' que a tradicional. Isso é normal. Forme uma bola, embrulhe e leve à geladeira por 30 minutos.", "tempo": 30, "destaque": false },
+        { "id": "passo-05-7", "ordem": 7, "texto": "Importante: essa massa não permite abrir muito grossa. Trabalhe com 0,8 cm.", "tempo": null, "destaque": true },
+        { "id": "passo-05-8", "ordem": 8, "texto": "Abra entre dois papéis manteiga com rolo. Se estiver rachando muito, faça bolinhas com a mão e amasse cada uma com a palma — o formato rústico funciona muito bem aqui.", "tempo": null, "destaque": false },
+        { "id": "passo-05-9", "ordem": 9, "texto": "Corte com cortador redondo de 4 cm ou trabalhe em formato rústico.", "tempo": null, "destaque": false },
+        { "id": "passo-05-10", "ordem": 10, "texto": "Disponha em assadeira forrada com 2 cm entre eles.", "tempo": null, "destaque": false },
+        { "id": "passo-05-11", "ordem": 11, "texto": "Asse por 20 a 22 minutos até as bordas dourarem levemente. Centro deve continuar claro.", "tempo": 22, "destaque": false },
+        { "id": "passo-05-12", "ordem": 12, "texto": "Deixe esfriar COMPLETAMENTE na assadeira. Sem glúten o biscoito é mais frágil quente — endurece ao esfriar.", "tempo": 20, "destaque": true },
+        { "id": "passo-05-13", "ordem": 13, "texto": "Polvilhe com açúcar de confeiteiro para acabamento elegante.", "tempo": null, "destaque": false }
+      ],
+      "dicas": [
+        "Cuidado com contaminação cruzada: se você vende para celíaco de verdade, use utensílios separados ou higienize muito bem. Celíaco não é 'frescura' — é doença autoimune.",
+        "Mencione no anúncio: '100% sem glúten' abre um mercado fiel. Use no Instagram, no status do WhatsApp.",
+        "Cliente celíaco recompra muito. Trate bem o primeiro pedido — vira cliente fixo de meses."
+      ],
+      "errosComuns": [
+        "Tentar abrir muito fino: quebra na hora de cortar. 0,8 cm é o mínimo.",
+        "Mexer a massa demais: sem glúten fica esfarelando se forçar.",
+        "Vender como 'sem glúten' sem ter cuidado com contaminação: problema sério para celíaco e problema legal para você."
+      ],
+      "precificacao": {
+        "custoMin": 0.55,
+        "custoMax": 0.75,
+        "vendaUnitariaMin": 3.50,
+        "vendaUnitariaMax": 5.00,
+        "vendaLataMin": 38.00,
+        "vendaLataMax": 55.00,
+        "unidadesPorLata": 10,
+        "observacao": "Cliente sem glúten geralmente aceita pagar 30-40% a mais. Pesquise farinha de arroz em lojas de granel ou atacado para reduzir custo."
+      },
+      "embalagem": "Embalagem clean e informativa: lata branca ou off-white com etiqueta destacando 'SEM GLÚTEN' de forma elegante (não gritante). Inclua na etiqueta os ingredientes — transparência é o que cliente celíaco valoriza. Adicione um cartão pequeno explicando o cuidado com contaminação cruzada. Posicione como produto de cuidado e atenção, não como 'doce de dieta'.",
+      "publicada": true,
+      "destaque": false
+    }
+  ]
+}

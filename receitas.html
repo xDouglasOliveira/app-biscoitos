@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Receitas — Coletânea Amanteigados da Rosana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/receitas-lista.css">
+
+  <style>body { background: #FAF6EF; }</style>
+
+  <!-- PROTEÇÃO: verifica autenticação antes de mostrar qualquer conteúdo -->
+  <script>
+    (function () {
+      try {
+        var t = JSON.parse(sessionStorage.getItem('auth_token') || 'null');
+        if (!t || !t.autenticado || Date.now() > t.expira) {
+          sessionStorage.removeItem('auth_token');
+          location.replace('index.html' + (t ? '?expirou=1' : ''));
+        }
+      } catch (e) { location.replace('index.html'); }
+    })();
+  </script>
+</head>
+<body class="lista-page">
+
+  <!-- ---- HEADER ---- -->
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo" aria-label="Ir para o início">
+        <span class="logo-text">Amanteigados <span>da Rosana</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="home.html"     class="nav-link">Início</a>
+        <a href="receitas.html" class="nav-link">Receitas</a>
+        <a href="bonus.html"    class="nav-link">Bônus</a>
+        <button class="btn-sair-header" onclick="fazerLogout()">Sair</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-expanded="false"
+              aria-controls="nav-overlay" aria-label="Abrir menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay mobile -->
+  <div class="nav-overlay" id="nav-overlay" hidden role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-overlay-header">
+      <span class="logo-text" aria-hidden="true">Amanteigados <span>da Rosana</span></span>
+      <button class="nav-overlay-close" id="nav-close" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav>
+      <a href="home.html"     class="nav-overlay-link">🏠 Início</a>
+      <a href="receitas.html" class="nav-overlay-link">📖 Receitas</a>
+      <a href="bonus.html"    class="nav-overlay-link">🎁 Bônus</a>
+      <button class="nav-overlay-link nav-overlay-sair" onclick="fazerLogout()">← Sair</button>
+    </nav>
+  </div>
+
+  <!-- ---- CONTEÚDO ---- -->
+  <main class="page-content" id="main">
+    <div class="container">
+
+      <!-- Cabeçalho da página -->
+      <div class="lista-header">
+        <h1 class="lista-titulo">Coletânea Completa</h1>
+        <p class="lista-subtitulo">40 receitas de biscoitos amanteigados para dominar e vender</p>
+      </div>
+
+      <!-- Barra de busca -->
+      <div class="busca-wrap" role="search">
+        <span class="busca-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          id="input-busca"
+          class="input-busca"
+          placeholder="Buscar receita por nome ou ingrediente..."
+          aria-label="Buscar receita"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+
+      <!-- Chips de categoria (preenchidos via JS após carregar o JSON) -->
+      <div id="chips-categorias" class="filtros-categorias" role="group" aria-label="Filtrar por categoria">
+        <!-- Chips gerados pelo receitas-lista.js -->
+      </div>
+
+      <!-- Toggle de filtros secundários -->
+      <button class="filtros-secundarios-toggle" id="toggle-filtros-sec"
+              aria-expanded="false" aria-controls="filtros-secundarios">
+        <span>Mais filtros</span>
+        <span class="filtros-secundarios-icone" aria-hidden="true">▾</span>
+      </button>
+
+      <!-- Filtros secundários (colapsados por padrão) -->
+      <div id="filtros-secundarios" class="filtros-secundarios" hidden>
+        <div class="filtros-secundarios-inner">
+
+          <!-- Filtro por nível -->
+          <div class="filtro-grupo" role="group" aria-label="Filtrar por nível de dificuldade">
+            <span class="filtro-grupo-label">Nível</span>
+            <div class="filtro-chips">
+              <button class="chip-filtro chip-nivel" data-nivel="1" aria-pressed="false">☆ Muito Fácil</button>
+              <button class="chip-filtro chip-nivel" data-nivel="2" aria-pressed="false">★☆ Fácil</button>
+              <button class="chip-filtro chip-nivel" data-nivel="3" aria-pressed="false">★★☆ Intermediário</button>
+              <button class="chip-filtro chip-nivel" data-nivel="4" aria-pressed="false">★★★ Avançado</button>
+            </div>
+          </div>
+
+          <!-- Filtro por tempo -->
+          <div class="filtro-grupo" role="group" aria-label="Filtrar por tempo de preparo">
+            <span class="filtro-grupo-label">Tempo</span>
+            <div class="filtro-chips">
+              <button class="chip-filtro chip-tempo" data-tempo="30"  aria-pressed="false">⏱ Até 30 min</button>
+              <button class="chip-filtro chip-tempo" data-tempo="60"  aria-pressed="false">⏱ 30–60 min</button>
+              <button class="chip-filtro chip-tempo" data-tempo="60+" aria-pressed="false">⏱ Mais de 1h</button>
+            </div>
+          </div>
+
+          <!-- Filtro por status -->
+          <div class="filtro-grupo" role="group" aria-label="Filtrar por status">
+            <span class="filtro-grupo-label">Status</span>
+            <div class="filtro-chips">
+              <button class="chip-filtro chip-status" data-status="favoritas" aria-pressed="false">❤️ Favoritas</button>
+              <button class="chip-filtro chip-status" data-status="feitas"    aria-pressed="false">✓ Já feitas</button>
+            </div>
+          </div>
+
+        </div><!-- /inner -->
+      </div><!-- /filtros secundários -->
+
+      <!-- Status: "X receitas encontradas" -->
+      <div id="filtros-status" class="filtros-status" aria-live="polite" aria-atomic="true"></div>
+
+      <!-- Grid de receitas (preenchido pelo JS) -->
+      <div id="receitas-grid" class="receitas-grid" aria-live="polite">
+        <div class="loading-state" style="grid-column: 1 / -1">
+          <div class="loading-spinner" aria-hidden="true"></div>
+          <p>Carregando receitas...</p>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Dúvidas?
+      <!-- PLACEHOLDER: substitua NUMERO pelo número da Rosana -->
+      <a href="https://wa.me/NUMERO" target="_blank" rel="noopener">Fale com a Rosana no WhatsApp</a>
+    </p>
+    <p>Esta área é exclusiva para alunas da Coletânea Amanteigados da Rosana.</p>
+  </footer>
+
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/receitas-lista.js"></script>
+
+</body>
+</html>

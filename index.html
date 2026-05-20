@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- IMPORTANTE: impede que o Google indexe esta página -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <title>Acessar — Coletânea Amanteigados da Rosana</title>
+
+  <!-- Google Fonts — carregamento sem bloquear a renderização -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+
+  <!-- CSS crítico inline: evita flash de fundo branco antes do CSS carregar -->
+  <style>body { background: #FAF6EF; }</style>
+</head>
+<body>
+
+  <main class="auth-page" id="main">
+
+    <div class="auth-card" role="main">
+
+      <!-- Aviso de sessão expirada (mostrado via JS quando URL tem ?expirou=1) -->
+      <div class="auth-aviso-expiracao" id="aviso-expiracao" role="alert" hidden>
+        ⏳ Sua sessão expirou. Digite a senha novamente para continuar.
+      </div>
+
+      <!-- Cabeçalho / Logo -->
+      <div class="auth-header">
+        <div class="auth-logo" aria-hidden="true">
+          <!-- PLACEHOLDER: quando tiver o logo, substitua por: <img src="/assets/img/logo.svg" alt=""> -->
+          <div class="auth-logo-icon">🍪</div>
+        </div>
+
+        <h1 class="auth-title">Amanteigados<br>da Rosana</h1>
+        <div class="auth-divider" aria-hidden="true"></div>
+        <p class="auth-subtitle">Área Exclusiva de Membros</p>
+      </div>
+
+      <!-- Formulário de acesso -->
+      <form class="auth-form" id="auth-form" novalidate aria-label="Formulário de acesso">
+
+        <div class="field-group">
+          <label class="field-label" for="campo-senha">
+            Sua senha de acesso
+          </label>
+
+          <!-- Wrapper para posicionar o botão de olho -->
+          <div class="input-senha-wrap">
+            <input
+              type="password"
+              id="campo-senha"
+              class="input-senha"
+              placeholder="Digite sua senha..."
+              autocomplete="current-password"
+              required
+              aria-describedby="erro-senha"
+              aria-label="Campo de senha"
+            >
+            <button
+              type="button"
+              class="btn-mostrar-senha"
+              id="btn-mostrar"
+              aria-label="Mostrar senha"
+              aria-pressed="false"
+            >👁</button>
+          </div>
+
+          <!-- Mensagem de erro — aparece quando senha está incorreta -->
+          <div class="auth-erro" id="erro-senha" role="alert" aria-live="assertive" hidden>
+            Senha incorreta. Tente novamente.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full btn-lg" id="btn-acessar">
+          Acessar minha área →
+        </button>
+
+      </form>
+
+      <!-- Link de suporte -->
+      <div class="auth-footer">
+        <p>Não recebeu a senha ou está com dificuldades?</p>
+        <p>
+          <!-- PLACEHOLDER: substitua NUMERO pelo número do WhatsApp da Rosana (ex: 5511999999999) -->
+          <a
+            href="https://wa.me/NUMERO"
+            class="link-suporte"
+            id="link-suporte"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Fale com a Rosana no WhatsApp"
+          >
+            Fale com a Rosana no WhatsApp →
+          </a>
+        </p>
+      </div>
+
+    </div><!-- /auth-card -->
+
+  </main>
+
+  <!-- auth.js: contém verificarSenha(), getTentativas() -->
+  <script src="assets/js/auth.js"></script>
+
+  <script>
+    // ---- Inicialização da página de login ----
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // Verificar se a URL indica sessão expirada (?expirou=1)
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('expirou') === '1') {
+        const aviso = document.getElementById('aviso-expiracao');
+        aviso.hidden = false;
+      }
+
+      const input      = document.getElementById('campo-senha');
+      const btnMostrar = document.getElementById('btn-mostrar');
+      const form       = document.getElementById('auth-form');
+      const erroEl     = document.getElementById('erro-senha');
+      const linkSup    = document.getElementById('link-suporte');
+      const btnAcessar = document.getElementById('btn-acessar');
+
+      // Toggle mostrar / esconder senha
+      btnMostrar.addEventListener('click', function () {
+        const escondido = input.type === 'password';
+        input.type = escondido ? 'text' : 'password';
+        btnMostrar.textContent = escondido ? '🙈' : '👁';
+        btnMostrar.setAttribute('aria-pressed', String(escondido));
+        btnMostrar.setAttribute('aria-label', escondido ? 'Esconder senha' : 'Mostrar senha');
+        input.focus();
+      });
+
+      // Submeter o formulário
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const senha = input.value;
+        if (!senha.trim()) {
+          input.focus();
+          return;
+        }
+
+        // Desabilitar botão para evitar duplo clique
+        btnAcessar.disabled = true;
+        btnAcessar.textContent = 'Verificando...';
+
+        const correto = await verificarSenha(senha);
+
+        if (!correto) {
+          // Mostrar erro
+          erroEl.hidden = false;
+          input.classList.add('erro');
+
+          // Animação de "shake" no campo
+          const wrap = document.querySelector('.input-senha-wrap');
+          wrap.classList.add('shake');
+          setTimeout(function () { wrap.classList.remove('shake'); }, 500);
+
+          // Mensagem personalizada após 3 tentativas
+          const tentativas = getTentativas();
+          if (tentativas >= 3) {
+            erroEl.textContent = 'Senha incorreta. Verificou a mensagem que recebeu com a senha?';
+            // Destacar link de suporte
+            linkSup.className = 'link-suporte-destaque';
+            linkSup.textContent = '💬 Falar com a Rosana no WhatsApp';
+          } else {
+            erroEl.textContent = 'Senha incorreta. Tente novamente.';
+          }
+
+          // Limpar campo e reabilitar botão
+          input.value = '';
+          input.focus();
+          btnAcessar.disabled = false;
+          btnAcessar.textContent = 'Acessar minha área →';
+        }
+        // Se correto: verificarSenha() redireciona automaticamente para home.html
+      });
+
+      // Limpar mensagem de erro enquanto a usuária digita
+      input.addEventListener('input', function () {
+        if (!erroEl.hidden) {
+          erroEl.hidden = true;
+          input.classList.remove('erro');
+        }
+      });
+
+      // Focar o campo de senha automaticamente
+      input.focus();
+    });
+  </script>
+
+</body>
+</html>

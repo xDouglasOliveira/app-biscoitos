@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <!-- Título atualizado via JS com o nome da receita -->
+  <title>Receita — Coletânea Amanteigados da Rosana</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/receita.css">
+
+  <style>body { background: #FAF6EF; }</style>
+
+  <!-- PROTEÇÃO: redireciona se não estiver autenticado -->
+  <script>
+    (function () {
+      try {
+        var t = JSON.parse(sessionStorage.getItem('auth_token') || 'null');
+        if (!t || !t.autenticado || Date.now() > t.expira) {
+          sessionStorage.removeItem('auth_token');
+          location.replace('index.html' + (t ? '?expirou=1' : ''));
+        }
+      } catch (e) { location.replace('index.html'); }
+    })();
+  </script>
+</head>
+<body class="receita-page">
+
+  <!-- ---- HEADER FIXO ---- -->
+  <header class="site-header">
+    <div class="container">
+      <a href="home.html" class="logo" aria-label="Início">
+        <span class="logo-text">Amanteigados <span>da Rosana</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+        <a href="home.html"     class="nav-link">Início</a>
+        <a href="receitas.html" class="nav-link">Receitas</a>
+        <a href="bonus.html"    class="nav-link">Bônus</a>
+        <button class="btn-sair-header" onclick="fazerLogout()">Sair</button>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-expanded="false"
+              aria-controls="nav-overlay" aria-label="Abrir menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Overlay mobile -->
+  <div class="nav-overlay" id="nav-overlay" hidden role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-overlay-header">
+      <span class="logo-text" aria-hidden="true">Amanteigados <span>da Rosana</span></span>
+      <button class="nav-overlay-close" id="nav-close" aria-label="Fechar menu">✕</button>
+    </div>
+    <nav>
+      <a href="home.html"     class="nav-overlay-link">🏠 Início</a>
+      <a href="receitas.html" class="nav-overlay-link">📖 Receitas</a>
+      <a href="bonus.html"    class="nav-overlay-link">🎁 Bônus</a>
+      <button class="nav-overlay-link nav-overlay-sair" onclick="fazerLogout()">← Sair</button>
+    </nav>
+  </div>
+
+  <!-- ---- CONTEÚDO PRINCIPAL ---- -->
+  <main class="page-content" id="main">
+
+    <!-- Estado de loading (visível enquanto JS busca e renderiza a receita) -->
+    <div id="loading" class="loading-state" style="min-height: 60vh" aria-live="polite">
+      <div class="loading-spinner" aria-hidden="true"></div>
+      <p>Carregando receita...</p>
+    </div>
+
+    <!-- Conteúdo da receita (oculto até o JS terminar de renderizar) -->
+    <div id="receita-conteudo" style="display:none">
+
+      <!-- ---- BARRA STICKY DO TOPO ----
+           Fica visível o tempo todo durante a leitura.
+           No MODO COZINHA o fundo vira escuro e o texto vira branco.
+      -->
+      <div class="receita-barra-top" role="navigation" aria-label="Navegação da receita">
+        <div class="container">
+          <!-- Botão voltar — grande para polegar sujo -->
+          <a href="receitas.html" class="btn-voltar" aria-label="Voltar para lista de receitas">
+            ← Voltar
+          </a>
+
+          <!-- Nome da receita (truncado, aparece após scroll) -->
+          <h1 class="receita-titulo-barra" id="receita-titulo-barra" aria-hidden="true"></h1>
+
+          <div class="receita-barra-acoes">
+            <!-- Favoritar -->
+            <button
+              id="btn-favoritar"
+              class="btn-favoritar-receita"
+              aria-label="Adicionar aos favoritos"
+              aria-pressed="false"
+            >♡</button>
+
+            <!-- Modo cozinha -->
+            <button
+              id="btn-modo-cozinha"
+              class="btn-modo-cozinha"
+              aria-label="Ativar modo cozinha"
+              aria-pressed="false"
+            >👨‍🍳 Modo Cozinha</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- FOTO HERO ---- -->
+      <div class="receita-hero" aria-hidden="true">
+        <img id="receita-foto" src="" alt="" loading="eager">
+        <div id="receita-foto-placeholder" class="receita-hero-placeholder" style="display:none">🍪</div>
+      </div>
+
+      <!-- ---- INTRODUÇÃO (nome, categoria, metadados) ---- -->
+      <section class="receita-intro" id="receita-intro">
+        <div class="container">
+          <!-- Categoria -->
+          <div class="receita-categoria-badge">
+            <span class="badge-categoria" id="receita-categoria"></span>
+          </div>
+
+          <!-- Nome completo da receita -->
+          <h1 class="receita-nome-titulo" id="receita-nome"></h1>
+
+          <!-- Tags -->
+          <div class="receita-tags-wrap" id="receita-tags" aria-label="Tags desta receita"></div>
+
+          <!-- Barra de 4 metadados -->
+          <div class="receita-meta-bar" role="list" aria-label="Informações da receita">
+
+            <div class="meta-item" role="listitem">
+              <span class="meta-icon" aria-hidden="true">⏱</span>
+              <span class="meta-valor" id="meta-tempo">—</span>
+              <span class="meta-label">Tempo total</span>
+            </div>
+
+            <div class="meta-item" role="listitem">
+              <span class="meta-valor" id="meta-nivel">—</span>
+              <span class="meta-label">Dificuldade</span>
+            </div>
+
+            <div class="meta-item" role="listitem">
+              <span class="meta-icon" aria-hidden="true">🥣</span>
+              <span class="meta-valor" id="meta-rendimento">—</span>
+              <span class="meta-label">Rendimento</span>
+            </div>
+
+            <div class="meta-item" role="listitem">
+              <span class="meta-icon" aria-hidden="true">🛠</span>
+              <span class="meta-valor" id="meta-equip-count">—</span>
+              <span class="meta-label">Equipamentos</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ---- HISTÓRIA DA RECEITA ---- -->
+      <section class="receita-section receita-section-historia" id="receita-secao-historia" aria-labelledby="titulo-historia">
+        <div class="container">
+          <h2 id="titulo-historia">História da Receita</h2>
+          <p id="receita-historia" class="receita-historia"></p>
+        </div>
+      </section>
+
+      <!-- ---- INGREDIENTES (checklist interativo) ---- -->
+      <section class="receita-section receita-section-ingredientes" id="receita-secao-ingredientes" aria-labelledby="titulo-ingredientes">
+        <div class="container">
+          <h2 id="titulo-ingredientes">Ingredientes</h2>
+          <p class="ingredientes-instrucao">Toque para marcar conforme separa:</p>
+          <ul id="ingredientes-lista" class="checklist-lista" aria-label="Lista de ingredientes"></ul>
+        </div>
+      </section>
+
+      <!-- Botão "Bora começar" — ancora nos passos -->
+      <div class="btn-comecar-wrap container">
+        <a href="#receita-secao-passos" class="btn btn-primary btn-full btn-lg">
+          Já tenho tudo, bora começar →
+        </a>
+      </div>
+
+      <!-- ---- PASSO A PASSO (checklist interativo) ---- -->
+      <section class="receita-section receita-section-passos" id="receita-secao-passos" aria-labelledby="titulo-passos">
+        <div class="container">
+          <h2 id="titulo-passos">Passo a Passo</h2>
+          <ol id="passos-lista" class="passos-lista" aria-label="Passo a passo da receita"></ol>
+        </div>
+      </section>
+
+      <!-- ---- DICAS DA ROSANA ---- -->
+      <section class="receita-section receita-section-dicas" id="receita-secao-dicas" aria-labelledby="titulo-dicas">
+        <div class="container">
+          <h2 id="titulo-dicas">💡 Dicas da Rosana</h2>
+          <ul id="dicas-lista" class="dicas-lista" aria-label="Dicas da Rosana"></ul>
+        </div>
+      </section>
+
+      <!-- ---- ERROS COMUNS ---- -->
+      <section class="receita-section receita-section-erros" id="receita-secao-erros" aria-labelledby="titulo-erros">
+        <div class="container">
+          <h2 id="titulo-erros">⚠️ Erros Comuns</h2>
+          <ul id="erros-lista" class="erros-lista" aria-label="Erros comuns a evitar"></ul>
+        </div>
+      </section>
+
+      <!-- ---- PRECIFICAÇÃO ---- -->
+      <section class="receita-section receita-section-prec" id="receita-secao-prec" aria-labelledby="titulo-prec">
+        <div class="container">
+          <h2 id="titulo-prec">💰 Sugestão de Precificação</h2>
+
+          <div class="prec-grid" role="list">
+            <div class="prec-item" role="listitem">
+              <span class="prec-label">Custo por biscoito</span>
+              <span class="prec-valor" id="prec-custo">—</span>
+            </div>
+            <div class="prec-item" role="listitem">
+              <span class="prec-label">Venda unitária</span>
+              <span class="prec-valor" id="prec-unitaria">—</span>
+            </div>
+            <div class="prec-item" role="listitem">
+              <span class="prec-label">Venda em lata</span>
+              <span class="prec-valor" id="prec-lata">—</span>
+            </div>
+          </div>
+
+          <p class="prec-obs" id="prec-obs"></p>
+        </div>
+      </section>
+
+      <!-- ---- EMBALAGEM ---- -->
+      <section class="receita-section receita-section-embalagem" id="receita-secao-embalagem" aria-labelledby="titulo-embalagem">
+        <div class="container">
+          <h2 id="titulo-embalagem">📦 Ideia de Embalagem</h2>
+          <p class="receita-embalagem-texto" id="receita-embalagem"></p>
+        </div>
+      </section>
+
+      <!-- ---- EQUIPAMENTOS ---- -->
+      <section class="receita-section receita-section-equip" id="receita-secao-equip" aria-labelledby="titulo-equip">
+        <div class="container">
+          <h2 id="titulo-equip">🛠 Equipamentos Necessários</h2>
+          <ul id="equip-lista" class="equip-lista" aria-label="Equipamentos necessários"></ul>
+        </div>
+      </section>
+
+      <!-- ---- BOTÃO "JÁ FIZ ESTA RECEITA" ---- -->
+      <div class="btn-feita-wrap container">
+        <button
+          id="btn-feita"
+          class="btn btn-success btn-full btn-xl"
+          aria-label="Marcar esta receita como concluída"
+          aria-pressed="false"
+        >
+          ✓ Já fiz esta receita!
+        </button>
+      </div>
+
+      <!-- ---- NAVEGAÇÃO ENTRE RECEITAS ---- -->
+      <nav class="receita-nav-rodape container" id="nav-rodape" style="display:none" aria-label="Navegar entre receitas">
+        <a id="btn-anterior" href="#" class="btn btn-secondary" style="flex:1; text-align:center; overflow:hidden; white-space:nowrap; text-overflow:ellipsis">
+          ← Anterior
+        </a>
+        <a id="btn-proxima" href="#" class="btn btn-secondary" style="flex:1; text-align:center; overflow:hidden; white-space:nowrap; text-overflow:ellipsis">
+          Próxima →
+        </a>
+      </nav>
+
+    </div><!-- /receita-conteudo -->
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <!-- PLACEHOLDER: substitua NUMERO pelo número da Rosana -->
+      <a href="https://wa.me/NUMERO" target="_blank" rel="noopener">Dúvidas? Fale com a Rosana no WhatsApp</a>
+    </p>
+  </footer>
+
+  <!-- Toast global (notificações de feedback) -->
+  <div id="toast-global" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/nav.js"></script>
+  <script src="assets/js/modo-cozinha.js"></script>
+  <script src="assets/js/receita.js"></script>
+
+</body>
+</html>
