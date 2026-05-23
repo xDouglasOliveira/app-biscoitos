@@ -315,6 +315,10 @@ function inicializarBotaoFeita(receitaId, totalReceitas) {
     Storage.marcarReceitaFeita(receitaId);
     marcarBotaoComoJaFeita(btn);
     mostrarToastLeve('Receita concluída! ✓');
+    // Exibe modal Okinawa uma única vez após a 1ª receita concluída
+    setTimeout(() => {
+      if (typeof exibirModalOkinawa === 'function') exibirModalOkinawa();
+    }, 800);
   });
 }
 

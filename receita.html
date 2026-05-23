@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/receita.css">
+  <link rel="stylesheet" href="assets/css/okinawa.css">
 
   <style>body { background: #FAF6EF; }</style>
 
@@ -290,10 +291,41 @@
   <!-- Toast global (notificações de feedback) -->
   <div id="toast-global" class="toast" role="status" aria-live="polite"></div>
 
+  <!-- ---- MODAL MÉTODO OKINAWA (aparece 1× após marcar 1ª receita como feita) ---- -->
+  <div class="ok-modal-overlay" id="ok-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="ok-modal-titulo">
+    <div class="ok-modal">
+      <button class="ok-modal-fechar" onclick="fecharModalOkinawa()" aria-label="Fechar">✕</button>
+      <div class="ok-modal-icon" aria-hidden="true">🎉</div>
+      <h2 id="ok-modal-titulo">Parabéns por concluir mais uma receita!</h2>
+      <hr class="ok-modal-divisor">
+      <p>
+        Agora que você já domina as receitas, que tal aprender a vender com mais consistência — sem trabalhar todos os dias?
+      </p>
+      <p>
+        Conheça o <strong>Método Okinawa</strong>: a estratégia de 5 dias de produção + 2 de folga que a Rosana usa para faturar sem se esgotar.
+      </p>
+      <a
+        href="mais-da-rosana/okinawa.html"
+        class="btn-ok-primary"
+        data-track-ok="modal-receita"
+        onclick="fecharModalOkinawa()"
+      >
+        Quero conhecer o Método Okinawa →
+      </a>
+      <button
+        onclick="fecharModalOkinawa()"
+        style="margin-top:var(--space-3);background:none;border:none;color:var(--text-muted);font-size:var(--text-sm);cursor:pointer;width:100%"
+      >
+        Agora não
+      </button>
+    </div>
+  </div>
+
   <script src="assets/js/auth.js"></script>
   <script src="assets/js/storage.js"></script>
   <script src="assets/js/nav.js"></script>
   <script src="assets/js/modo-cozinha.js"></script>
+  <script src="assets/js/okinawa.js"></script>
   <script src="assets/js/receita.js"></script>
 
 </body>
