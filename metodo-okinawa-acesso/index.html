@@ -275,44 +275,6 @@
     </div>
   </header>
 
-  <!-- ---- POPUP SENHA ---- -->
-  <div id="ok-popup-senha" style="
-    position:fixed;inset:0;z-index:300;
-    background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);
-    display:flex;align-items:center;justify-content:center;padding:1rem;
-  " role="dialog" aria-modal="true" aria-labelledby="popup-titulo">
-    <div style="
-      background:#fff;border-radius:1.25rem;padding:2rem 1.75rem;
-      max-width:360px;width:100%;text-align:center;
-      box-shadow:0 20px 60px rgba(0,0,0,0.22);
-    ">
-      <div style="font-size:2.5rem;margin-bottom:1rem" aria-hidden="true">🔑</div>
-      <h2 id="popup-titulo" style="font-family:var(--font-display);font-size:1.25rem;color:var(--text-primary);margin-bottom:0.75rem;line-height:1.3">
-        Sua senha de acesso
-      </h2>
-      <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.65;margin-bottom:1.25rem">
-        Para acessar o Método Okinawa, use a senha abaixo:
-      </p>
-      <div style="
-        background:#F0F2EC;border:2px dashed #7D9D7C;border-radius:0.75rem;
-        padding:0.875rem 1.25rem;margin-bottom:1.5rem;
-      ">
-        <span style="font-family:monospace;font-size:1.5rem;font-weight:700;letter-spacing:0.15em;color:#4A7A48">
-          BISCOITOS
-        </span>
-      </div>
-      <button
-        onclick="document.getElementById('ok-popup-senha').style.display='none'; document.getElementById('ok-senha-input').focus();"
-        style="
-          width:100%;padding:0.875rem;background:var(--accent-primary);color:#fff;
-          font-size:1rem;font-weight:700;border:none;border-radius:0.75rem;cursor:pointer;
-        "
-      >
-        Entendi, vou digitar agora →
-      </button>
-    </div>
-  </div>
-
   <!-- ---- GATE DE SENHA ---- -->
   <div id="ok-gate">
     <div class="ok-gate-card">
