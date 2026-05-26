@@ -151,8 +151,8 @@ function iniciarTracking() {
 
 // ---- GATE DE SENHA ----
 
-// Hash SHA-256 da senha OKINAWA2026
-const SENHA_HASH = '889cf72bb266282c15cad50f4b5a1043e6e2e968bfc51bc51adaf9b72ad05e62';
+// Hash SHA-256 da senha BISCOITOS
+const SENHA_HASH = 'c173d7b16b2ce4a95ff40ebc18dd87a6816481e56f722ba0ad8f3bc5cc90e1bb';
 
 async function sha256(str) {
   const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
@@ -185,10 +185,10 @@ function verificarAcessoOkinawa() {
     mostrarAreaAcesso();
     return true;
   }
-  // Verifica se veio com código na URL (ex: ?codigo=OKINAWA2026)
+  // Verifica se veio com código na URL (ex: ?codigo=BISCOITOS)
   const params = new URLSearchParams(window.location.search);
   const codigo = params.get('codigo');
-  if (codigo && codigo.toUpperCase() === 'OKINAWA2026') {
+  if (codigo && codigo.toUpperCase() === 'BISCOITOS') {
     localStorage.setItem('okinawa_acesso', '1');
     mostrarAreaAcesso();
     return true;
