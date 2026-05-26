@@ -31,13 +31,13 @@ function formatarTempo(minutos) {
   return m > 0 ? `${h}h ${m}min` : `${h}h`;
 }
 
-// Gera HTML de estrelas (★☆) para o nível da receita
+// Gera HTML de foguinhos para o nível de dificuldade da receita
 function renderizarEstrelas(nivel) {
   let html = '';
   for (let i = 1; i <= 5; i++) {
-    html += i <= nivel ? '★' : '☆';
+    html += `<span style="opacity:${i <= nivel ? '1' : '0.2'}">🔥</span>`;
   }
-  return `<span class="stars" aria-label="Nível ${nivel} de 5">${html}</span>`;
+  return `<span class="stars" aria-label="Dificuldade: ${nivel} de 5">${html}</span>`;
 }
 
 // Busca o JSON (com cache em memória para não recarregar em navegações)

@@ -386,8 +386,7 @@ function formatarTempo(minutos) {
 function gerarEstrelas(nivel) {
   let html = '';
   for (let i = 1; i <= 5; i++) {
-    const cor = i <= nivel ? 'var(--accent-primary)' : 'var(--border-medium)';
-    html += `<span style="color:${cor}">${i <= nivel ? '★' : '☆'}</span>`;
+    html += `<span style="opacity:${i <= nivel ? '1' : '0.2'}">🔥</span>`;
   }
   return html;
 }

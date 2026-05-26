@@ -195,7 +195,7 @@ function montarCardReceita(receita) {
         <div class="recipe-card-categoria">${categoria}</div>
         <h2 class="recipe-card-nome">${receita.nome}</h2>
         <div class="recipe-card-meta">
-          <span aria-label="Nível ${receita.nivel} de 5">${estrelas}</span>
+          <span aria-label="Dificuldade: ${receita.nivel} de 5">Dificuldade: ${estrelas}</span>
           <span aria-label="Tempo total: ${tempo}">⏱ ${tempo}</span>
         </div>
       </div>
@@ -376,7 +376,7 @@ function formatarTempo(minutos) {
 function gerarEstrelas(nivel) {
   let html = '';
   for (let i = 1; i <= 5; i++) {
-    html += `<span style="color:${i <= nivel ? 'var(--accent-primary)' : 'var(--border-medium)'}">${i <= nivel ? '★' : '☆'}</span>`;
+    html += `<span style="opacity:${i <= nivel ? '1' : '0.2'}">🔥</span>`;
   }
   return html;
 }
